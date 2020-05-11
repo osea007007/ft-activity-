@@ -1,0 +1,24 @@
+{
+    "lang": "zh-Hant-TW",
+    "short_name": "心誠”折”靈",
+    "name": "心誠”折”靈",
+    "icons": [
+        {
+            "src": "../images/192x192.png",
+            "type": "image/png",
+            "sizes": "300x300"
+        },
+        {
+            "src": "../images/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://event.franklin.com.tw/new-year/index.html",
+    "background_color": "#114790",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000",
+    "orientation": "portrait",
+    "description": "庚子迎財去，金鼠咬錢來！"
+}

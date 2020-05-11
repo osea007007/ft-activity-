@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+$maxWidth-xxl: 1799px;
+$maxWidth-xl: 1399px;
+$maxWidth-lg: 1199px;
+$maxWidth-md: 991px;
+$maxWidth-sm: 767px;
+$maxWidth-xs: 479px;
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: $maxWidth-xxl) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: $maxWidth-xl) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: $maxWidth-lg) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: $maxWidth-md) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: $maxWidth-sm) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: $maxWidth-xs) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/
+
+// reset ========================================================================
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    // background: #eaded6;
+    // background: #fbdc31 url(../images/bg-star-30.png) top left repeat;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+    // background: #ff407a;
+}
+
+/*Webkit,Opera9.5+,Ie9+ 控制文字選取時的顏色*/
+::selection {
+	background:#ffde00;
+	color:#000;
+}
+
+/*Mozilla Firefox 控制文字選取時的顏色*/
+::-moz-selection {
+	background:#ffde00;
+	color:#000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border: none;
+}
+
+p {
+    margin: 0px;
+}
+
+// input ========================================================================
+.checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    input[type="checkbox"] {
+        display: none;
+        &:checked + span {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+            }
+        }
+    }
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease all;
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s ease all;
+        }
+    }
+}
+
+.radio {
+    vertical-align: middle;
+    display: inline-block;
+    input[type="radio"] {
+        display: none;
+        &:checked + .radio-fake {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+            }
+        }
+    }
+    &-fake {
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 100%;
+        transition: 0.3s ease all;
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 13px;
+            transition: 0.3s ease all;
+        }
+    }
+    &-text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 17px;
+        padding-left: 8px;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    color: #fff;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    cursor: pointer;
+    i {
+        margin-left: 5px;
+    }
+}
+
+input,
+button {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+}
+
+// component ========================================================================
+.container {
+    margin: 0 auto;
+    padding: 0px;
+    width: 1170px;
+    &-2 {
+        margin: 0 auto;
+        padding: 0px;
+        width: 960px;
+    }
+    @include maxWidth-lg {
+        margin: 0px 25px;
+        width: auto;
+    }
+    @include maxWidth-md {
+        &-2 {
+            margin: 0px 25px;
+            width: auto;
+        }
+    }
+    @include maxWidth-sm {
+        margin: 0px 15px;
+        &-2 {
+            margin: 0px 15px;
+        }
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.mobileShow {
+    display: none !important;
+}
+@include maxWidth-md {
+    .pcShow {
+        display: none !important;
+    }
+    .mobileShow {
+        display: initial !important;
+    }
+}
+
+//--fontAwesome ========================================================================
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

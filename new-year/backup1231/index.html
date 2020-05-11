@@ -1,0 +1,633 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#114790" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="js/manifest.json" crossorigin="use-credentials" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192×192" href="images/192x192.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>心誠”折”靈 | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="心誠”折”靈" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1060402337367331" />
+    <meta name="description" content="庚子迎財去，金鼠咬錢來！" />
+    <meta property="og:description" content="庚子迎財去，金鼠咬錢來！" />
+    <meta property="og:image" content="https://event.franklin.com.tw/new-year/images/fb.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://event.franklin.com.tw/new-year/index.html" />
+    <style>
+      .banner .banner-text {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+      .banner.active .banner-text {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+    <script>
+      var images = new Array();
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+        }
+      }
+      preload("images/banner-text.png", "images/banner-kv.png", "images/banner-lantern.png", "images/banner-bottom.png");
+    </script>
+
+    <!-- <script src="js/vue.js"></script> -->
+    <script src="js/vue.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/ScrollMagic.min.js"></script> -->
+    <!-- <script src="js/gsap.min.js"></script> -->
+    <!-- <script src="js/animation.gsap.js"></script> -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-586SXP");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="content" v-cloak>
+      <!-- ie用的遮罩 -->
+      <div class="ieUseMask" v-if="ieUseMask">
+        <div class="ieUseMask-text">
+          <strong>建議您使用現代化瀏覽器瀏覽</strong><br /><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+          <div class="ieUseMask-dot"></div>
+        </div>
+      </div>
+
+      <div id="top"></div>
+
+      <!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+      <!-- header -->
+      <header class="header">
+        <div class="container clearfix">
+          <div class="logo">
+            <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+              <picture>
+                <source media="(max-width: 991px)" srcset="images/logo2019.svg" />
+                <img src="images/header-logo.png" alt="富蘭克林‧國民的基金" />
+              </picture>
+              <div class="logo-text">
+                富蘭克林‧國民的基金
+              </div>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- main -->
+      <article class="main">
+        <section class="banner">
+          <img src="images/banner-bottom.png" alt="" class="banner-bottom" />
+          <div class="container">
+            <img src="images/banner-lantern.png" alt="" class="banner-lantern" />
+            <h1 class="banner-tit" title="心誠”折”靈">
+              心誠”折”靈
+            </h1>
+            <img src="images/banner-text.png" alt="心誠”折”靈" class="banner-text" />
+            <div class="banner-kv">
+              <img src="images/banner-kv.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <div id="trigger-fixedShare"></div>
+
+        <section class="item item1">
+          <div class="container">
+            <img src="images/tattoo-left.png" alt="" class="item1-tattoo item1-tattoo-left" />
+            <img src="images/tattoo-right.png" alt="" class="item1-tattoo item1-tattoo-right" />
+
+            <!-- 第一階段文字 -->
+            <p class="item1-text" data-stage="stage1" v-if="step == 1">
+              春暖花開迎富貴，現在就跟著<b>富蘭克林‧國民的基金</b>累積您的第一桶金！
+            </p>
+
+            <!-- 第二階段文字 -->
+            <p class="item1-text" data-stage="stage2" v-else>春暖花開迎富貴，富蘭克林加碼放送精選基金單筆申購手續費0元優惠，<br />簽到即領，即領即用！</p>
+
+            <div class="item1-discount-area" v-if="step == 1">
+              <article class="item1-discount">
+                <div class="item1-discount-content">
+                  <h3 class="item1-discount-tit" title="定期投資1定強">定期投資<strong class="focus">1</strong>定強</h3>
+                  <div class="item1-discount-belt"></div>
+                  <p class="item1-discount-text">
+                    精選基金定期定額自由選
+                    <br />
+                    <b class="focus">
+                      手續費0.1%優惠
+                    </b>
+                  </p>
+                </div>
+              </article>
+              <article class="item1-discount">
+                <div class="item1-discount-content">
+                  <h3 class="item1-discount-tit" title="扣款成功加碼送">扣款成功<strong class="focus">加碼送</strong></h3>
+                  <div class="item1-discount-belt"></div>
+                  <p class="item1-discount-text">
+                    精選基金單筆申購
+                    <br />
+                    <b class="focus">
+                      手續費0元優惠
+                    </b>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <h2 id="featured" class="item1-tit" title="本季精選基金">
+              <span>本季精選基金</span>
+            </h2>
+            <div class="fundItem-area">
+              <article class="fundItem">
+                <div class="fundItem-content">
+                  <img src="images/fundImg-1.png" alt="金鼠向錢衝 富貴迎進門" class="fundItem-img" />
+                  <div class="fundItem-bottom">
+                    <h3 class="fundItem-tit" title="金鼠向錢衝 富貴迎進門">金鼠向錢衝<br />富貴迎進門</h3>
+                    <p class="fundItem-text">
+                      個性積極的您，投資講究立竿見影！富蘭克林嚴選爆發力十足的主題基金，陪您一路向錢衝。
+                    </p>
+                    <ul class="fundItem-fundList">
+                      <li>
+                        <a target="_blank" href="https://event.franklin.com.tw/C2017_06_Q3_1009/index.html" title="亞洲小型企業基金">
+                          亞洲小型企業基金
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a target="_blank" href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html" title="美國機會基金">
+                          美國機會基金
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="fundItem">
+                <div class="fundItem-content">
+                  <img src="images/fundImg-2.png" alt="財源要廣進 穩中求利來" class="fundItem-img" />
+                  <div class="fundItem-bottom">
+                    <h3 class="fundItem-tit" title="財源要廣進 穩中求利來">財源要廣進<br />穩中求利來</h3>
+                    <p class="fundItem-text">
+                      生性踏實的您，投資期盼細水長流！富蘭克林人氣經典好基金，協助您創造安穩富足好人生。
+                    </p>
+                    <ul class="fundItem-fundList">
+                      <li>
+                        <a target="_blank" href="https://www.franklin.com.tw/Fund/BasicInformation/2108" title="全球氣候變遷基金">
+                          全球氣候變遷基金
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://event.franklin.com.tw/C2017_08_Q3_0839/index.html"
+                          title="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+                        >
+                          穩定月收益基金<b class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</b>
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="fundItem">
+                <div class="fundItem-content">
+                  <img src="images/fundImg-3.png" alt="年年期有餘 投資有出息" class="fundItem-img" />
+                  <div class="fundItem-bottom">
+                    <h3 class="fundItem-tit" title="年年期有餘 投資有出息">年年期有餘<br />投資有出息</h3>
+                    <p class="fundItem-text">
+                      精打細算的您，投資追求入袋為安！富蘭克林優質配息基金，為您帶來源源不絕的被動收入。
+                    </p>
+                    <ul class="fundItem-fundList">
+                      <li>
+                        <a target="_blank" href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html" title="全球債券基金(本基金之配息來源可能為本金)">
+                          全球債券基金<b class="focus">(本基金之配息來源可能為本金)</b>
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://event.franklin.com.tw/C2018_10_fund/0427.html"
+                          title="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+                        >
+                          精選收益基金<b class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</b>
+                          <i class="fas fa-chevron-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="btnArea threeBtn">
+              <div class="btn">
+                <a href="https://etrade.franklin.com.tw/Open/Entrance" title="立即去開戶" target="_blank"> 立即去開戶 <i class="fas fa-arrow-right"></i> </a>
+              </div>
+              <div class="btn type2">
+                <a href="https://etrade.franklin.com.tw/Home/Login" title="馬上來下單" target="_blank"> 馬上來下單 <i class="fas fa-arrow-right"></i> </a>
+              </div>
+              <div class="btn">
+                <a :href="latestOffersUrl + '#Q2FeaturedFund'" title="更多好基金" target="_blank"> 更多好基金 <i class="fas fa-arrow-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="item item2" id="signIn">
+          <div class="container">
+            <div class="item2-discount">
+              <h2 class="item2-discount-tit" title="新春超級加碼單筆0負擔">新春超級加碼單筆<strong class="focus">0</strong>負擔</h2>
+              <div class="item2-discount-belt"></div>
+              <div class="item2-discount-bottom">
+                <!-- 第一階段顯示 -->
+                <img src="images/blurryDiscount.png" alt="" class="item2-discount-bottom-blurryDiscount" data-stage="stage1" v-if="step == 1" />
+
+                <!-- 第二階段顯示 -->
+
+                <p class="item2-discount-bottom-text" data-stage="stage2" v-else>
+                  精選基金單筆申購
+                  <br />
+                  <span class="focus">
+                    手續費0元優惠
+                  </span>
+                </p>
+
+                <div class="item2-discount-bottom-reciprocal" data-stage="stage1" v-if="step == 1">
+                  離開放簽到領取還有
+                  <div class="reciprocal" style="padding-top: 10px">
+                    {{ showClock }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+						第二階段顯示
+						[.item2-tab-area]
+						[item2-tabContent-area]
+					-->
+            <div id="item2-tab"></div>
+            <div class="item2-tab-area" v-if="step == 2 && config.isBinded != 1" data-stage="stage2">
+              <div class="item2-tab" :class="{ 'active' : loginType == 2 }" @click.prevent="changeLoginType(2)">
+                <div class="item2-tab-content">
+                  <i class="fas fa-times"></i>
+                  <div class="item2-tab-content-tit">
+                    我不是
+                  </div>
+                  國民e帳戶會員
+                </div>
+              </div>
+              <div class="item2-tab" :class="{ 'active' : loginType == 1 }" @click.prevent="changeLoginType(1)">
+                <div class="item2-tab-content">
+                  <i class="circle"></i>
+                  <div class="item2-tab-content-tit">
+                    我是
+                  </div>
+                  國民e帳戶會員
+                </div>
+              </div>
+            </div>
+            <div class="item2-tabContent-area" v-if="step == 2" data-stage="stage2">
+              <div class="item2-tabContent" :class="{ 'active' : loginType == 2 }" v-show="loginType == 2 && config.isBinded != 1">
+                <div class="notFinished">
+                  <p class="item2-tabContent-text">
+                    留下完整資料，並於2020年2月底前以相同資料開通國民e帳戶，即可享有精選基金單筆申購手續費0元優惠一筆
+                  </p>
+                  <div class="formArea">
+                    <div class="formArea-item">
+                      <div class="formArea-item-tit">
+                        <label for="name">
+                          姓名
+                        </label>
+                      </div>
+                      <div class="formArea-item-input">
+                        <input type="text" name="" id="name" />
+                      </div>
+                    </div>
+                    <div class="formArea-item">
+                      <div class="formArea-item-tit">
+                        <label for="id">
+                          身分證字號
+                        </label>
+                      </div>
+                      <div class="formArea-item-input">
+                        <input type="text" name="" id="id" />
+                      </div>
+                    </div>
+                    <div class="formArea-item full">
+                      <div class="formArea-item-tit">
+                        <label for="email">
+                          電子信箱
+                        </label>
+                      </div>
+                      <div class="formArea-item-input">
+                        <input type="email" name="" id="email" />
+                      </div>
+                    </div>
+                    <div class="formArea-item full agree">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="" id="agree1" />
+                          <span>
+                            <i class="fas fa-check"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <label for="agree1">
+                        我已閱讀並同意接受
+                      </label>
+                      <a href="https://www.franklin.com.tw/Privacy/Index" target="_blank" title="「富蘭克林證券投顧個資告知義務」">
+                        「富蘭克林證券投顧個資告知義務」
+                      </a>
+                      與
+                      <a href="javascriptLvoid(0);" title="「LINE Business Connect服務使用條款暨個人資料運用告知聲明」">
+                        「LINE Business Connect服務使用條款暨個人資料運用告知聲明」
+                      </a>
+                    </div>
+                    <div class="btnArea">
+                      <div class="btn">
+                        <a href="#item2-tab" title="簽到並領取0元優惠券"> 簽到並領取0元優惠券 <i class="fas fa-arrow-right"></i> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="finished">
+                  <p class="item2-tabContent-text">
+                    成功簽到!!!
+                    <br />記得接續完成開戶爽用0元優惠喔!
+                  </p>
+                  <div class="btnArea">
+                    <div class="btn">
+                      <a href="https://etrade.franklin.com.tw/Open/Entrance" title="接著去開戶"> 接著去開戶 <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item2-tabContent" :class="{ 'active' : loginType == 1 }" v-show="loginType == 1 && config.isBinded != 1">
+                <div class="notFinished">
+                  <p class="item2-tabContent-text">
+                    2020年2月底前在下方簽到，並登入國民e帳戶，即可享有精選基金單筆申購手續費0元優惠一筆
+                  </p>
+                  <div class="formArea">
+                    <div class="formArea-item">
+                      <div class="formArea-item-tit">
+                        <label for="accountNumber">
+                          帳號
+                        </label>
+                      </div>
+                      <div class="formArea-item-input">
+                        <input type="text" name="" id="accountNumber" />
+                      </div>
+                    </div>
+                    <div class="formArea-item">
+                      <div class="formArea-item-tit">
+                        <label for="password">
+                          密碼
+                        </label>
+                      </div>
+                      <div class="formArea-item-input">
+                        <input type="password" name="" id="password" />
+                      </div>
+                    </div>
+                    <div class="formArea-item full agree">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="" id="agree2" />
+                          <span>
+                            <i class="fas fa-check"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <label for="agree2">
+                        我已閱讀並同意接受
+                      </label>
+                      <a href="https://www.franklin.com.tw/Privacy/Index" target="_blank" title="「富蘭克林證券投顧個資告知義務」">
+                        「富蘭克林證券投顧個資告知義務」
+                      </a>
+                    </div>
+                    <div class="btnArea">
+                      <div class="btn">
+                        <a href="#item2-tab" title="簽到並領取0元優惠券"> 簽到並領取0元優惠券 <i class="fas fa-arrow-right"></i> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="finished">
+                  <p class="item2-tabContent-text">
+                    成功簽到!!!
+                    <br />記得3月底前要把0元優惠用掉喔!
+                  </p>
+                  <div class="btnArea twoBtn">
+                    <div class="btn type2">
+                      <a href="#featured" title="看精選基金"> 看精選基金 <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                    <div class="btn">
+                      <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="帶我去下單"> 帶我去下單 <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item2-tabContent" data-status="bindMember" id="bindMember" v-show="config.isBinded == 1">
+                <div class="notFinished">
+                  <p class="item2-tabContent-text">
+                    很棒！您已綁定富蘭克林LINE官方帳號，同時也已是國民e帳戶會員，直接點選下方按鍵簽到並領取0元優惠券吧！
+                  </p>
+                  <div class="formArea">
+                    <div class="btnArea">
+                      <div class="btn">
+                        <a href="#item2-tab" title="簽到並領取0元優惠券"> 簽到並領取0元優惠券 <i class="fas fa-arrow-right"></i> </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="finished">
+                  <p class="item2-tabContent-text">
+                    成功簽到!!!
+                    <br />記得3月底前要把0元優惠用掉喔!
+                  </p>
+                  <div class="btnArea twoBtn">
+                    <div class="btn type2">
+                      <a href="#featured" title="看精選基金"> 看精選基金 <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                    <div class="btn">
+                      <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="帶我去下單"> 帶我去下單 <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="item precautions">
+          <div class="container">
+            <h2 title="活動說明" class="item1-tit">
+              <span>活動說明</span>
+            </h2>
+            <ol class="precautions-list">
+              <li>
+                即日起至2020/2/2(日)止，透過定期定額自由選方式新申購第一季精選基金，不限次數與金額均享手續費0.1%優惠；若於前述日期申購之定期定額自由選契約扣款成功，再得1筆單筆申購第一季精選基金手續費0元優惠，該項優惠統一於2020/2/10前匯入，每人限得一次，取得優惠之使用期限至2020/3/31。
+              </li>
+              <li>
+                2020/2/3(一)~2020/3/1(日)止，參加本公司官網「單筆投資0負擔」網頁活動頁完整輸入各欄位資料完成簽到，即可取得1筆單筆申購第一季精選基金手續費0元優惠資格，透過其他管道無法參加本活動；本優惠每人限取得一次(依活動當時輸入並完成簽到的身分證字號認列)，使用期限至2020/3/31，不限基金與金額。
+              </li>
+              <li>
+                本活動各項優惠限透過國民e帳戶網路交易新申購使用，除適用交易方式須依個別活動規定外，轉申購、既有契約新扣款或AI智能理財專區交易不適用本活動各項優惠；尚未辦理「國民e帳戶」開戶客戶，需於活動期間完成開戶、核印與變更密碼啟用交易權限，方可使用本活動優惠。
+              </li>
+              <li>
+                本季完整活動說明請參考<a :href="latestOffersUrl" target="_blank">最新優惠</a
+                >或依富蘭克林基金理財網公告為準；本公司保留是否接受預約開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動權利。
+              </li>
+            </ol>
+          </div>
+        </section>
+      </article>
+
+      <!-- footer -->
+      <footer-area></footer-area>
+
+      <!-- <div class="topBtn">
+			<a href="#top" title="返回最上面">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div> -->
+
+      <div class="fixedRightBtn-area clearfix">
+        <div class="fixedRightBtn">
+          <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="線上開戶"> 線上開戶 <i class="fas fa-chevron-right"></i> </a>
+        </div>
+        <div class="fixedRightBtn">
+          <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單"> 立即下單 <i class="fas fa-chevron-right"></i> </a>
+        </div>
+      </div>
+      <test-mode @test="test" @line="changeType(1)" :step="step"></test-mode>
+    </div>
+
+    <script src="js/index.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+    <!--
+		示意用script 可刪---------------------------------------------------------------
+	-->
+    <!-- <script>
+      $(function() {
+      //-------------------------------------tab
+      $(".item2-tab").on("click", function() {
+        var n = $(this).index();
+        $(this)
+          .addClass("active")
+          .siblings(".item2-tab")
+          .removeClass("active");
+        $(this)
+          .parent(".item2-tab-area")
+          .siblings(".item2-tabContent-area")
+          .find(".item2-tabContent")
+          .eq(n)
+          .addClass("active")
+          .siblings(".item2-tabContent")
+          .removeClass("active");
+      });
+
+      //-------------------------------------簽到完成
+      $(".finished").hide();
+      $(".notFinished .btn a").on("click", function() {
+        $(this)
+          .parents(".notFinished")
+          .hide()
+          .siblings(".finished")
+          .show();
+      });
+
+      //-------------------------------------切換2階段呈現資訊
+      $("#content").after('<div class="toggleStage"><div>1</div><div>2</div><div>綁LINE是客戶</div></div>');
+      $(".toggleStage > div:eq(0)").on("click", function() {
+        $('[data-stage="stage1"]').show();
+        $('[data-stage="stage2"]').hide();
+      });
+      $(".toggleStage > div:eq(1)").on("click", function() {
+        $(".item2-tabContent").removeAttr("style");
+        $('[data-stage="stage2"]').show();
+        $('[data-stage="stage1"]').hide();
+      });
+      $(".toggleStage > div:eq(2)").on("click", function() {
+        $('[data-stage="stage2"], [data-status="bindMember"]').show();
+        $('.item2-tab-area, [data-stage="stage1"]').hide();
+        $('[data-status="bindMember"]')
+          .siblings(".item2-tabContent")
+          .hide();
+      });
+      });
+    </script> -->
+  </body>
+</html>

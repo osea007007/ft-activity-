@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <!-- <script language="javascript">
+      if (location.hostname == "event.franklin.com.tw") document.location.href = "https://event.franklin.com.tw/activityEnds/event-end.html";
+    </script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#98373b" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="js/manifest.json" crossorigin="use-credentials" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192×192" href="images/192x192.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pikaday.min.css" />
+    <style>
+      .banner .banner-kv,
+      .banner .banner-right {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .banner .banner-right {
+        transition-delay: 0.5s;
+      }
+      .banner.active .banner-kv,
+      .banner.active .banner-right {
+        opacity: 1;
+      }
+    </style>
+    <title>#微型投資術—女生，其實是最會投資的生物 | 富蘭克林 國民的基金</title>
+    <meta property="og:title" content="#微型投資術—女生，其實是最會投資的生物 | 富蘭克林 國民的基金" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1060402337367331" />
+    <meta
+      name="description"
+      content="富蘭克林為迷人的女人們設計的「#微型投資術」，沒有複雜的動作、艱深的理論，讓您在忙碌生活之餘，也能如同貓咪般優雅的投資理財、疼惜自己也寵愛未來。"
+    />
+    <meta
+      property="og:description"
+      content="富蘭克林為迷人的女人們設計的「#微型投資術」，沒有複雜的動作、艱深的理論，讓您在忙碌生活之餘，也能如同貓咪般優雅的投資理財、疼惜自己也寵愛未來。"
+    />
+    <meta property="og:image" content="https://event.franklin.com.tw/womany-cat/images/fb.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://event.franklin.com.tw/womany-cat/index.html" />
+    <script>
+      var images = new Array();
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+        }
+      }
+      preload("images/bannerTattoo-left.png", "images/bannerTattoo-right.png", "images/banner-kv.png");
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/pikaday.min.js"></script>
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <!-- <script src="js/vue.js"></script> -->
+    <script src="js/vue.min.js"></script>
+    <script src="js/vuelidate.min.js"></script>
+    <script src="js/validators.min.js"></script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-586SXP");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+    <div id="content" v-cloak>
+      <!-- ie用的遮罩 -->
+      <div class="ieUseMask" v-if="ieUseMask">
+        <div class="ieUseMask-text">
+          <strong>建議您使用現代化瀏覽器瀏覽</strong><br /><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+          <div class="ieUseMask-dot"></div>
+        </div>
+      </div>
+
+      <div id="top"></div>
+
+      <!-- main -->
+      <article class="main">
+        <section class="banner">
+          <div class="container clearfix">
+            <img src="images/bannerTattoo-left.png" alt="" class="banner-tattoo banner-tattoo-left" />
+            <img src="images/bannerTattoo-right.png" alt="" class="banner-tattoo banner-tattoo-right" />
+            <img src="images/banner-kv.png" alt="#微型投資術" class="banner-kv" />
+            <div class="banner-right">
+              <img src="images/banner-logo.png" alt="" class="banner-right-logo" />
+              <h1 class="banner-right-tit" title="#微型投資術">
+                #微型投資術
+              </h1>
+              <p class="banner-right-stit">
+                —女生，其實是最會投資的生物。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="item introduction">
+          <div class="container clearfix">
+            <img src="images/img-1.png" alt="" class="introduction-tattoo introduction-tattoo-left" />
+            <img src="images/img-2.png" alt="" class="introduction-tattoo introduction-tattoo-right" />
+            <div class="introduction-left">
+              <p>
+                理想的女性啊，就該總是優雅自信、從容自在，生活處處都是我們的伸展台，每個move都散發自信光彩。
+                <br /><br />
+                女人啊，更是天生的投資好手。我們敷臉保養投資美麗外在，我們瑜伽健身投資完美體態，我們閱讀學習投資豐富內在。這樣的我們，即使資產微型，也要投資出一番天地。
+              </p>
+            </div>
+            <div class="introduction-right">
+              <p>
+                富蘭克林為女人迷讀者專屬打造的—「微型投資術」，只要簡單三招，就能讓女人輕鬆打理財務，享受零負擔的理財捷徑。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="item choose">
+          <div class="container">
+            <img src="images/img-3.png" alt="" class="choose-tattoo choose-tattoo-left" />
+            <img src="images/img-4.png" alt="" class="choose-tattoo choose-tattoo-right" />
+            <h2 title="超簡單！微型投資術 招數大公開">
+              超簡單！微型投資術 招數大公開
+            </h2>
+            <p>
+              「微型投資術」從微量投資起步，2,000元起就有機會和全球熱門的產業一起養大自己的小金庫，讓迷人的妳既beautiful更international！
+            </p>
+            <div class="splineBox"></div>
+            <h3 title="招數一：申請「國民e帳戶」線上投資專戶">
+              招數一：申請「國民e帳戶」線上投資專戶
+            </h3>
+            <p>
+              想輕鬆管理微型資產，你一定需要專屬的線上投資帳戶。富蘭克林線上投資帳戶不但管理方便，更少了銀行的管理費用，絕對適合精打細算的微資產一族。新的一年，給自己一個理財挑戰吧！成功申辦「國民e帳戶」，解鎖窮忙人生。
+            </p>
+            <div class="btnArea twoBtn">
+              <div class="btn type2">
+                <a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online" target="_blank" title="申辦國民e帳戶">
+                  申辦國民e帳戶 <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="splineBox"></div>
+            <h3 title="招數二：開始「國民輕鬆扣」啟動微型投資">
+              招數二：開始「國民輕鬆扣」啟動微型投資
+            </h3>
+            <p>
+              不怕在投資茫茫大海迷路，富蘭克林【國民輕鬆扣】三種方案，宜衝刺、宜穩健、宜安心，每月只要2千元起讓投資輕鬆起步！<strong>立刻開始#微型投資吧！從此刻起，充值理想的美好未來。</strong>
+            </p>
+            <div class="choose-item-area">
+              <article class="choose-item">
+                <div class="choose-item-top" id="type1" @click="toggleLightBox('fundGroup1');">
+                  <h4 class="choose-item-top-tit" title="自信女人最愛 積極組合">自信女人最愛<br />積極組合</h4>
+                  <img src="images/women-1.png" alt="自信女人最愛 積極組合" class="choose-item-top-women" />
+                </div>
+                <p>
+                  相信自己眼光、從投資成果肯定自我的自信女性，【衝刺組合】同時精選2檔具有爆發潛力的股票型基金很適合妳！
+                </p>
+                <i class="far fa-plus-square choose-item-btn" @click="toggleLightBox('fundGroup1');"></i>
+              </article>
+              <article class="choose-item">
+                <div class="choose-item-top"id="type2" @click="toggleLightBox('fundGroup2');">
+                  <h4 class="choose-item-top-tit" title="小資女孩首選 安心組合">小資女孩首選<br />安心組合</h4>
+                  <img src="images/women-2.png" alt="小資女孩首選 安心組合" class="choose-item-top-women" />
+                </div>
+                <p>
+                  初入投資、追求資產穩定的妳可考慮小資女孩首選的【安心組合】，它包含2檔能因應市場變化又提供現金流的債券型基金！
+                </p>
+                <i class="far fa-plus-square choose-item-btn" @click="toggleLightBox('fundGroup2');"></i>
+              </article>
+              <article class="choose-item">
+                <div class="choose-item-top" id="type3" @click="toggleLightBox('fundGroup3');">
+                  <h4 class="choose-item-top-tit" title="貼心女生偏愛 穩健組合">貼心女生偏愛<br />穩健組合</h4>
+                  <img src="images/women-3.png" alt="貼心女生偏愛 穩健組合" class="choose-item-top-women" />
+                </div>
+                <p>
+                  貼心的妳知道投資，不只為自己。【穩健組合】包含多類型基金，1檔為自己、1檔為家人，讓全家同時擁有現在的現金流與未來的上漲機會！
+                </p>
+                <i class="far fa-plus-square choose-item-btn" @click="toggleLightBox('fundGroup3');"></i>
+              </article>
+            </div>
+            <div class="btnArea twoBtn">
+              <div class="btn">
+                <a href="https://etrade.franklin.com.tw/Areas/C2019_12_ARSP/SipPlus" target="_blank" title="專屬下單入口">
+                  專屬下單入口 <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="splineBox"></div>
+            <!--
+					<p class="choose-bottomText">
+						投資第一步：擁有「國民e帳戶」
+						<br/>從此，妳只要優雅的登入線上帳戶，即可下單投資、查詢損益與配息等資料。
+					</p>-->
+            <h3 title="招數三：每個月五分鐘，理財漸成日常">
+              招數三：每個月五分鐘，理財漸成日常
+            </h3>
+            <p>
+              一步步讓理財成為日常，零負擔的 #微型投資 就從一個月挑戰一篇理財文章開始！！富蘭克林有各種為您規劃的市場報告，輕鬆訂閱，選擇最無負擔的閱讀頻率，包括日報、週報、月報或季報，立即訂閱按讚並追蹤粉絲團或LINE官方帳號，讓富蘭克林帶您輕鬆掌握投資大小事！
+            </p>
+            <div class="btnArea twoBtn">
+              <div class="btn">
+                <a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="追蹤粉絲團"> 追蹤粉絲團 <i class="fas fa-angle-right"></i> </a>
+              </div>
+              <div class="btn type2">
+                <a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="LINE官方帳號"> LINE官方帳號 <i class="fas fa-angle-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="item fill" v-if="step == 1">
+          <div class="container">
+            <h2 title="領取女人迷好友專屬優惠">
+              領取女人迷好友專屬優惠
+            </h2>
+            <p>
+              現在改變，才有機會。留下資料即可領取富蘭克林專為每位迷人女性準備的<strong style="border-bottom: solid 1px;">定期定額自由選0.2%手續費優惠禮</strong
+              >，可於富蘭克林<a
+                href="https://etrade.franklin.com.tw/Areas/C2019_12_ARSP/SipPlus"
+                target="_blank"
+                title="國民e帳戶"
+                style="border-bottom: solid 1px; color: #203074;"
+                >國民e帳戶</a
+              >基金投資平台使用，讓妳投資無憂、理財無慮！
+            </p>
+            <div class="discount">
+              <div class="title">
+                <h3>有了女人迷好友專屬優惠</h3>
+                <!--<p>假設你投資1,000元手續費為15~30元，現在領取0.2%優惠券，手續費降為2元!</p>-->
+              </div>
+              <img src="images/funny.png" class="comic" />
+            </div>
+            <div class="formArea half">
+              <!-- 
+							有錯誤時[.formArea-item]加[.error]
+						 -->
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.BF_NAME.$error }">
+                <div class="formArea-item-tit">
+                  <label for="name">
+                    姓名：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="text" name="" id="name" v-model="form.BF_NAME" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的姓名
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.CELL_PHONE.$error }">
+                <div class="formArea-item-tit">
+                  <label for="phone">
+                    手機：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="tel" name="" id="phone" v-model="form.CELL_PHONE" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的手機
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.EMAIL.$error }">
+                <div class="formArea-item-tit">
+                  <label for="email">
+                    Email：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="email" name="" id="email" v-model="form.EMAIL" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的Email
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.ID_NO.$error }">
+                <div class="formArea-item-tit">
+                  <label for="id">
+                    身分證字號：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="text" name="" id="id" v-model="login_id_no" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的身分證字號
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.AGREE.$error }">
+                <div class="formArea-item-tit">
+                  <label for="id">
+                    &nbsp;
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <label class="checkbox">
+                    <input type="checkbox" name="" id="agree" v-model="form.AGREE" />
+                    <span>
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </label>
+                  <label for="agree">
+                    我已閱讀並同意接受<a href="https://www.franklin.com.tw/Privacy" target="_blank" class="ruleLink">「富蘭克林證券投顧個資告知義務」</a>
+                  </label>
+                </div>
+                <div class="formArea-item-error">
+                  請勾選同意
+                </div>
+              </div>
+            </div>
+            <!-- <ul class="fill-notice">
+						<li>
+							若該時段已額滿，可點選檢視其他可預約日期或選擇當日候補，顧問將會盡快與您聯繫
+						</li>
+						<li>
+							每個時段最多可預約8組
+						</li>
+					</ul> -->
+
+            <div class="btnArea">
+              <div class="btn">
+                <a href="" title="送出" @click.prevent="sendForm"> 送出 <i class="fas fa-angle-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="item fill" v-else>
+          <div class="container">
+            <h2 title="預約理財顧問專屬服務">
+              預約理財顧問專屬服務
+            </h2>
+            <p>
+              帶財女人不是斤斤計較而是細細思量，想針對妳的個人財務良深建議，立即預約理財顧問了解詳細方案內容，帶財不用瞎子摸象。若您已經是富蘭克林會員，歡迎撥打0800-885-888(週一至週五9:00~18:00)您既有之專屬理財顧問會為您服務喔!
+            </p>
+            <div class="formArea">
+              <!-- 
+							有錯誤時[.formArea-item]加[.error]
+						 -->
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.BF_NAME.$error }">
+                <div class="formArea-item-tit">
+                  <label for="name">
+                    姓名：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="text" name="" id="name" v-model="form.BF_NAME" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的姓名
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.CELL_PHONE.$error }">
+                <div class="formArea-item-tit">
+                  <label for="phone">
+                    手機：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="tel" name="" id="phone" v-model="form.CELL_PHONE" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的手機
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.EMAIL.$error }">
+                <div class="formArea-item-tit">
+                  <label for="email">
+                    Email：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="email" name="" id="email" v-model="form.EMAIL" />
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的Email
+                </div>
+              </div>
+
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.selectDate.$error }">
+                <div class="formArea-item-tit">
+                  <label for="id">
+                    預約日期：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <input type="text" id="datepicker" v-show="false" />
+                  <div class="datepicker"></div>
+                  <!--
+								<select id="id" name="">
+									<option value="請選擇">請選擇</option>
+									<option value="2019">2019</option>
+									<option value="2020">2020</option>
+								</select>
+								年
+								<select id="id" name="">
+									<option value="請選擇">請選擇</option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+								</select>
+								月
+								<select id="id" name="">
+									<option value="請選擇">請選擇</option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+								</select>
+								日-->
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的預約日期
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.selectTime.$error }">
+                <div class="formArea-item-tit">
+                  <label for="id">
+                    預約時段：
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <select name="" id="" v-model.number="form.selectTime">
+                    <option value="" disabled>
+                      請選擇
+                    </option>
+                    <option value="1" :disabled="setTime.IsMorningFull && form.selectDate != ''">
+                      上午
+                    </option>
+                    <option value="2" :disabled="setTime.IsAfternnonFull && form.selectDate != ''">
+                      下午
+                    </option>
+                  </select>
+                </div>
+                <div class="formArea-item-error">
+                  請確認您的預約時段
+                </div>
+              </div>
+              <div class="formArea-item clearfix" :class="{ 'error' :　$v.form.AGREE.$error }">
+                <div class="formArea-item-tit">
+                  <label for="id">
+                    &nbsp;
+                  </label>
+                </div>
+                <div class="formArea-item-input">
+                  <label class="checkbox">
+                    <input type="checkbox" name="" id="agree" v-model="form.AGREE" />
+                    <span>
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </label>
+                  <label for="agree">
+                    我已閱讀並同意接受<a href="https://www.franklin.com.tw/Privacy" target="_blank" class="ruleLink">「富蘭克林證券投顧個資告知義務」</a>
+                  </label>
+                </div>
+                <div class="formArea-item-error">
+                  請勾選同意
+                </div>
+              </div>
+              <ul class="fill-notice">
+                <li>
+                  若該時段已額滿，可點選檢視其他可預約日期或選擇當日候補，顧問將會盡快與您聯繫
+                </li>
+                <li>
+                  每個時段最多可預約8組
+                </li>
+              </ul>
+            </div>
+
+            <div class="btnArea">
+              <div class="btn">
+                <a href="" title="送出" @click.prevent="sendReserve"> 送出 <i class="fas fa-angle-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="item notice">
+          <div class="container">
+            <h2 title="注意事項">
+              注意事項
+            </h2>
+            <h3>國民輕鬆扣</h3>
+            <ol class="notice-list">
+              <li>
+                本方案須從本活動頁提供之專屬下單頁以台幣申購單筆(最低1萬元)或定期定額自由選組合(每次最低2千元，1檔基金1千元)，唯須以新申購為主，轉申購、既有契約新扣款或AI智能理財專區交易不適用此申購門檻與優惠。
+              </li>
+              <li>
+                本方案下單優惠期間自2020/1/2至2020/3/31止，適用基金依下單專頁列示或富蘭克林基金理財網公告為準。
+              </li>
+              <li>
+                透過「國民輕鬆扣」下單定期定額自由選若後續進行變更，其原投資門檻(1檔1千元)不變；定期定額自由選組合中，配息型基金的配息方式均預設為「轉入再投資(配單位數)」，若需修改，需待契約生效後次一營業日登入富蘭克林國民e帳戶點選「定期定額自由選變更」以各契約分別進行變更。
+              </li>
+            </ol>
+            <h3>女人迷好友專屬優惠</h3>
+            <ol class="notice-list">
+              <li>
+                自2020/1/2至2020/2/2止，於本活動頁完整輸入各欄位資料完成簽到，即可取得1筆定期定額自由選0.2%申購手續費優惠，透過其他管道無法參加本活動；本活動優惠每人限取得一次(依活動當時輸入並完成簽到的身分證字號認列)，使用期限至2020/3/31，不限基金。
+              </li>
+              <li>
+                本活動取得之優惠限透過富蘭克林國民e帳戶網路交易新申購適用，單筆申購或轉申購、既有契約新扣款或AI智能理財專區交易不適用此優惠；尚未辦理富蘭克林國民e帳戶開戶客戶，需於活動期間完成開戶、核印與變更密碼啟用交易權限，方可使用本活動優惠。
+              </li>
+            </ol>
+            <h3>本活動說明</h3>
+            <ol class="notice-list">
+              <li>富蘭克林證券投顧保留是否接受預約開戶，以及取消、中止、修改活動內容、規則、時間或暫停所有活動權利。</li>
+            </ol>
+          </div>
+        </section>
+      </article>
+
+      <!-- footer -->
+      <footer-area></footer-area>
+
+      <!-- -------------------------------------燈箱區------------------------------------- -->
+      <light-box ref="fundGroup1" :can-close="true">
+        <slot slot="infoArea">
+          <div class="fundGroup-head">
+            <img src="images/img-3.png" alt="" class="fundGroup-head-tattoo" />
+            <div class="fundGroup-head-tit">
+              衝刺組合
+            </div>
+            <img src="images/women-1.png" alt="" class="fundGroup-head-img" />
+          </div>
+          <div class="fundGroup-list-area">
+            <div class="fundGroup-list">
+              <a href="https://event.franklin.com.tw/C2017_06_Q3_1009/index.html" target="_blank" title="亞洲小型企業基金">
+                亞洲小型企業基金
+              </a>
+            </div>
+            <div class="fundGroup-list-plus">
+              <i class="fas fa-plus-circle"></i>
+            </div>
+            <div class="fundGroup-list">
+              <a href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html" target="_blank" title="美國機會基金">
+                美國機會基金
+              </a>
+            </div>
+          </div>
+        </slot>
+      </light-box>
+
+      <light-box ref="fundGroup2" :can-close="true">
+        <slot slot="infoArea">
+          <div class="fundGroup-head">
+            <img src="images/img-3.png" alt="" class="fundGroup-head-tattoo" />
+            <div class="fundGroup-head-tit">
+              安心組合
+            </div>
+            <img src="images/women-2.png" alt="" class="fundGroup-head-img" />
+          </div>
+          <div class="fundGroup-list-area">
+            <div class="fundGroup-list">
+              <a href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html" target="_blank" title="全球債券基金 (本基金之配息來源可能為本金)">
+                全球債券基金<span class="focus">(本基金之配息來源可能為本金)</span>
+              </a>
+            </div>
+            <div class="fundGroup-list-plus">
+              <i class="fas fa-plus-circle"></i>
+            </div>
+            <div class="fundGroup-list">
+              <a
+                href="https://event.franklin.com.tw/C2018_10_fund/0427.html"
+                target="_blank"
+                title="精選收益基金 (本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+              >
+                精選收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+              </a>
+            </div>
+          </div>
+        </slot>
+      </light-box>
+
+      <light-box ref="fundGroup3" :can-close="true">
+        <slot slot="infoArea">
+          <div class="fundGroup-head">
+            <img src="images/img-3.png" alt="" class="fundGroup-head-tattoo" />
+            <div class="fundGroup-head-tit">
+              穩健組合
+            </div>
+            <img src="images/women-3.png" alt="" class="fundGroup-head-img" />
+          </div>
+          <div class="fundGroup-list-area">
+            <div class="fundGroup-list">
+              <a href="https://www.franklin.com.tw/Fund/BasicInformation/2108" target="_blank" title="全球氣候變遷基金">
+                全球氣候變遷基金
+              </a>
+            </div>
+            <div class="fundGroup-list-plus">
+              <i class="fas fa-plus-circle"></i>
+            </div>
+            <div class="fundGroup-list">
+              <a
+                href="https://event.franklin.com.tw/C2017_08_Q3_0839/index.html"
+                target="_blank"
+                title="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+              >
+                穩定月收益基金<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+              </a>
+            </div>
+          </div>
+        </slot>
+      </light-box>
+
+      <light-box ref="complete" :can-close="true">
+        <slot slot="infoArea">
+          <div class="completeInfo">
+            <div class="tit-type2">
+              成功！
+            </div>
+            <p>
+              恭喜您獲得定期定額0.2%手續費優惠禮，別忘了於2019/4/30前完成開戶並使用完畢唷。
+            </p>
+            <div class="btnArea twoBtn">
+              <div class="btn fixedWidth type2">
+                <a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online" target="_blank" title="網路預約寄件開戶">
+                  網路預約寄件開戶 <i class="fas fa-angle-right"></i>
+                </a>
+                <div class="btn-remark">
+                  多數銀行皆可配合
+                </div>
+              </div>
+              <div class="btn fixedWidth">
+                <a href="https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated/" target="_blank" title="登入網銀線上開戶">
+                  登入網銀線上開戶 <i class="fas fa-angle-right"></i>
+                </a>
+                <div class="btn-remark">
+                  第一、兆豐、華南、元大台幣網銀搶先體驗開戶作業最快1個工作天！
+                </div>
+              </div>
+            </div>
+          </div>
+        </slot>
+      </light-box>
+      <test-mode @test="test" :step="step"></test-mode>
+    </div>
+
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+		<script src="js/animation.gsap.js"></script> -->
+
+    <script src="js/lineEvent.min.js"></script>
+    <script src="js/valid.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "lang": "zh-Hant-TW",
+    "short_name": "富蘭克林直播活動限定 手續費0元優惠簽到領取處",
+    "name": "富蘭克林直播活動限定 手續費0元優惠簽到領取處",
+    "icons": [
+        {
+            "src": "../images/192x192.png",
+            "type": "image/png",
+            "sizes": "300x300"
+        },
+        {
+            "src": "../images/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://event.franklin.com.tw/live/index.html",
+    "background_color": "#114790",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000",
+    "orientation": "portrait",
+    "description": "市場震盪期間，投資也要加裝防震裝備，超前部署富蘭克林抗震三傑『全、伊、美』，建構三道防線，讓資產防疫也防震！"
+}
