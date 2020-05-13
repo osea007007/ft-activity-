@@ -117,20 +117,22 @@ Vue.component('footer-area', {
 });
 
 Vue.component('more-btns', {
-    template: `<jf-is-app-show class="cta-area twoCta wow fadeInUp">
-                        <jf-go-to-fund class="cta" fundId="0799">
-                            <a href="javascript:void(0);" target="_blank" title="立即擁有">
-                                <strong>立即擁有</strong>
-                                <i class="fas fa-angle-right"></i>
-                            </a>
-                        </jf-go-to-fund>
-                        <jf-go-to-fund class="cta redCta" fundId="0799">
-                            <a href="javascript:void(0);" target="_blank" title="了解更多">
-                                <strong>了解更多</strong>
-                                <i class="fas fa-angle-right"></i>
-                            </a>
-                        </jf-go-to-fund>
-                    </jf-is-app-show>`
+    template: `
+                <div class="cta-area twoCta wow fadeInUp">
+                    <jf-go-to-fund class="cta" fundId="0799">
+                        <a href="javascript:void(0);" target="_blank" title="立即擁有">
+                            <strong>立即擁有</strong>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </jf-go-to-fund>
+                    <jf-go-to-fund class="cta redCta" fundId="0799">
+                        <a href="javascript:void(0);" target="_blank" title="了解更多">
+                            <strong>了解更多</strong>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </jf-go-to-fund>
+                </div>
+                `
 })
 
 var content = new Vue({

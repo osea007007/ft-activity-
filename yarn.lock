@@ -1116,10 +1116,10 @@ sice-vue-component@^0.1.1:
     stylus-loader "^3.0.2"
     vue "^2.6.11"
 
-sice-vue-component@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/sice-vue-component/-/sice-vue-component-0.3.1.tgz#ec241d88318bf9b7ab30a53c65398b79b4e5d17f"
-  integrity sha512-X3WhdtSFu886Q0EMMXTKRVCZX4iCBH7UW6e1T4MHlfQc1mDz95t57ofzmyR4dlsMWMtBz9MDbPwIMNMZBeGh7A==
+sice-vue-component@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/sice-vue-component/-/sice-vue-component-0.3.2.tgz#862b1767a13e00432d66a60027303f601317f5f0"
+  integrity sha512-yXiKcGi2SITJlbAGVM47TLnvzLE/FerKWepUazO1TJNh05UvcUFA+55bfSv4au8NReCWbdhgZwhEK+MlELyl5g==
   dependencies:
     core-js "^3.6.4"
     node-sass "^4.13.1"
