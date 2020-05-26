@@ -86,8 +86,8 @@ Vue.component('footer-warning', {
                         <li> <span class="footer-warning-focus">由於高收益債券之信用評等未達投資等級或未經信用評等，且對利率變動的敏感度甚高，故本基金可能會因利率上升、市場流動性下降，或債券發行機構違約不支付本金、利息或破產而蒙受虧損。本基金不適合無法承擔相關風險之投資人。基金經理公司以往之經理績效不保證基金之最低投資收益；基金經理公司除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。本基金較適合投資屬性中風險承受度較高之投資人，投資人投資高收益債券為訴求基金不宜占其投資組合過高之比重，投資人應審慎評估。</span></li>
                         <li> 由於新興市場基金之主要投資風險除包含一般股票型基金之投資組合跌價與匯率風險外，與成熟市場相比須承受較高之政治與金融管理風險，而因市值及制度性因素，流動性風險也相對較高，新興市場投資組合波動性普遍高於成熟市場。基金投資均涉及風險且不負任何抵抗投資虧損之擔保。投資風險之詳細資料請參閱基金公開說明書。</li>
                         <li> <span class="footer-warning-focus">境外基金投資大陸地區證券市場之有價證券以掛牌上市有價證券為限，且投資前述有價證券總金額不得超過本基金淨資產價值之20%，另投資香港地區紅籌股及H股並無限制。本基金並非完全投資於大陸地區之有價證券，投資人仍須留意中國市場特定政治、經濟與市場之投資風險。</span></li>
-                        <li> 基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<jf-web-link href="https://www.Franklin.com.tw" target="_blank">https://www.Franklin.com.tw</jf-web-link>)查閱。</li>
-                        <li> 投資基金所應承擔之相關風險及應負擔之費用(含分銷費用)已揭露於基金公開說明書及投資人須知中，投資人可至境外基金資訊觀測站(<jf-web-link href="https://www.fundclear.com.tw/" target="_blank">https://www.fundclear.com.tw/</jf-web-link>)下載，或逕向本公司網站(<jf-web-link href="https://www.franklin.com.tw/" target="_blank">https://www.franklin.com.tw/</jf-web-link>)查閱。
+                        <li> 基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<sice-web-link href="https://www.Franklin.com.tw" target="_blank">https://www.Franklin.com.tw</sice-web-link>)查閱。</li>
+                        <li> 投資基金所應承擔之相關風險及應負擔之費用(含分銷費用)已揭露於基金公開說明書及投資人須知中，投資人可至境外基金資訊觀測站(<sice-web-link href="https://www.fundclear.com.tw/" target="_blank">https://www.fundclear.com.tw/</sice-web-link>)下載，或逕向本公司網站(<sice-web-link href="https://www.franklin.com.tw/" target="_blank">https://www.franklin.com.tw/</sice-web-link>)查閱。
                         <div class="footer-warning-remark">【富蘭克林證券投顧獨立經營管理】</div></li>
                     </ul>
                 </div>`,
@@ -115,25 +115,6 @@ Vue.component('footer-area', {
                     </div>
                 </footer>`,
 });
-
-Vue.component('more-btns', {
-    template: `
-                <div class="cta-area twoCta wow fadeInUp">
-                    <jf-go-to-fund class="cta" fundId="0799">
-                        <a href="javascript:void(0);" target="_blank" title="立即擁有">
-                            <strong>立即擁有</strong>
-                            <i class="fas fa-angle-right"></i>
-                        </a>
-                    </jf-go-to-fund>
-                    <jf-go-to-fund class="cta redCta" fundId="0799">
-                        <a href="javascript:void(0);" target="_blank" title="了解更多">
-                            <strong>了解更多</strong>
-                            <i class="fas fa-angle-right"></i>
-                        </a>
-                    </jf-go-to-fund>
-                </div>
-                `
-})
 
 var content = new Vue({
     el: '#content',
