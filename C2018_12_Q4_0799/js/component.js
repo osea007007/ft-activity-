@@ -10,7 +10,7 @@ Vue.component('fixed-train', {
 });
 
 // ========= 精選基金 ==============================================================================================================================
-Vue.component('prodList', {
+Vue.component('prod-list', {
     data: function () {
         return {
             prodListData: commonProdList
@@ -114,6 +114,22 @@ Vue.component('footer-area', {
                         <footer-warning></footer-warning>
                     </div>
                 </footer>`,
+});
+
+Vue.component('mock-sice-provider', {
+    data: function () {
+        return {
+            data: {
+                // 判斷是否為app
+                isApp: true,
+                // 判斷app是否登錄
+                isLogin: true
+            }
+        }
+    },
+    template: `<sice-provider :mock-data="data">
+                    <slot></slot>
+                </sice-provider> `,
 });
 
 var content = new Vue({
