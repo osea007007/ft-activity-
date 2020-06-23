@@ -116,21 +116,138 @@ Vue.component('footer-area', {
                 </footer>`,
 });
 
-Vue.component('mock-sice-provider', {
+
+
+Vue.component('link-test', {
     data: function () {
         return {
-            data: {
-                // 判斷是否為app
-                isApp: true,
-                // 判斷app是否登錄
-                isLogin: true
-            }
+            list: [
+                {
+                    // 官網首頁
+                    path: 'javascript: void(0)',
+                },
+                {
+                    // 官網首頁
+                    path: 'https://docs.google.com/spreadsheets/d/13dUalUR4QGZqsFQaGah1E8AlGGQfH_e_IyTEhcSoc7w/edit#gid=0',
+                },
+                {
+                    // 官網首頁
+                    path: 'https://www.franklin.com.tw',
+                },
+                {
+                    // 開戶
+                    path: 'https://etrade.franklin.com.tw/Open/Entrance',
+                },
+                {
+                    // 寄件開戶
+                    path: 'https://etrade.franklin.com.tw/Open/NewMember?so=Online&',
+                },
+                {
+                    // 網銀開戶
+                    path: 'https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated?',
+                },
+                {
+                    // 下單（進登入頁）
+                    path: 'https://etrade.franklin.com.tw/Home/Login',
+                },
+                {
+                    // 下單(先登入/指定基金下單)(例：美國機會基金)
+                    path: 'https://etrade.franklin.com.tw/Home/Login?ReturnUrl=/Trade/LumpSum/ShowForm/0805',
+                },
+                {
+                    // 下單(先登入/指定基金下單)(例：美國機會基金)
+                    path: 'https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0805'
+                },
+                {
+                    // 下單
+                    path: 'https://etrade.franklin.com.tw/Trade/LumpSum',
+                },
+                {
+                    // FB粉絲團
+                    path: 'https://www.facebook.com/franklin.taiwan/',
+                },
+                {
+                    // Line官方賬號
+                    path: 'http://line.naver.jp/ti/p/%40franklin',
+                },
+                {
+                    // YOUTUBE
+                    path: 'https://www.youtube.com/user/franklin0800885888',
+                },
+                {
+                    path: 'https://www.fundclear.com.tw/',
+                },
+                {
+                    // 智能客服
+                    path: 'https://m.me/franklin.taiwan/',
+                },
+                {
+                    path: 'https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage',
+                },
+                {
+                    // 會員權益
+                    path: 'https://www.franklin.com.tw/Member/Index',
+                },
+                {
+                    // 基金介紹頁(官網)
+                    path: 'https://www.franklin.com.tw/Fund/BasicInformation/0805',
+                },
+                {
+                    // 官網常見問題
+                    path: 'https://www.franklin.com.tw/ReservationAccount/ECFAQ',
+                },
+                {
+                    // 紅利點數問與答
+                    path: 'https://www.franklin.com.tw/ReservationAccount/ECFAQ/DivPoint',
+                },
+                {
+                    // 個人資料告知義務內容
+                    path: 'https://www.franklin.com.tw/Privacy',
+                },
+            ]
         }
     },
-    template: `<sice-provider :mock-data="data">
-                    <slot></slot>
-                </sice-provider> `,
-});
+    methods: {
+        test: function () {
+            console.log('123')
+        }
+    },
+    template: ` <ol>
+                    <li v-for="item in list">
+                        <a :href="item.path"  v-bind:key="item.id" v-on:click="test" target="_blank">
+                        <div><h5>{{ item.path }}</h5><div>
+                        </a>
+                    </li>
+                </ol>`,
+})
+
+Vue.component('test-url', {
+    data: function () {
+        return {
+            list: a = [
+                'twsice://fundDetail?fundId=0799',
+                'twsice://webFundDetail?fundId=0799',
+                'twsice://fundList',
+                'twsice://login',
+                'twsice://memberCenter',
+                'twsice://bonus',
+                'twsice://mineCenter',
+            ]
+        }
+    },
+    methods: {
+        test: function () {
+            console.log('123')
+        }
+    },
+    template: ` <ol>
+                    <li v-for="item in list">
+                        <a :href="item"  v-bind:key="item" v-on:click="test">
+                        {{ item }}
+                        </a>
+                    </li>
+                </ol>`,
+})
 
 var content = new Vue({
     el: '#content',
