@@ -1,79 +1,108 @@
 window.onload = function () {
     let regxList = [
         {
-            regx: '^https://www.franklin.com.tw$',
-            path: ''
+            regx: '^https://www.franklin.com.tw\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Open/Entrance$',
-            path: 'twsice://login'
-
+            regx: '^https://etrade.franklin.com.tw/Open/Entrance\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://login';
+            }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Open/NewMember\\?so=Online&$',
-            path: 'twsice://login'
+            regx: '^https://etrade.franklin.com.tw/Open/NewMember\\?so=Online&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://login';
+            }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated\\?$',
-            path: 'twsice://login'
+            regx: '^https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://login';
+            }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Home/Login$',
-            path: 'twsice://fundList'
+            regx: '^https://etrade.franklin.com.tw/Home/Login\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://fundList';
+            }
         },
         {
-            regx: createRegExp('^https://etrade.franklin.com.tw/Home/Login\\?ReturnUrl=/Trade/LumpSum/ShowForm/(\\d{4})$'),
+            regx: createRegExp('^https://etrade.franklin.com.tw/Home/Login\\?ReturnUrl=/Trade/LumpSum/ShowForm/(\\d{4})&?(_ga=[\\d.-])?'),
             path: function (arguments) {
                 let fundId = arguments[1];
                 return 'twsice://fundDetail?fundId=' + fundId;
             }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Trade/LumpSum$',
-            path: 'twsice://fundList'
+            regx: '^https://etrade.franklin.com.tw/Trade/LumpSum\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://fundList';
+            }
         },
         {
-            regx: '^https://www.facebook.com/franklin.taiwan/$',
-            path: 'twsice://facebookHome'
+            regx: '^https://www.facebook.com/franklin.taiwan/\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://facebookHome';
+            }
         },
         {
-            regx: '^http://line.naver.jp/ti/p/@franklin$',
-            path: 'twsice://lineHome'
+            regx: '^http://line.naver.jp/ti/p/@franklin\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://lineHome';
+            }
         },
         {
-            regx: '^https://www.youtube.com/user/franklin0800885888$',
-            path: 'twsice://youtubeHome'
+            regx: '^https://www.youtube.com/user/franklin0800885888\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://youtubeHome';
+            }
         },
         {
-            regx: '^https://m.me/franklin.taiwan/$',
-            path: 'twsice://onlineService'
+            regx: '^https://m.me/franklin.taiwan/\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://onlineService';
+            }
         },
         {
-            regx: '^https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage$',
-            path: ''
+            regx: '^https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
         },
         {
-            regx: '^https://www.franklin.com.tw/Member/Index$',
-            path: 'twsice://memberCenter'
+            regx: '^https://www.franklin.com.tw/Member/Index\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://memberCenter';
+            }
         },
         {
-            regx: '^https://www.franklin.com.tw/Fund/BasicInformation/(\\d{4})$',
+            regx: '^https://www.franklin.com.tw/Fund/BasicInformation/(\\d{4})\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 let fundId = arguments[1];
                 return 'twsice://fundDetail?fundId=' + fundId;
             }
         },
         {
-            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ$',
-            path: ''
+            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
         },
         {
-            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ/DivPoint$',
-            path: ''
+            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ/DivPoint\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
         },
         {
-            regx: '^https://www.franklin.com.tw/Privacy$',
-            path: 'twsice://mineCenter'
+            regx: '^https://www.franklin.com.tw/Privacy\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://mineCenter';
+            }
         },
     ];
     function createRegExp(str, a) {
@@ -82,7 +111,9 @@ window.onload = function () {
     function getHref(href) {
         for (let i = 0; i < regxList.length; i += 1) {
             const { regx, path } = regxList[i];
+
             const arguments = href.match(regx);
+            // console.log(href)
             if (arguments) {
                 if (arguments.length > 1) {
                     return path(arguments)
@@ -97,17 +128,17 @@ window.onload = function () {
         if (isApp) {
             const dom = $(e.currentTarget);
             const href = dom.attr('href');
-            const test = dom.attr('test');
+            const applink = dom.attr('applink');
             if (href.indexOf('https://') !== -1) {
                 const url = unescape(href);
                 const link = getHref(url);
                 if (link !== url) {
                     dom.attr('href', 'javascript: void(0)');
-                    dom.attr('test', href);
+                    dom.attr('applink', href);
                 }
                 window.location.href = link;
-            } else if (href === 'javascript: void(0)' && test) {
-                const url = unescape(test);
+            } else if (href === 'javascript: void(0)' && applink) {
+                const url = unescape(applink);
                 const link = getHref(url);
                 window.location.href = link;
             }
