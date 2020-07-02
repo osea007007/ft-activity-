@@ -1,5 +1,12 @@
-window.onload = function () {
+$(window).load(function () {
     let regxList = [
+        {
+            regx: '^https://www.franklin.com.tw/Mobile/Fund/FundInfo\\?idNo=([\\da-zA-Z]*)&token=([\\da-zA-Z]*)&fundGuid=(\\d{4})&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                let fundId = arguments[3];
+                return 'twsice://fundDetail?fundId=' + fundId;
+            }
+        },
         {
             regx: '^https://www.franklin.com.tw\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
@@ -104,6 +111,7 @@ window.onload = function () {
                 return 'twsice://mineCenter';
             }
         },
+
     ];
     function createRegExp(str, a) {
         return new RegExp(str)
@@ -111,9 +119,7 @@ window.onload = function () {
     function getHref(href) {
         for (let i = 0; i < regxList.length; i += 1) {
             const { regx, path } = regxList[i];
-
             const arguments = href.match(regx);
-            // console.log(href)
             if (arguments) {
                 if (arguments.length > 1) {
                     return path(arguments)
@@ -144,4 +150,4 @@ window.onload = function () {
             }
         }
     })
-}
+});
