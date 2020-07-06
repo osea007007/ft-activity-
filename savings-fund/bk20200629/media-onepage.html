@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#003680" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v3.7.2.css" />
+    <link rel="stylesheet" href="css/style.css?v=20200610" />
+
+    <title>存基金 好薪安 解決你的理財痛點｜富蘭克林</title>
+    <meta property="og:title" content="存基金 好薪安  解決你的理財痛點｜富蘭克林" />
+    <meta name="twitter:title" content="存基金 好薪安  解決你的理財痛點｜富蘭克林" />
+
+    <meta name="description" content="富蘭克林證券投顧推出【存基金 好薪安】方案，解決3大投資痛點，預約專案再領基金投資0手續費優惠！" />
+    <meta property="og:description" content="富蘭克林證券投顧推出【存基金 好薪安】方案，解決3大投資痛點，預約專案再領基金投資0手續費優惠！" />
+    <meta name="twitter:description" content="富蘭克林證券投顧推出【存基金 好薪安】方案，解決3大投資痛點，預約專案再領基金投資0手續費優惠！" />
+
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1060402337367331" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://event.franklin.com.tw/savings-fund/images/fb.jpg" />
+    <meta name="twitter:image" content="https://event.franklin.com.tw/savings-fund/images/fb.jpg" />
+    <meta name="twitter:card" content="https://event.franklin.com.tw/savings-fund/images/fb.jpg" />
+
+    <meta property="og:url" content="https://event.franklin.com.tw/savings-fund/media-onepage.html" />
+    <meta name="twitter:site" content="@franklin_tw" />
+
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/md5.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+    <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+    <script src="js/vue-scrollto.min.js"></script>
+    <script src="js/vuelidate.min.js"></script>
+    <script src="js/validators.min.js"></script>
+
+    <style>
+      .btnArea .disabled {
+        cursor: not-allowed;
+        background: #d2d2d2;
+        color: #9c9393;
+      }
+
+      .btnArea .disabled:hover {
+        box-shadow: none;
+      }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-586SXP");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+    <div id="content" v-cloak>
+      <!-- 2020-06-02 Jeffery 增加part2判斷 -->
+      <cta-ad :is-part2="isPart2" class="mobileShow"></cta-ad>
+
+      <div id="top"></div>
+
+      <header class="mobileHeader">
+        <div class="container clearfix">
+          <div class="mobileHeader-logo">
+            <a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+              <img src="https://event.franklin.com.tw/commonResources/images/logo2019.svg" alt="富蘭克林 國民的基金" />
+            </a>
+          </div>
+          <!--
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div> -->
+        </div>
+      </header>
+
+      <!-- header -->
+      <header class="header temp">
+        <div class="container clearfix">
+          <div class="logo">
+            <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+              <picture>
+                <source media="(max-width: 991px)" srcset="https://event.franklin.com.tw/commonResources/images/logo2019.svg" />
+                <img src="https://event.franklin.com.tw/commonResources/images/header-logo.png" alt="富蘭克林‧國民的基金" />
+              </picture>
+              <div class="logo-text">
+                富蘭克林‧國民的基金
+              </div>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- main -->
+      <article class="main">
+        <div class="kvarea">
+          <div class="container">
+            <h1>解決投資痛點，「存基金」颳起旋風！</h1>
+          </div>
+        </div>
+
+        <section class="item news">
+          <div class="container wow fadeInUp">
+            <slick
+              ref="slick"
+              :options="slickOptions"
+              class="news-slick"
+              @afterChange="handleAfterChange"
+              @beforeChange="handleBeforeChange"
+              @breakpoint="handleBreakpoint"
+              @destroy="handleDestroy"
+              @edge="handleEdge"
+              @init="handleInit"
+              @reInit="handleReInit"
+              @setPosition="handleSetPosition"
+              @swipe="handleSwipe"
+              @lazyLoaded="handleLazyLoaded"
+              @lazyLoadError="handleLazeLoadError"
+            >
+              <div v-for="item in newsContent1">
+                <div class="news-head" v-if="false">
+                  <picture>
+                    <source media="(max-width: 991px)" :srcset="item.logo_svg" />
+                    <img :src="item.logo_png" alt="存基金 好薪安" class="news-logo" />
+                  </picture>
+                  <div class="news-info">
+                    <!-- 2020/06/03<br/> -->
+                    {{item.name}}
+                  </div>
+                </div>
+                <div class="news-content">
+                  <i class="fas fa-quote-left"></i>
+                  <!-- 理財的痛點與投資的距離 -->
+                  <span v-html="item.text"></span>
+                  <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="text-center">
+                  - {{item.name}} -
+                </div>
+              </div>
+            </slick>
+          </div>
+        </section>
+
+
+        <section class="item bother">
+          <div class="bother-bg"></div>
+          <div class="container">
+            <h2 class="tit-type1 wow fadeInUp" title="你還在存股？「存基金」成為穩健投資首選">
+              你還在存股？「存基金」成為穩健投資首選
+            </h2>
+            <div class="leftSide">
+              <img src="images/chart-9.svg" alt="人機協作的存基金產品設計" class="chart-img" />
+            </div>
+            <div class="rightSide">
+              <p>
+                「用錯誤的方式使用正確的工具，往往會導致悲慘的結果。」近年來很多人用投機的方式「玩基金」，短線操作頻繁、不斷追高殺低，2020上半年市場極不穩定，讓許多人不禁思考有沒有更穩定、更不燒腦的投資方式？
+              </p>
+              <p>
+                也因此富蘭克林倡導的「存基金」開始蔚為風潮，透過人機協作的機制，國人可以在網路上一指下單，小額即可輕鬆存基金，面對市場變化，國民理財機器人也會即時提出資產調整建議，過程中更有專業的顧問團隊在線服務，讓您投資路上再也不孤單。
+              </p>
+            </div>
+
+            <div></div>
+          </div>
+        </section>
+
+        <div id="part2"></div>
+        <div class="part2">
+          <section class="item" v-if="!isDone">
+            <div class="container">
+              <h2 class="tit-type1 wow fadeInUp" title="立馬跟風！領取「存基金」免手續費優惠">
+                立馬跟風！領取「存基金」免手續費優惠
+              </h2>
+              <p class="text-center">
+                只要在6月30日前留下資料預約富蘭克林「存基金 好薪安」專案，即可獲得終身0手續費，隨時隨地透過您的「國民e帳戶」輕鬆下單存基金。
+              </p>
+
+              <!-- 一般狀態 start -->
+              <div class="formArea wow fadeInUp" v-if="config.isBinded != 1">
+                <!-- 有錯誤時[.formArea-item]加[.error] -->
+                <div class="formArea-item" :class="{ 'error' :　loginType == 2 && $v.form.ID_NO.$error }">
+                  <div class="formArea-item-tit">
+                    <label for="id">
+                      身份證字號
+                    </label>
+                  </div>
+                  <div class="formArea-item-input">
+                    <input type="text" name="" id="id" :value="covered_id_no" v-if="form.ID_NO == temp.ID_NO && temp.ID_NO != ''" disabled />
+                    <input type="text" name="" id="id" v-model="login_id_no" v-else />
+                  </div>
+                  <div class="formArea-item-error">
+                    請確認您的身份證字號
+                  </div>
+                </div>
+                <div class="formArea-item" :class="{ 'error' :　$v.form.BF_NAME.$error }">
+                  <div class="formArea-item-tit">
+                    <label for="name">
+                      姓名
+                    </label>
+                  </div>
+                  <div class="formArea-item-input">
+                    <input type="text" name="" id="name" v-model="form.BF_NAME" :disabled="form.BF_NAME == temp.BF_NAME && temp.BF_NAME != ''" />
+                  </div>
+                  <div class="formArea-item-error">
+                    請確認您的姓名
+                  </div>
+                </div>
+                <div class="formArea-item" :class="{ 'error' :　$v.form.CELL_PHONE.$error }">
+                  <div class="formArea-item-tit">
+                    <label for="phone">
+                      手機
+                    </label>
+                  </div>
+                  <div class="formArea-item-input">
+                    <input type="tel" name="" id="phone" v-model="form.CELL_PHONE" :disabled="form.CELL_PHONE == temp.CELL_PHONE && temp.CELL_PHONE != ''" />
+                  </div>
+                  <div class="formArea-item-error">
+                    請確認您的手機
+                  </div>
+                </div>
+                <div class="formArea-item" :class="{ 'error' :　$v.form.EMAIL.$error }">
+                  <div class="formArea-item-tit">
+                    <label for="email">
+                      Email
+                    </label>
+                  </div>
+                  <div class="formArea-item-input">
+                    <input type="email" name="" id="email" v-model="form.EMAIL" :disabled="form.EMAIL == temp.EMAIL && temp.EMAIL != ''" />
+                  </div>
+                  <div class="formArea-item-error">
+                    請確認您的Email
+                  </div>
+                </div>
+                <div class="formArea-item full agree" :class="{ 'error' :　loginType == 2 && $v.form.AGREE.$error }">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="" id="agree1" v-model="form.AGREE" />
+                      <span>
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </label>
+                  </div>
+                  <label for="agree1">
+                    我已閱讀並同意接受
+                  </label>
+                  <a href="https://www.franklin.com.tw/Privacy" target="_blank" title="富蘭克林證券投顧 個人資料告知義務內容">
+                    「富蘭克林證券投顧 個人資料告知義務內容」
+                  </a>
+                  <span v-if="isLine">
+                    與
+                    <a href="" @click.prevent="lineAlert" title="「LINE Business Connect服務使用條款暨個人資料運用告知聲明」">
+                      「LINE Business Connect服務使用條款暨個人資料運用告知聲明」
+                    </a>
+                  </span>
+                  <div class="formArea-item-error">
+                    請勾選個資同意條款
+                  </div>
+                </div>
+                <div class="btnArea">
+                  <div class="btn">
+                    <a href="" title="立即預約" @click.prevent="sendForm" v-if="!isSubmit"> 立即預約 <i class="fas fa-angle-right"></i> </a>
+                    <a href="" title="處理中，請稍候..." @click.prevent class="disabled" v-else> 處理中，請稍候... </a>
+                  </div>
+                </div>
+              </div>
+              <!-- 一般狀態 end -->
+
+              <!-- LINE綁定狀態 start -->
+              <div class="line wow fadeInUp" v-else>
+                <div class="tit-type2 text-center" style="color: #000;">
+                  <b>
+                    很棒！您已經綁定富蘭克林LINE官方帳號
+                  </b>
+                </div>
+                <div class="formArea">
+                  <p class="text-center text">
+                    您的身分證字號為{{covered_id_no}}，請直接點選下方按鍵取得優惠資格吧！
+                  </p>
+                  <div class="btnArea">
+                    <div class="btn">
+                      <a href="" title="立即預約" @click.prevent="sendForm" v-if="!isSubmit"> 立即預約 <i class="fas fa-angle-right"></i> </a>
+                      <a href="" title="處理中，請稍候..." @click.prevent class="disabled" v-else> 處理中，請稍候... </a>
+                    </div>
+                  </div>
+                  <p class="text-center chart-remark">
+                    *提醒您，若LINE綁定身分證字號與國民e帳戶不同，請於周一至周五上午9點至下午6點致電0800-885-888，請專人為您服務。
+                  </p>
+                </div>
+              </div>
+              <!-- LINE綁定狀態 end -->
+            </div>
+          </section>
+
+          <section class="item" id="complete" v-else>
+            <div class="container">
+              <h2 class="tit-type1" title="恭喜您已完成『存基金』專案預約！">
+                恭喜您已完成『存基金』專案預約！
+              </h2>
+              <p class="text-center">
+                尚未開戶者，快來申請線上開戶成為會員吧！
+              </p>
+              <div class="btnArea">
+                <div class="btn">
+                  <a href="https://etrade.franklin.com.tw/Open/Entrance" title="線上開戶"> 線上開戶 <i class="fas fa-angle-right"></i> </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        
+            <section class="item notice">
+                <div class="container">
+                    <h2 title="溫馨提醒" class="tit-type2 wow fadeInUp text-center" style="color: #000;">
+                        溫馨提醒
+                    </h2>
+                    <ul>
+                        <li>
+                            活動名稱：「存基金專案終身0手續費」好評加碼活動
+                        </li>
+                        <li>
+                            活動日期：2020/6/10～2020/6/30止。
+                        </li>
+                        <li>
+                            活動對象：活動期間內登記預約「存基金、好薪安」專案加碼活動者。
+                        </li>
+                        <li>
+                            「存基金、好薪安」專案之終身０手續費產品計劃將於2020/7/1上線，活動詳情請依富蘭克林證券投顧公告為準。
+                        </li>
+                        <li>
+                            本專案活動每人限參加一次，活動後將發送LINE通知型訊息，確認預約資格，請加入 <a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" class="link">『富蘭克林 國民的基金』LINE官方帳號</a> ，以獲得『存基金』專案進度LINE即時訊息，以及後續好康訊息通知。
+                        </li>
+                        <li>
+                            預約登記者因資料不完整或錯誤或重覆參加，導致主辦單位無法連絡參加者時，將視同放棄優惠領取資格與權利。
+                        </li>
+                        <li>
+                            富蘭克林證券投顧保留修改、變更、取消或暫停本活動及贈品之權利，並毋需作事前通知。
+                        </li>
+                    </ul>
+                </div>
+            </section>
+      </article>
+
+      <!-- footer -->
+      <footer-area></footer-area>
+
+      <!-- 2020-05-29 Jeffery 用vue scroll to做 -->
+      <div class="topBtn">
+        <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+          <span>
+            <i class="fas fa-caret-up"></i>
+            TOP
+          </span>
+        </a>
+      </div>
+
+      <!-- <modal ref="warning" :can-close="false" class="md">
+			<slot slot="infoArea">
+				xxxx
+			</slot>
+		</modal> -->
+    </div>
+
+    <script src="js/lineEvent.min.js"></script>
+    <script src="js/valid.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script src="js/main.min.js?v=20200610"></script>
+    <script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script>
+  </body>
+</html>

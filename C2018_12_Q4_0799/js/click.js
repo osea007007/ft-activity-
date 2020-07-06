@@ -112,6 +112,33 @@ $(window).load(function () {
             }
         },
 
+
+        // 存基金新增
+        {
+            regx: '^https://www.franklin.com.tw/AI_robo/kyc\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/AI_robo/\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^market.html\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^http://www.fundclear.com.tw\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+
     ];
     function createRegExp(str, a) {
         return new RegExp(str)
@@ -129,12 +156,15 @@ $(window).load(function () {
         }
         return href;
     }
+
     $("body").on('click', 'a', function (e) {
         const { isApp } = window.appInfo || {}
         if (isApp) {
             const dom = $(e.currentTarget);
             const href = dom.attr('href');
             const applink = dom.attr('applink');
+            console.log(href)
+            alert(href)
             if (href.indexOf('https://') !== -1) {
                 const url = unescape(href);
                 const link = getHref(url);

@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="theme-color" content="#003680" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="192×192" href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/animate-v3.7.2.css" />
+	<link rel="stylesheet" href="marketUse/css/style.css" />
+
+	<title>存基金 好薪安 – 後疫情時代 投資基金有存無患｜富蘭克林</title>
+	<meta property="og:title" content="存基金 好薪安 – 後疫情時代 投資基金有存無患｜富蘭克林" />
+	<meta name="twitter:title" content="存基金 好薪安 – 後疫情時代 投資基金有存無患｜富蘭克林" />
+
+	<meta name="description" content="疫情黑夜已過 經濟曙光乍現" />
+	<meta property="og:description" content="疫情黑夜已過 經濟曙光乍現" />
+	<meta name="twitter:description" content="疫情黑夜已過 經濟曙光乍現" />
+
+	<meta property="og:type" content="website" />
+	<meta property="fb:app_id" content="1060402337367331" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image" content="https://event.franklin.com.tw/savings-fund/marketUse/images/fb.jpg" />
+	<meta name="twitter:image" content="https://event.franklin.com.tw/savings-fund/marketUse/images/fb.jpg" />
+	<meta name="twitter:card" content="https://event.franklin.com.tw/savings-fund/marketUse/images/fb.jpg" />
+
+	<meta property="og:url" content="https://event.franklin.com.tw/savings-fund/market.html" />
+	<meta name="twitter:site" content="@franklin_tw" />
+
+	<script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+	<!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+	<script src="marketUse/js/vue-scrollto.min.js"></script>
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-586SXP");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">//APP用的js</script>
+    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">//APP用的js</script>
+</head>
+
+<body>
+	<!-- Google Tag Manager -->
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0"
+			style="display: none; visibility: hidden;"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager -->
+
+	<sice-provider id="content" v-cloak>
+
+		<div id="top"></div>
+
+		<!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+		<!-- header -->
+		<header-area :active-number="100"></header-area>
+
+		<!-- main -->
+		<article class="main">
+
+			<section class="banner">
+				<div class="container">
+					<div class="banner-content wow fadeInUp">
+						<picture>
+							<source media="(max-width: 991px)" srcset="marketUse/images/banner-logo.svg">
+							<img src="marketUse/images/banner-logo.png" alt="存基金 好薪安" class="banner-titImg">
+						</picture>
+						<h1 class="banner-tit" title="後疫情時代 投資基金有存無患">
+							後疫情時代
+							<br/><span class="focus1">投資基金</span> 有<span class="focus2">存</span>無患
+						</h1>
+					</div>
+					<img src="marketUse/images/banner-kv.png" alt="" class="banner-kv">
+				</div>
+			</section>
+
+			<section class="banner-bottom item wow fadeIn">
+				<div class="container">
+					<h2 class="tit-type1" title="疫情黑夜已過  經濟曙光乍現">
+						疫情黑夜已過  經濟曙光乍現
+					</h2>
+					<p>
+						為了力挽新冠疫情狂瀾，全球政府齊力救市，規模超過20兆美元！政策積極作多激勵全球股債市反彈，逐步收復失土。
+					</p>
+				</div>
+			</section>
+
+			<section class="item">
+				<div class="container">
+					<h2 class="tit-type1 wow fadeInUp" title="四大關鍵 V.S. 兩大挑戰">
+						四大關鍵 V.S. 兩大挑戰
+					</h2>
+					<div class="wow fadeInUp">
+						<p>
+							雖然曙光乍現，但不排除未來仍有陰霾，包括疫苗進度、信心修復、美國選舉與地緣風險等關鍵不確定因素，都會持續挑戰市場走勢。
+						</p>
+						<p>
+							此外，觀察S&P500指數年度上漲及下跌成分股數目，不難發現今年下跌與上漲檔數相當趨近；道瓊工業指數單日漲跌幅超過2%的天數，近年來亦明顯增加！顯見市場波動日益頻繁且加劇，選股與擇時難度大幅提高！
+						</p>
+					</div>
+					<div class="item2 wow fadeInUp">
+						<h3 class="tit-type2 text-center" title="挑戰一：當上漲下跌檔數趨近，您敢孤注一擲嗎？">
+							<!-- 挑戰一：選股難度增加 -->
+							挑戰一：當上漲下跌檔數趨近，您敢孤注一擲嗎？
+						</h3>
+						<div class="chart">
+							<h4 class="chart-tit" title="S&P500指數年度上漲及下跌成分股數(2010-2020)">
+								<div class="chart-tit-content">
+									S&amp;P500指數年度上漲及下跌成分股數(2010-2020)
+								</div>
+							</h4>
+							<img src="marketUse/images/chart-1.svg" alt="S&P500指數年度上漲及下跌成分股數(2010-2020)" class="chart-img">
+							<p class="chart-remark">
+								資料來源：彭博資訊，總報酬率，截至2020年6月12日，投資人無法對指數直接進行投資，過去績效不代表未來績效之保證。
+							</p>
+						</div>
+					</div>
+					<div class="item2 wow fadeInUp">
+						<h3 class="tit-type2 text-center" title="挑戰二：當單日漲跌幅度加劇，您敢對賭時機嗎？">
+							<!-- 挑戰二：時機掌握不易 -->
+							挑戰二：當單日漲跌幅度加劇，您敢對賭時機嗎？
+						</h3>
+						<div class="chart">
+							<h4 class="chart-tit" title="道瓊工業指數單日漲跌幅在2%以上的天數">
+								<div class="chart-tit-content">
+									道瓊工業指數單日漲跌幅在2%以上的天數
+								</div>
+							</h4>
+							<img src="marketUse/images/chart-2.svg?v=20200702" alt="道瓊工業指數單日漲跌幅在2%以上的天數" class="chart-img">
+							<p class="chart-remark">
+								資料來源：彭博資訊，統計至2020/6/12，〈投資人無法直接投資指數。本文提及之經濟走勢不必然代表本基金之績效，本基金投資風險請詳閱基金公開說明書。〉
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item tattooBg">
+				<div class="container">
+					<h2 class="tit-type1 wow fadeInUp" title="存基金三不政策  疫後投資最安心">
+						存基金三不政策  疫後投資最安心
+					</h2>
+					<p class="wow fadeInUp">
+						面對多空難測的投資環境，與其大膽賭時機，不如安心存基金！藉由「定期定額」這個耳熟能詳的投資工具，選定長期趨勢向上的投資標的後，便堅持「持續扣款」、「低檔加碼」 、「不亂贖回」的策略，落實三不政策、提高投資勝率！
+					</p>
+					<div class="doNot">
+						<div class="doNot-item wow fadeInUp">
+							<img src="marketUse/images/img-1.png" alt="不賭性堅強" class="doNot-item-img">
+							<div class="doNot-item-tit">
+								不賭性堅強
+							</div>
+							<i class="far fa-times-circle doNot-item-icon"></i>
+						</div>
+						<div class="doNot-item wow fadeInUp">
+							<img src="marketUse/images/img-2.png" alt="不三心二意" class="doNot-item-img">
+							<div class="doNot-item-tit">
+								不三心二意
+							</div>
+							<i class="far fa-times-circle doNot-item-icon"></i>
+						</div>
+						<div class="doNot-item wow fadeInUp">
+							<img src="marketUse/images/img-3.png" alt="不半途而廢" class="doNot-item-img">
+							<div class="doNot-item-tit">
+								不半途而廢
+							</div>
+							<i class="far fa-times-circle doNot-item-icon"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item">
+				<div class="container">
+					<div class="item2 wow fadeInUp">
+						<h2 class="tit-type1" title="存基金主流產業 - 雙技美">
+							存基金主流產業 - 雙技美
+						</h2>
+						<article class="fundList">
+							<section class="fundList-item" v-for="item in fundList1">
+								<a :href="item.fundLink" :title="item.tit + item.fundWarning" target="_blank">
+									<img :src="item.img" alt="" class="fundList-item-img">
+									<h3 class="fundList-item-tit" :title="item.tit + item.fundWarning">
+										{{item.tit}}
+										<span class="fundList-item-tit-warning" v-if="item.fundWarning != ''">
+											{{item.fundWarning}}
+										</span>
+									</h3>
+								</a>
+								<p class="fundList-item-text" v-html="item.text">
+									聚焦「雲端運算」、「人工智慧」和「電子商務」三大主軸的全球領導品牌，瞄準科技創新成長動能，掌握疫後宅經濟需求，非存不可！
+								</p>
+								<div class="btnArea twoBtn">
+									<div class="btn smallText">
+										<a :href="item.link1" title="定期定額" target="_blank">
+											定期定額 <i class="fas fa-angle-right"></i>
+										</a>
+									</div>
+									<div class="btn smallText type2">
+										<a :href="item.link2" title="單筆申購" target="_blank">
+											單筆申購 <i class="fas fa-angle-right"></i>
+										</a>
+									</div>
+								</div>
+							</section>
+						</article>
+					</div>
+					<div class="item2 wow fadeInUp">
+						<h2 class="tit-type1" title="存基金側重題材 - 變成金">
+							存基金側重題材 - 變成金
+						</h2>
+						<article class="fundList">
+							<section class="fundList-item" v-for="item in fundList2">
+								<a :href="item.fundLink" :title="item.tit + item.fundWarning" target="_blank">
+									<img :src="item.img" alt="" class="fundList-item-img">
+									<h3 class="fundList-item-tit type2" :title="item.tit + item.fundWarning">
+										{{item.tit}}
+										<span class="fundList-item-tit-warning" v-if="item.fundWarning != ''">
+											{{item.fundWarning}}
+										</span>
+									</h3>
+								</a>
+								<p class="fundList-item-text" v-html="item.text">
+									聚焦「雲端運算」、「人工智慧」和「電子商務」三大主軸的全球領導品牌，瞄準科技創新成長動能，掌握疫後宅經濟需求，非存不可！
+								</p>
+								<div class="btnArea twoBtn">
+									<div class="btn smallText">
+										<a :href="item.link1" title="定期定額" target="_blank">
+											定期定額 <i class="fas fa-angle-right"></i>
+										</a>
+									</div>
+									<div class="btn smallText type2">
+										<a :href="item.link2" title="單筆申購" target="_blank">
+											單筆申購 <i class="fas fa-angle-right"></i>
+										</a>
+									</div>
+								</div>
+							</section>
+						</article>
+					</div>
+					<div class="btnArea threeBtn wow fadeInUp">
+						<div class="btn twoLines">
+							<a href="https://event.franklin.com.tw/savings-fund/index.html" title="了解更多存基金" target="_blank">
+								了解更多<br class="pcShow"/>存基金 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+						<div class="btn twoLines">
+							<a href="https://www.franklin.com.tw/AI_robo/" title="國民理財機器人幫忙存基金" target="_blank">
+								國民理財機器人<br class="pcShow"/>幫忙存基金 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+						<div class="btn twoLines">
+							<a href="https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage" title="理財顧問協助存基金" target="_blank">
+								理財顧問<br class="pcShow"/>協助存基金 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="item grayBg">
+				<div class="container wow fadeIn">
+					<div class="item2">
+						<h2 class="tit-type1" title="國民e帳戶本季基金優惠方案內容與使用規則說明">
+							國民e帳戶本季基金優惠方案內容與使用規則說明
+						</h2>
+						<div class="notice">
+							<ul>
+								<li>
+									優惠資格：已完成國民e帳戶所有開戶程序並修改初始密碼、啟用交易權限者。
+								</li>
+								<li>
+									手續費優惠內容與使用期限：
+									<ol>
+										<li>
+											精選基金：含各股份類別單筆及定期定額新申購手續費1折優惠，本季精選基金限國民e帳戶下單頁所列為準。
+										</li>
+										<li>
+											非精選基金：含各股份類別單筆及定期定額新申購手續費2優惠。
+										</li>
+										<li>
+											優惠使用期限：2020/7/1~2020/9/30。
+										</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item2">
+						<h2 class="tit-type1" title="預約「存基金、好薪安終身0手續費優惠專案」使用規則說明">
+							預約「存基金、好薪安終身0手續費優惠專案」使用規則說明
+						</h2>
+						<div class="notice">
+							<ul>
+								<li>
+									專案優惠資格：已於「存基金、好薪安」各項專屬活動頁完成「存基金終身0」專案預約並完整填寫資料者，每人限參加一次，依活動當時輸入成功的身分證字號認列。
+								</li>
+								<li>
+									手續費優惠內容：(以下稱本優惠)
+									<ol>
+										<li>
+											「國民理財機器人」專區：單筆及定期定額新申購投資計畫手續費0元優惠。
+										</li>
+										<li>
+											一般基金交易專區：「存基金自選方案」精選六檔基金(含各股份類別) 單筆及定期定額新申購手續費0元優惠。
+										</li>
+									</ol>
+								</li>
+								<li>
+									優惠使用規則：
+									<ol>
+										<li>
+											本優惠使用期限：2020/7/1~2020/8/31。
+										</li>
+										<li>
+											本優惠除特別說明外，申購次數不限制；前述「存基金自選方案」適用基金限本活動網頁所列為準。
+										</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="notice">
+						<p style="text-indent: -15px; padding-left: 15px;">
+							※各項優惠除特別說明外限透過國民e帳戶網路交易新申購、加碼使用，轉換、既有契約新扣款、國民理財機器人專區交易不適用；尚未辦理國民e帳戶開戶者，需於專案期間完成開戶、核印與變更密碼啟用交易權限，方可使用本優惠。 活動詳情請依富蘭克林證券投顧公告為準，本公司保留修改、變更活動內容以及取消或暫停本活動及贈品之權利，並毋需作事前通知。
+						</p>
+					</div>
+				</div>
+			</section>
+
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+		<div class="topBtn">
+			<a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<div class="fixedRightBtn-area clearfix twoBtn">
+			<div class="fixedRightBtn rightArrowCta">
+				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="免費開戶去">
+					<b>免費開戶去</b> <i class="fas fa-angle-right"></i>
+				</a>
+			</div>
+			<div class="fixedRightBtn type2 rightArrowCta">
+				<a href="https://etrade.franklin.com.tw/Home/Login?" target="_blank" title="立即存基金">
+					<b>立即存基金</b> <i class="fas fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<!-- <modal ref="warning" :can-close="false" class="md">
+			<slot slot="infoArea">
+				xxxx
+			</slot>
+		</modal> -->
+
+	</sice-provider>
+
+	<script src="marketUse/js/main.min.js"></script>
+	<script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script>
+</body>
+
+</html>
