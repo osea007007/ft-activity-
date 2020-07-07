@@ -1,0 +1,14 @@
+@media screen and (max-width: 767px) {
+    .fixedRightBtn-area {
+        display: flex;
+    }
+
+    .fixedRightBtn-area .fixedRightBtn {
+        flex: 1;
+    }
+
+    .fixedRightBtn-area.twoBtn .fixedRightBtn:nth-of-type(1).type3 a {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
