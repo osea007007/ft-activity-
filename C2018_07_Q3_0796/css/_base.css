@@ -1,0 +1,121 @@
+@charset "UTF-8";
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+  color: #14003d; }
+
+/*Webkit,Opera9.5+,Ie9+ 控制文字選取時的顏色*/
+::-moz-selection {
+  background: #fefd00;
+  color: #14003d; }
+::selection {
+  background: #fefd00;
+  color: #14003d; }
+
+/*Mozilla Firefox 控制文字選取時的顏色*/
+::-moz-selection {
+  background: #fefd00;
+  color: #14003d; }
+
+a {
+  text-decoration: none; }
+
+.buttonStyle {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  display: inline-block;
+  height: 56px;
+  line-height: 50px;
+  border: solid 3px #fffc00;
+  border-radius: 30px;
+  background: #d3376a url(../images/bg-star-10.png) top left repeat;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  overflow: hidden; }
+  .buttonStyle::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all; }
+  .buttonStyle:active::before, .buttonStyle:focus::before, .buttonStyle:hover::before {
+    width: 200%;
+    height: 200%;
+    -webkit-transition: 0.6s ease all;
+    -o-transition: 0.6s ease all;
+    transition: 0.6s ease all; }
+  .buttonStyle.type2 {
+    background: #3c3b6e url(../images/bg-star-10.png) top left repeat; }
+  @media screen and (min-width: 991px) {
+    .buttonStyle:hover {
+      -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); } }
+  @media screen and (max-width: 991px) {
+    .buttonStyle {
+      height: 46px;
+      line-height: 40px;
+      font-size: 15px; } }
+
+button,
+a {
+  font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 30px; }
+  @media screen and (max-width: 991px) {
+    .container {
+      padding: 0px 25px; } }
+  @media screen and (max-width: 767px) {
+    .container {
+      padding: 0px 15px; } }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.hide {
+  display: none; }
+
+.mobileShow {
+  display: none; }
+
+@media screen and (max-width: 991px) {
+  .pcShow {
+    display: none; }
+  .mobileShow {
+    display: initial; } }
+
+.fontAwesomeIcon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }

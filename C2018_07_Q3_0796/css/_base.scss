@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+// reset
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    // background: #eaded6;
+    // background: #fbdc31 url(../images/bg-star-30.png) top left repeat;
+    color: #14003d;
+}
+
+/*Webkit,Opera9.5+,Ie9+ 控制文字選取時的顏色*/
+::selection {
+	background:#fefd00;
+	color:#14003d;
+}
+
+/*Mozilla Firefox 控制文字選取時的顏色*/
+::-moz-selection {
+	background:#fefd00;
+	color:#14003d;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonStyle {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease all;
+    display: inline-block;
+    height: 56px;
+    line-height: 50px;
+    border: solid 3px #fffc00;
+    border-radius: 30px;
+    background: #d3376a url(../images/bg-star-10.png) top left repeat;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: rgba(#fff, 0.08);
+        transition: 0.2s ease all;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+        &::before {
+            width: 200%;
+            height: 200%;
+            transition: 0.6s ease all;
+        }
+    }
+    &.type2 {
+        
+        background: #3c3b6e url(../images/bg-star-10.png) top left repeat;
+       
+    }
+    @media screen and (min-width: 991px) {
+        &:hover {
+            box-shadow: 0px 5px 5px rgba(#000, 0.2);
+        }
+    }
+    @media screen and (max-width: 991px) {
+        height: 46px;
+        line-height: 40px;
+        font-size: 15px;
+    }
+}
+
+button,a {
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    display: inline-block;
+}
+
+// component
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 30px;
+    @media screen and (max-width: 991px) {
+        padding: 0px 25px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 0px 15px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.mobileShow {
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    .pcShow {
+        display: none;
+    }
+    .mobileShow {
+        display: inline-block;
+    }
+}
+
+//--fontAwesome
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
