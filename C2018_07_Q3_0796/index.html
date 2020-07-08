@@ -11,14 +11,22 @@
     <script src="js/vue.min.js"></script>
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-586SXP');</script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+    </script>
     <!-- End Google Tag Manager -->
 
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -36,15 +44,15 @@
     <meta property="og:url" content="https://event.franklin.com.tw/C2018_07_Q3_0796/index.html">
 
     <meta name="twitter:title" content="富蘭克林國民的基金-富蘭克林坦伯頓生技領航基金">
-    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="富蘭克林坦伯頓生技領航基金，聚焦醫藥創新、人口老化帶來的銀髮商機，以及產業併購熱潮的投資機會，掌握生技產業劃時代發展的成長動能！">
     <meta name="twitter:site" content="@franklin_tw">
     <meta name="twitter:image" content="https://event.franklin.com.tw/C2018_07_Q3_0796/images/fb.jpg">
 
     <!-- 載入精選基金區塊資料 start -->
-	<!-- <script src="https://wt.franklin.com.tw/areas/commonBanner/common-prod.js"></script> -->
-	<script src="https://event.franklin.com.tw/commonBanner/common-prod.js"></script>
-	<!-- <script>
+    <!-- <script src="https://wt.franklin.com.tw/areas/commonBanner/common-prod.js"></script> -->
+    <script src="https://event.franklin.com.tw/commonBanner/common-prod.js"></script>
+    <!-- <script>
 		var _head = document.getElementsByTagName('head')[0],
 			_script = document.createElement('script');
 
@@ -53,16 +61,21 @@
 		_head.appendChild(_script); 
 	</script> -->
     <!-- 載入精選基金區塊資料 end -->
-    
-    <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">//APP用的js</script>
+
+    <script src="../common/package/siceVueCmp.umd.min.js">
+        //APP用的js
+    </script>
     <script src="js/jquery.js"></script>
-    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">//APP用的js</script>
+    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+        //APP用的js
+    </script>
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -268,29 +281,20 @@
             </div> -->
 
             <div id="slickArea" class="slickBanner">
-                <slick
-                ref="slick"
-                :options="slickOptions"
-                @afterChange="handleAfterChange"
-                @beforeChange="handleBeforeChange"
-                @breakpoint="handleBreakpoint"
-                @destroy="handleDestroy"
-                @edge="handleEdge"
-                @init="handleInit"
-                @reInit="handleReInit"
-                @setPosition="handleSetPosition"
-                @swipe="handleSwipe"
-                @lazyLoaded="handleLazyLoaded"
-                @lazyLoadError="handleLazeLoadError">
+                <slick ref="slick" :options="slickOptions" @afterChange="handleAfterChange"
+                    @beforeChange="handleBeforeChange" @breakpoint="handleBreakpoint" @destroy="handleDestroy"
+                    @edge="handleEdge" @init="handleInit" @reInit="handleReInit" @setPosition="handleSetPosition"
+                    @swipe="handleSwipe" @lazyLoaded="handleLazyLoaded" @lazyLoadError="handleLazeLoadError">
                     <div>
-                        <div class="slickBanner-img-pc" alt="富蘭克林坦伯頓生技領航基金" style="background-image: url(images/banner-1-2.png);"></div>
+                        <div class="slickBanner-img-pc" alt="富蘭克林坦伯頓生技領航基金"
+                            style="background-image: url(images/banner-1-2.png);"></div>
                         <img class="slickBanner-img-mobile" src="images/banner-mobile-1-2.png" alt="富蘭克林坦伯頓生技領航基金">
 
                         <!-- 引言 -->
                         <div class="introduction type1">
                             <div class="container">
                                 <div class="introduction-info">
-                                    <h1 class="introduction-info-tit" title="破解肺炎病毒疫苗的關鍵，來自生技醫療的創新發展" >
+                                    <h1 class="introduction-info-tit" title="破解肺炎病毒疫苗的關鍵，來自生技醫療的創新發展">
                                         破解肺炎病毒疫苗的關鍵，來自生技醫療的創新發展
                                     </h1>
                                     <div class="introduction-info-text">
@@ -299,13 +303,15 @@
                                 </div>
                                 <div class="introduction-btn">
                                     <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
-                                    <a class="buttonStyle" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    <a class="buttonStyle"
+                                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="slickBanner-img-pc" alt="富蘭克林坦伯頓生技領航基金" style="background-image: url(images/banner-2-2.png);"></div>
+                        <div class="slickBanner-img-pc" alt="富蘭克林坦伯頓生技領航基金"
+                            style="background-image: url(images/banner-2-2.png);"></div>
                         <img class="slickBanner-img-mobile" src="images/banner-mobile-2-2.png" alt="富蘭克林坦伯頓生技領航基金">
 
                         <!-- 引言 -->
@@ -321,7 +327,8 @@
                                 </div>
                                 <div class="introduction-btn">
                                     <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
-                                    <a class="buttonStyle" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    <a class="buttonStyle"
+                                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
                                 </div>
                             </div>
                         </div>
@@ -413,8 +420,10 @@
                     </div>-->
                     <div class="keyStrategy-btnArea">
                         <a class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
-                        <a class="buttonStyle type2 pcShow" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
-                        <a class="buttonStyle type2 mobileShow" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        <a class="buttonStyle type2 pcShow"
+                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        <a class="buttonStyle type2 mobileShow"
+                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
                     </div>
                 </div>
             </section>
@@ -434,7 +443,8 @@
                             </h3>
                         </div>
                         <div class="benefits-introduction clearfix">
-                            <img class="benefits-introduction-img" src="images/benefits-img-1.png" alt="基金佈局三大領域，掌握生技產業最新發展動能">
+                            <img class="benefits-introduction-img" src="images/benefits-img-1.png"
+                                alt="基金佈局三大領域，掌握生技產業最新發展動能">
                             <div class="benefits-introduction-text">
                                 <ul>
                                     <li>
@@ -482,7 +492,8 @@
                                     <strong>新藥創新是生技產業成長的關鍵</strong>
                                     <div class="tag-tail"></div>
                                 </div>
-                                <img class="barChart" src="images/chart-1.svg" alt="新藥創新是生技產業成長的關鍵" style="width: 100%;">
+                                <img class="barChart" src="images/chart-1.svg" alt="新藥創新是生技產業成長的關鍵"
+                                    style="width: 100%;">
                                 <div class="sourceInfo">
                                     資料來源：美國食品暨藥物管理局(FDA)藥品評估暨研究中心，統計至2019年底。
                                 </div>
@@ -492,7 +503,8 @@
                                     <strong>2019~23年新藥數量預估將提升</strong>
                                     <div class="tag-tail"></div>
                                 </div>
-                                <img class="barChart" src="images/chart-2.svg" alt="2019~23年新藥數量預估將提升" style="width: 100%;">
+                                <img class="barChart" src="images/chart-2.svg" alt="2019~23年新藥數量預估將提升"
+                                    style="width: 100%;">
                                 <div class="sourceInfo">
                                     資料來源：IQVIA全球藥品市場展望報告(2019年1月)，new active substance(新活性物質)。
                                 </div>
@@ -724,7 +736,7 @@
                         </div>
                     </article>
 
-                    <br/>
+                    <br />
                     <!--
                     <div class="keyStrategy-btnArea">
                         <button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Open/NewMember?so=Online&')">線上開戶</button>
@@ -733,7 +745,8 @@
                     -->
                     <div class="keyStrategy-btnArea">
                         <a class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
-                        <a class="buttonStyle type2" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        <a class="buttonStyle type2"
+                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
                     </div>
                 </div>
             </section>
@@ -749,7 +762,7 @@
                     <div class="item-text text-center">
                         <div class="item-text-tit">
                             <strong>
-                                面對人口老化帶來的醫療商機，以及創新醫療的發展機會，要如何佈局生技產業，才能抓住龐大商機？<br/>第一手佈局策略大公開！
+                                面對人口老化帶來的醫療商機，以及創新醫療的發展機會，要如何佈局生技產業，才能抓住龐大商機？<br />第一手佈局策略大公開！
                             </strong>
                         </div>
                     </div>
@@ -854,8 +867,10 @@
                                     免費開戶、領取3折優惠
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </a>
-                                <a class="buttonStyle type2 pcShow" href="https://www.franklin.com.tw/ReservationAccount/ECOffer">優惠說明</a>
-                                <a class="buttonStyle type2 mobileShow" href="https://www.franklin.com.tw/Mobile/Activity/ActivityOffer">優惠說明</a>
+                                <a class="buttonStyle type2 pcShow"
+                                    href="https://www.franklin.com.tw/ReservationAccount/ECOffer">優惠說明</a>
+                                <a class="buttonStyle type2 mobileShow"
+                                    href="https://www.franklin.com.tw/Mobile/Activity/ActivityOffer">優惠說明</a>
                             </div>
                         </article>
 
@@ -881,7 +896,8 @@
                                     免費開戶、啟動翻身第一步
                                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </a>
-                                <a class="buttonStyle type2" htref="https://event.franklin.com.tw/C2018_04_YRSP/index.html">詳閱妙計</a>
+                                <a class="buttonStyle type2"
+                                    htref="https://event.franklin.com.tw/C2018_04_YRSP/index.html">詳閱妙計</a>
                             </div>
                         </article>
 
@@ -1043,7 +1059,8 @@
                         <br />
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </button>-->
-                    <a class="buttonStyle" href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">
+                    <a class="buttonStyle"
+                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">
                         立
                         <br />即
                         <br />申
@@ -1112,7 +1129,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+                                <a href="https://www.youtube.com/user/franklin0800885888" target="_blank"
+                                    title="youtube">
                                     <img src="images/icon-youtube.png" alt="">
                                 </a>
                             </li>
@@ -1149,12 +1167,15 @@
                         </li>
                         <li>
                             <strong class="footer-warning-focus">
-                                基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<a href="https://www.Franklin.com.tw" target="_blank">https://www.Franklin.com.tw</a>)查閱。
+                                基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<a
+                                    href="https://www.Franklin.com.tw"
+                                    target="_blank">https://www.Franklin.com.tw</a>)查閱。
                             </strong>
                         </li>
                         <li>
                             投資基金所應承擔之相關風險及應負擔之費用(含分銷費用)已揭露於基金公開說明書及投資人須知中，投資人可至境外基金資訊觀測站(
-                            <a href="https://www.fundclear.com.tw/" target="_blank">https://www.fundclear.com.tw/</a>)下載，或逕向本公司網站(
+                            <a href="https://www.fundclear.com.tw/"
+                                target="_blank">https://www.fundclear.com.tw/</a>)下載，或逕向本公司網站(
                             <a href="https://www.franklin.com.tw/" target="_blank">https://www.franklin.com.tw/</a>)查閱。
                         </li>
                     </ul>
@@ -1176,7 +1197,7 @@
     <!-- 接資料庫 -->
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="js/axios.min.js"></script>
-    
+
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/accessDatabase-dist.js?v=20200108"></script>
