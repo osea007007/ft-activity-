@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css?v=20200108">
+    <link rel="stylesheet" href="css/add.css">
     <title>富蘭克林國民的基金-富蘭克林坦伯頓生技領航基金</title>
     <meta property="og:title" content="富蘭克林坦伯頓生技領航基金-瞄準生技產業的創新商機">
     <meta property="og:type" content="website">
@@ -66,7 +67,7 @@
         //APP用的js
     </script>
     <script src="js/jquery.js"></script>
-    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">
+    <script src="../common/click.js">
         //APP用的js
     </script>
 </head>
@@ -301,11 +302,21 @@
                                         新冠肺炎疫情損害人類健康，更危及全球經濟，生技醫療產業的重要性越顯重要！美股底部已確立，掌握疫後商機趁現在！
                                     </div>
                                 </div>
-                                <div class="introduction-btn">
-                                    <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
-                                    <a class="buttonStyle"
-                                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
-                                </div>
+                                <sice-login-hide>
+                                    <div class="introduction-btn" v-app-login>
+                                        <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
+                                        <a class="buttonStyle"
+                                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    </div>
+                                </sice-login-hide>
+                                <sice-login-show>
+                                    <div class="introduction-btn">
+                                        <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
+                                        <a class="buttonStyle"
+                                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    </div>
+                                </sice-login-show>
+
                             </div>
                         </div>
                     </div>
@@ -325,11 +336,20 @@
                                         新冠肺炎疫情損害人類健康，更危及全球經濟，生技醫療產業的重要性越顯重要！美股底部已確立，掌握疫後商機趁現在！
                                     </div>
                                 </div>
-                                <div class="introduction-btn">
-                                    <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
-                                    <a class="buttonStyle"
-                                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
-                                </div>
+                                <sice-login-hide>
+                                    <div class="introduction-btn" v-app-login>
+                                        <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
+                                        <a class="buttonStyle"
+                                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    </div>
+                                </sice-login-hide>
+                                <sice-login-show>
+                                    <div class="introduction-btn">
+                                        <!--<button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即申購</button>-->
+                                        <a class="buttonStyle"
+                                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即申購</a>
+                                    </div>
+                                </sice-login-show>
                             </div>
                         </div>
                     </div>
@@ -419,11 +439,22 @@
                         <button class="buttonStyle type2 mobileShow" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">立即擁有</button>
                     </div>-->
                     <div class="keyStrategy-btnArea">
-                        <a class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
+                        <sice-login-hide>
+                            <a class="buttonStyle"
+                                href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
+                        </sice-login-hide>
                         <a class="buttonStyle type2 pcShow"
                             href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
-                        <a class="buttonStyle type2 mobileShow"
-                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+
+                        <sice-login-hide>
+                            <a class="buttonStyle type2 mobileShow"
+                                href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796"
+                                v-app-login>立即擁有</a>
+                        </sice-login-hide>
+                        <sice-login-show>
+                            <a class="buttonStyle type2 mobileShow"
+                                href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        </sice-login-show>
                     </div>
                 </div>
             </section>
@@ -744,9 +775,18 @@
                     </div>
                     -->
                     <div class="keyStrategy-btnArea">
-                        <a class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
-                        <a class="buttonStyle type2"
-                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        <sice-login-hide>
+                            <a class="buttonStyle"
+                                href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&">線上開戶</a>
+                        </sice-login-hide>
+                        <sice-login-hide>
+                            <a v-app-login class="buttonStyle type2"
+                                href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        </sice-login-hide>
+                        <sice-login-show>
+                            <a class="buttonStyle type2"
+                                href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">立即擁有</a>
+                        </sice-login-show>
                     </div>
                 </div>
             </section>
@@ -1044,57 +1084,48 @@
 
             <!-- pinRight -->
             <div class="pinRight">
-                <div class="pinRight-btn">
-                    <!--
-                    <div class="pinRight-btn-bubble" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">
-                        <strong>3</strong>折
-                        <br /> 限時優惠
-                    </div>-->
-                    <!--
-                    <button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796')">
-                        立
-                        <br />即
-                        <br />申
-                        <br />請
-                        <br />
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </button>-->
-                    <a class="buttonStyle"
-                        href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">
-                        立
-                        <br />即
-                        <br />申
-                        <br />請
-                        <br />
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="pinRight-btn">
-                    <!--
-                    <button class="buttonStyle" onClick="window.open('https://etrade.franklin.com.tw/Open/NewMember')">
-                        免
-                        <br />費
-                        <br />開
-                        <br />戶
-                        <br />拿
-                        <br />紅
-                        <br />利
-                        <br />
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </button>
-                    -->
-                    <a class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember">
-                        免
-                        <br />費
-                        <br />開
-                        <br />戶
-                        <br />拿
-                        <br />紅
-                        <br />利
-                        <br />
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </a>
-                </div>
+                <sice-login-hide>
+                    <div class="pinRight-btn">
+                        <a v-app-login class="buttonStyle"
+                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">
+                            立
+                            <br />即
+                            <br />申
+                            <br />請
+                            <br />
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </sice-login-hide>
+                <sice-login-show>
+                    <div class="pinRight-btn all">
+                        <a class="buttonStyle"
+                            href="https://etrade.franklin.com.tw/Home/Login?ReturnUrl=%2FTrade%2FLumpSum%2FShowForm%2F0796">
+                            立
+                            <br />即
+                            <br />申
+                            <br />請
+                            <br />
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </sice-login-show>
+                <sice-login-hide>
+
+                    <div class="pinRight-btn">
+                        <a v-app-login class="buttonStyle" href="https://etrade.franklin.com.tw/Open/NewMember">
+                            免
+                            <br />費
+                            <br />開
+                            <br />戶
+                            <br />拿
+                            <br />紅
+                            <br />利
+                            <br />
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </sice-login-hide>
             </div>
 
         </div>
@@ -1167,16 +1198,17 @@
                         </li>
                         <li>
                             <strong class="footer-warning-focus">
-                                基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(<a
-                                    href="https://www.Franklin.com.tw"
-                                    target="_blank">https://www.Franklin.com.tw</a>)查閱。
+                                基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金的配息可能由基金的收益或本金中支付。部分基金進行配息前未先扣除應負擔之費用。任何涉及由本金支出的部份，可能導致原始投資金額減損。由本金支付配息之相關資料已揭露於本公司網站，投資人可至本公司網站(
+                                <sice-web-link href="https://www.Franklin.com.tw" target="_blank">
+                                    https://www.Franklin.com.tw</sice-web-link>)查閱。
                             </strong>
                         </li>
                         <li>
                             投資基金所應承擔之相關風險及應負擔之費用(含分銷費用)已揭露於基金公開說明書及投資人須知中，投資人可至境外基金資訊觀測站(
-                            <a href="https://www.fundclear.com.tw/"
-                                target="_blank">https://www.fundclear.com.tw/</a>)下載，或逕向本公司網站(
-                            <a href="https://www.franklin.com.tw/" target="_blank">https://www.franklin.com.tw/</a>)查閱。
+                            <sice-web-link href="https://www.fundclear.com.tw/" target="_blank">
+                                https://www.fundclear.com.tw/</sice-web-link>)下載，或逕向本公司網站(
+                            <sice-web-link href="https://www.franklin.com.tw/" target="_blank">
+                                https://www.franklin.com.tw/</sice-web-link>)查閱。
                         </li>
                     </ul>
                     <div class="text-right">

@@ -1,0 +1,18 @@
+@media screen and (max-width: 991px) {
+    .pinRight-btn .buttonStyle {
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .buttonStyle:active::before {
+        transform: none;
+        transition: none;
+        position: inherit;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .pinRight-btn.all {
+        width: 100%;
+    }
+}

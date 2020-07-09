@@ -26,6 +26,12 @@ $(window).load(function () {
             }
         },
         {
+            regx: '^https://etrade.franklin.com.tw/Open/NewMember\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://login';
+            }
+        },
+        {
             regx: '^https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return 'twsice://login';
@@ -157,14 +163,12 @@ $(window).load(function () {
         return href;
     }
 
-    $("body").on('click', 'a', function (e) {
+    $("body").on('touchstart', 'a', function (e) {
         const { isApp } = window.appInfo || {}
         if (isApp) {
             const dom = $(e.currentTarget);
             const href = dom.attr('href');
             const applink = dom.attr('applink');
-            console.log(href)
-            alert(href)
             if (href.indexOf('https://') !== -1) {
                 const url = unescape(href);
                 const link = getHref(url);
