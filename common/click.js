@@ -163,7 +163,7 @@ $(window).load(function () {
         return href;
     }
 
-    $("body").on('touchstart', 'a', function (e) {
+    $("body").on('click', 'a', function (e) {
         const { isApp } = window.appInfo || {}
         if (isApp) {
             const dom = $(e.currentTarget);
