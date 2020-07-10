@@ -1,0 +1,25 @@
+{
+    "lang": "zh-Hant-TW",
+    "short_name": "富蘭克林國民e帳戶優惠活動",
+    "name": "富蘭克林國民e帳戶優惠活動",
+    "icons": [
+        {
+            "src": "../images/192x192.png",
+            "type": "image/png",
+            "sizes": "300x300"
+        },
+        {
+            "src": "../images/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://event.franklin.com.tw/latest-offers/index.html",
+    "//start_url": "http://localhost:7879/index.html",
+    "background_color": "#114790",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000",
+    "orientation": "portrait",
+    "description": "基金專業投資顧問-富蘭克林坦伯頓基金,您的投資理財最佳顧問,富蘭克林基金提供您多樣化的基金組合,專業市場分析,基金投資建議,國際金融行情與國際財經新聞,讓您了解市場焦點,理財資訊,投資理財輕鬆上手。"
+}

@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="theme-color" content="#0060a0" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="onepage/images/favicon.ico" />
+	<link rel="”apple-touch-icon”" sizes="”192×192″" href="onepage/images/192x192.png" />
+	<link rel="stylesheet" href="onepage/css/style.css" />
+	<title>【定期定額】交易不設限 投資更方便！ | 富蘭克林 國民的基金</title>
+	<meta property="og:title" content="【定期定額】交易不設限 投資更方便！" />
+	<meta property="og:type" content="website" />
+	<meta property="fb:app_id" content="1060402337367331" />
+	<meta name="description" content="只要選好標的，2020金鼠年即可網羅收益型資產的投資契機！" />
+	<meta property="og:description" content="只要選好標的，2020金鼠年即可網羅收益型資產的投資契機！" />
+	<meta property="og:image" content="https://event.franklin.com.tw/regular-rsp/onepage/images/fb.png" />
+
+	<meta name="twitter:title" content="定期定額">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="操作更靈活 投資更簡單">
+	<meta name="twitter:site" content="@franklin_tw">
+	<meta name="twitter:image" content="https://event.franklin.com.tw/regular-rsp/images/fb.png">
+
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:url" content="https://event.franklin.com.tw/regular-rsp/onepage.html" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js"
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-586SXP");
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<script src="js/vue.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">//APP用的js</script>
+    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">//APP用的js</script>
+</head>
+
+<body>
+	<!-- Google Tag Manager -->
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager -->
+
+	<sice-provider id="content" v-cloak>
+		<!-- ie用的遮罩 -->
+		<div class="ieUseMask" v-if="ieUseMask">
+			<div class="ieUseMask-text">
+				<strong>建議您使用現代化瀏覽器瀏覽</strong><br /><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+				<div class="ieUseMask-dot"></div>
+			</div>
+		</div>
+
+		<div id="top"></div>
+
+		<!-- <header class="mobileHeader">
+			<div class="container clearfix">
+				<div class="mobileHeader-logo">
+					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
+						<img src="onepage/images/logo2019.svg" alt="富蘭克林 國民的基金">
+					</a>
+				</div>
+				<div class="mobileHeader-shareLink-area">
+					<div class="mobileHeader-shareLink">
+						<a href="http://line.naver.jp/ti/p/%40franklin" target="_blank" title="Line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.youtube.com/user/franklin0800885888" target="_blank" title="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<div class="mobileHeader-shareLink">
+						<a href="https://www.facebook.com/franklin.taiwan/" target="_blank" title="粉絲團">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header> -->
+
+		<!-- header -->
+		<header class="header">
+			<div class="container clearfix">
+				<div class="logo">
+					<a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+						<picture>
+							<source media="(max-width: 991px)" srcset="onepage/images/logo2019.svg" />
+							<img src="onepage/images/header-logo.png" alt="富蘭克林‧國民的基金" />
+						</picture>
+						<div class="logo-text">
+							富蘭克林‧國民的基金
+						</div>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- main -->
+		<article class="main">
+			<section class="banner">
+				<h1 title="2020金鼠年 開春必勝投資策略">
+					2020金鼠年 開春必勝投資策略
+				</h1>
+				<picture>
+					<source media="(max-width: 767px)" srcset="onepage/images/banner-mobile.png?v=20200617" />
+					<img src="onepage/images/banner-pc.png?v=20200617" alt="2020金鼠年 開春必勝投資策略" class="banner-kv" />
+				</picture>
+			</section>
+			<div id="trigger-fixedShare"></div>
+
+			<section class="item">
+				<div class="container">
+					<p>
+						<b
+							style="color: #ff0000; text-decoration: underline;">「定期定額」</b>是一個適合所有人的懶人投資法，簡單來說就是每隔一段時間，投資固定金額於固定的基金上，不必在乎進場時點，也不必在意市場價格起伏，又被譽為<b
+							style="color: #ff0000; text-decoration: underline;">懶人投資法</b>。
+					</p>
+					<p>
+						富蘭克林推出<b
+							style="color: #ff0000; text-decoration: underline;">定期定額</b>，能夠任選扣款日、百元即能累加投資、當日下單當日扣，投資更為彈性且即時！
+					</p>
+
+					<h2 title="定期定額適合各式人群" class="tit-type1">
+						定期定額適合各式人群
+					</h2>
+
+					<table class="itemsTemplate" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+						<tbody>
+							<tr>
+								<td class="itemsTemplate-td" width="25%" align="center" valign="top" bgcolor="#e9eeff">
+									<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+										<tbody>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td style="font-size: 0px;" align="center">
+													<img src="https://event.franklin.com.tw/MH_Content/E-Newspaper/Event/20191225_regular-rsp/images/1-img-4.png"
+														alt="" style="outline: none; display: block; margin: 0 auto;"
+														border="0" class="manImg" />
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td align="center">
+													<div class="tit-2"
+														style="font-size: 20px; font-family: '微軟正黑體'; font-weight: bold; text-align: center; color: #33468e;">
+														月光族
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td>
+													<div class="text"
+														style="font-size: 16px; font-family: '微軟正黑體'; text-align: center;">
+														<br class="pcShow" />
+														設定發薪日扣款
+														<br class="pcShow" />，強迫理財
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td class="itemsTemplate-td" width="25%" align="center" valign="top" bgcolor="#d4deff">
+									<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+										<tbody>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td style="font-size: 0px;" align="center">
+													<img src="https://event.franklin.com.tw/MH_Content/E-Newspaper/Event/20191225_regular-rsp/images/1-img-5.png"
+														alt="" style="outline: none; display: block; margin: 0 auto;"
+														border="0" class="manImg" />
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td align="center">
+													<div class="tit-2"
+														style="font-size: 20px; font-family: '微軟正黑體'; font-weight: bold; text-align: center; color: #33468e;">
+														菜籃族
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td>
+													<div class="text"
+														style="font-size: 16px; font-family: '微軟正黑體'; text-align: center;">
+														<br class="pcShow" />
+														每次只要3000元，
+														<br class="pcShow" />投資輕鬆無負擔
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td class="itemsTemplate-td" width="25%" align="center" valign="top" bgcolor="#c1cffd">
+									<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+										<tbody>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td style="font-size: 0px;" align="center">
+													<img src="https://event.franklin.com.tw/MH_Content/E-Newspaper/Event/20191225_regular-rsp/images/1-img-6.png"
+														alt="" style="outline: none; display: block; margin: 0 auto;"
+														border="0" class="manImg" />
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td align="center">
+													<div class="tit-2"
+														style="font-size: 20px; font-family: '微軟正黑體'; font-weight: bold; text-align: center; color: #33468e;">
+														SOHO族
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td>
+													<div class="text"
+														style="font-size: 16px; font-family: '微軟正黑體'; text-align: center;">
+														13:30前下單當日即可扣款，還可視財務狀況，以最低100元累加申購金額
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td class="itemsTemplate-td" width="25%" align="center" valign="top" bgcolor="#b2c4fe">
+									<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+										<tbody>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td style="font-size: 0px;" align="center">
+													<img src="https://event.franklin.com.tw/MH_Content/E-Newspaper/Event/20191225_regular-rsp/images/1-img-7.png"
+														alt="" style="outline: none; display: block; margin: 0 auto;"
+														border="0" class="manImg" />
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td align="center">
+													<div class="tit-2"
+														style="font-size: 20px; font-family: '微軟正黑體'; font-weight: bold; text-align: center; color: #33468e;">
+														小老闆
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="5" colspan="3">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+												<td>
+													<div class="text"
+														style="font-size: 16px; font-family: '微軟正黑體'; text-align: center;">
+														每月1-31日扣款日期任您選，而且變更扣款日期與金額最快隔日就能生效
+													</div>
+												</td>
+												<td style="font-size: 0px;" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td style="font-size: 0px;" height="13" colspan="3">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+
+					<div class="dividingLine"></div>
+
+
+					<h2 title="重點來了！富蘭克林貼心到底，折扣與優惠殺到超低！" class="tit-type1">重點來了！富蘭克林貼心到底，折扣與優惠殺到超低！ </h2>
+
+					<table class="itemsTemplate item2" width="60%" align="center" cellpadding="0" cellspacing="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td class="itemsTemplate-td" align="center" valign="top">
+									<img src="onepage/images/goodies-2.png" alt=""
+										style="outline: none; display: block; margin: 0 auto;" border="0"
+										class="goodiesImg">
+								</td>
+								<td class="itemsTemplate-td" align="center" valign="top">
+									<img src="onepage/images/goodies-3.png" alt=""
+										style="outline: none; display: block; margin: 0 auto;" border="0"
+										class="goodiesImg">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="text-center"><a class="text"
+							href="https://www.franklin.com.tw/ReservationAccount/ECOffer?utm_source=franklinEDM&amp;utm_medium=franklinofficial&amp;utm_campaign=franklinofficial"
+							target="_blank"
+							style="font-size: 16px; font-family: '微軟正黑體'; color: #2a44a9; text-decoration: underline; font-weight: bold;">
+							優惠詳情&gt;
+						</a></p class="text-center">
+					<p>巴菲特曾說：「投資並不需要很高的智商、高明的見解或是內線消息。投資最需要的是堅定的意志以及一個不受情緒輕易改變、穩健的方法。」馬上運用定期定額，讓小錢也能立大功吧！</p>
+
+
+					<div class="btnArea twoBtn">
+						<div class="btn">
+							<a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online" title="立即開戶"
+								target="_blank">
+								立即開戶 <i class="fas fa-angle-right"></i>
+							</a>
+						</div>
+						<!-- <div class="btn type2">
+                <a href="https://etrade.franklin.com.tw/Home/Login" title="立即申購" target="_blank"> 立即申購 <i class="fas fa-angle-right"></i> </a>
+              </div> -->
+					</div>
+				</div>
+			</section>
+		</article>
+
+		<!-- footer -->
+		<footer-area></footer-area>
+
+		<div class="topBtn">
+			<a href="#top" title="返回最上面">
+				<span>
+					<i class="fas fa-caret-up"></i>
+					TOP
+				</span>
+			</a>
+		</div>
+
+		<div class="fixedRightBtn-area clearfix">
+			<div class="fixedRightBtn">
+				<a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online" target="_blank" title="線上開戶"> 線上開戶 <i
+						class="fas fa-chevron-right"></i> </a>
+			</div>
+			<!-- <div class="fixedRightBtn type2">
+          <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即申購"> 立即申購 <i class="fas fa-chevron-right"></i> </a>
+        </div> -->
+		</div>
+
+	</sice-provider>
+	
+	<!-- <script src="onepage/js/wow.min.js"></script> -->
+	<script src="onepage/js/main.min.js"></script>
+</body>
+
+</html>

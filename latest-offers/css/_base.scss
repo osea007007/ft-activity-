@@ -1,0 +1,346 @@
+@charset "UTF-8";
+
+$maxWidth-xxl: 1599px;
+$maxWidth-xl: 1399px;
+$maxWidth-lg: 1199px;
+$maxWidth-md: 991px;
+$maxWidth-sm: 767px;
+$maxWidth-xs: 320px;
+
+@mixin maxWidth-xxl() {
+    @media screen and (max-width: $maxWidth-xxl) {
+        @content;
+    }
+}
+@mixin maxWidth-xl() {
+    @media screen and (max-width: $maxWidth-xl) {
+        @content;
+    }
+}
+@mixin maxWidth-lg() {
+    @media screen and (max-width: $maxWidth-lg) {
+        @content;
+    }
+}
+@mixin maxWidth-md() {
+    @media screen and (max-width: $maxWidth-md) {
+        @content;
+    }
+}
+@mixin maxWidth-sm() {
+    @media screen and (max-width: $maxWidth-sm) {
+        @content;
+    }
+}
+@mixin maxWidth-xs() {
+    @media screen and (max-width: $maxWidth-xs) {
+        @content;
+    }
+}
+
+/* 用法範例
+    @include maxWidth-xxl {
+        margin: 20px;
+    }
+*/
+
+// reset ========================================================================
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, 'Noto Sans TC', sans-serif;
+    // font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+    color: #212121;
+    font-size: 18px;
+    line-height: 1.4;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;         /*強制瀏覽器不要縮放文字*/
+    overflow-x: hidden;
+    @include maxWidth-md {
+        font-size: 16px;
+    }
+}
+
+/*控制文字選取時的顏色*/
+::selection {
+	background:#79ebff;
+	color:#000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border: none;
+}
+
+p {
+    margin: 15px 0px;
+}
+
+ol, ul {
+    margin: 15px 0px;
+    padding-left: 20px;
+    li {
+        padding-bottom: 3px;
+        &:last-of-type {
+            padding-bottom: 0px;
+        }
+    }
+    @include maxWidth-md {
+        padding-left: 17px;
+    }
+}
+
+// input ========================================================================
+.checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    input[type="checkbox"] {
+        display: none;
+        &:checked + span {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+            }
+        }
+    }
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        // border: solid 2px #818181;
+        background: #fff;
+        border-radius: 3px;
+        transition: 0.3s ease all;
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s ease all;
+        }
+    }
+}
+
+.radio {
+    vertical-align: middle;
+    display: inline-block;
+    input[type="radio"] {
+        display: none;
+        &:checked + .radio-fake {
+            background: #fae103;
+            border-color: #fae103;
+            i {
+                color: #000;
+            }
+        }
+    }
+    &-fake {
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: solid 2px #a4a4a4;
+        background: #fff;
+        border-radius: 100%;
+        transition: 0.3s ease all;
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 13px;
+            transition: 0.3s ease all;
+        }
+    }
+    &-text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 17px;
+        padding-left: 8px;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    color: #fff;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    cursor: pointer;
+    i {
+        margin-left: 5px;
+    }
+}
+
+input,
+button {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei" ,  "Helvetica Neue", Helvetica, sans-serif;
+}
+
+input,
+button,
+select {
+    outline: none;
+    font-family: Arial, "Microsoft JhengHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.inputStyle {
+    border-radius: 10px;
+    // border: solid 2px #818181;
+    border: none;
+    background: #fff;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+input {
+    &[type="text"],
+    &[type="password"],
+    &[type="tel"],
+    &[type="search"],
+    &[type="number"],
+    &[type="email"] {
+        @extend .inputStyle;
+    }
+}
+
+select {
+    box-sizing: border-box;
+    padding: 0 24px 0 10px;
+    font-size: 17px;
+    line-height: 50px;
+    height: 54px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #fff url(../images/icon-dropdown.png) right center no-repeat;
+    background-size: 18px;
+    border-radius: 10px;
+    border: solid 2px #818181;
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+// component ========================================================================
+.container {
+    margin: 0 auto;
+    padding: 0px;
+    width: 972px;
+    @include maxWidth-lg {
+        margin: 0px 65px;
+        width: auto;
+    }
+    @include maxWidth-md {
+        margin: 0px 25px;
+    }
+    @include maxWidth-sm {
+        margin: 0px 10px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.mobileShow {
+    display: none !important;
+}
+@include maxWidth-md {
+    .pcShow {
+        display: none !important;
+    }
+    .mobileShow {
+        display: initial !important;
+    }
+}
+
+//--fontAwesome ========================================================================
+.fontAwesomeIcon {
+    display: inline-block;
+    font: normal normal normal 14px/1 "Font Awesome 5 Free";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 900;
+}
+
+//--解決animate.css引起的z-index問題 ========================================================================
+.animated {
+    animation-fill-mode: backwards;
+}
+
+//--分隔線 ========================================================================
+.dividingLine {
+    margin: 20px 0px;
+    border-bottom: dashed 1px #bbb;
+    clear: both;
+}
+
+// youtube ==================================================
+.youtube {
+    width: 100%;
+    max-width: 600px;
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    img {
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    &-content {
+        position: relative;
+        padding-bottom: 56.25%;
+        // padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @include maxWidth-md {
+        max-width: 600px;
+    }
+}

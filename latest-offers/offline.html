@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+	</script>
+	<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#003680">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="manifest" href="js/manifest.json" crossorigin="use-credentials">
+    <title>富蘭克林國民e帳戶優惠活動 | 富蘭克林 國民的基金</title>
+    
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            font-family: '微軟正黑體';
+        }
+        #content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+	<!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+	<!-- End Google Tag Manager -->
+
+	<div id="content">
+
+		糟糕，您似乎已離線，該應用需要互聯網連接。
+
+    </div>
+    
+	<script>
+		// CODELAB: Register service worker.
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/service-worker.js')
+					.then((reg) => {
+					console.log('Service worker registered.', reg);
+					});
+			});
+		}
+	</script>
+
+</body>
+</html>
