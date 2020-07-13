@@ -1,78 +1,92 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-	<script src="js/vue.min.js"></script>
-	<!-- Google Tag Manager -->
-	<script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-586SXP');
-	</script>
-	<!-- End Google Tag Manager -->
+    <script src="js/vue.min.js"></script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-586SXP');
+    </script>
+    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#a0212a">
-	<meta name="format-detection" content="telephone=no">
-	
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="manifest" href="js/manifest.json" crossorigin="use-credentials">
+    <meta name="format-detection" content="telephone=no">
 
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel=”apple-touch-icon” sizes=”192×192″ href="images/192x192.png"/>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" href="css/style.css?v=20200427">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="js/manifest.json" crossorigin="use-credentials">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel=”apple-touch-icon” sizes=”192×192″ href="images/192x192.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css?v=20200427">
+    <link rel="stylesheet" href="css/add.css">
     <title>定期定額 | 富蘭克林 國民的基金</title>
     <meta property="og:title" content="定期定額">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="1060402337367331">
     <meta name="description" content="操作更靈活 投資更簡單">
-	<meta property="og:description" content="操作更靈活 投資更簡單">
-	<meta property="og:image" content="https://event.franklin.com.tw/regular-rsp/images/fb.png">
-	<meta property="og:image:width" content="1200"/>
-	<meta property="og:image:height" content="630"/>
-	<meta property="og:url" content="https://event.franklin.com.tw/regular-rsp/index.html">
+    <meta property="og:description" content="操作更靈活 投資更簡單">
+    <meta property="og:image" content="https://event.franklin.com.tw/regular-rsp/images/fb.png">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://event.franklin.com.tw/regular-rsp/index.html">
 
-	<meta name="twitter:title" content="定期定額">
-    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:title" content="定期定額">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="操作更靈活 投資更簡單">
     <meta name="twitter:site" content="@franklin_tw">
-	<meta name="twitter:image" content="https://event.franklin.com.tw/regular-rsp/images/fb.png">
-	
-	<script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">//APP用的js</script>
-    <script src="https://event.franklin.com.tw/commonResources/js/appUse/click.js">//APP用的js</script>
+    <meta name="twitter:image" content="https://event.franklin.com.tw/regular-rsp/images/fb.png">
+
+    <script src="../common/package/siceVueCmp.umd.min.js">
+        //APP用的js
+    </script>
+    <script src="../common/click.js">
+        //APP用的js
+    </script>
 </head>
+
 <body>
 
-	<!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
     <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
-	<!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-	<sice-provider id="content" v-cloak>
+    <sice-provider id="content" v-cloak :mock-data="{isApp:true,isLogin:true}">
 
-		<!-- ie用的遮罩 -->
-		<div class="ieUseMask" v-if="ieUseMask">
-			<div class="ieUseMask-text">
-				<strong>建議您使用現代化瀏覽器瀏覽</strong><br/><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
-				<div class="ieUseMask-dot"></div>
-			</div>
-		</div>
+        <!-- ie用的遮罩 -->
+        <div class="ieUseMask" v-if="ieUseMask">
+            <div class="ieUseMask-text">
+                <strong>建議您使用現代化瀏覽器瀏覽</strong><br /><strong>以獲得最佳瀏覽效果</strong><br />(例：Chrome、Firefox)
+                <div class="ieUseMask-dot"></div>
+            </div>
+        </div>
 
-		<div id="top"></div>
+        <div id="top"></div>
 
-		<!-- <header class="mobileHeader">
+        <!-- <header class="mobileHeader">
 			<div class="container clearfix">
 				<div class="mobileHeader-logo">
 					<a href="https://www.franklin.com.tw/" target="_blank" title="富蘭克林 國民的基金">
@@ -99,279 +113,279 @@
 			</div>
 		</header> -->
 
-		<!-- header -->
-		<header class="header">
-			<div class="container clearfix">
-				<div class="logo">
-					<a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
-						<picture>
-							<source media="(max-width: 991px)" srcset="images/logo2019.svg">
-							<img src="images/header-logo.png" alt="富蘭克林‧國民的基金">
-						</picture>
-						<div class="logo-text">
-							富蘭克林‧國民的基金
-						</div>
-					</a>
-				</div>
-			</div>
-		</header>
+        <!-- header -->
+        <header class="header">
+            <div class="container clearfix">
+                <div class="logo">
+                    <a href="http://www.franklin.com.tw/" target="_blank" title="富蘭克林證券投顧">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="images/logo2019.svg">
+                            <img src="images/header-logo.png" alt="富蘭克林‧國民的基金">
+                        </picture>
+                        <div class="logo-text">
+                            富蘭克林‧國民的基金
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-		<!-- main -->
-		<article class="main">
+        <!-- main -->
+        <article class="main">
 
-			<section class="banner">
-				<div class="container">
-					<div class="banner-left">
-						<h1 title="定期定額 操作更靈活 投資更簡單">
-							定期定額 操作更靈活 投資更簡單
-						</h1>
-						<img src="images/banner-tit.png?v=20200617" alt="定期定額 操作更靈活 投資更簡單" class="banner-left-tit">
-						<!-- <p class="banner-left-text">
+            <section class="banner">
+                <div class="container">
+                    <div class="banner-left">
+                        <h1 title="定期定額 操作更靈活 投資更簡單">
+                            定期定額 操作更靈活 投資更簡單
+                        </h1>
+                        <img src="images/banner-tit.png?v=20200617" alt="定期定額 操作更靈活 投資更簡單" class="banner-left-tit">
+                        <!-- <p class="banner-left-text">
 							定期定額投資基金，扣款日1-31號都能選
 							<br/>紅利折抵手續費最低到0.3%
 							<br/>當天下單當天扣款、當天變更隔天生效
 							<br/>讓投資更彈性，天天都是良辰吉日！
 						</p> -->
-						<!-- <p class="banner-left-text">
+                        <!-- <p class="banner-left-text">
 							6月底前15檔基金享0手續費※
 						</p> -->
-					</div>
-					<img src="images/banner-kv.png?v=20191226" alt="操作更靈活 投資更簡單" class="banner-kv">
-				</div>
-			</section>
-			<div id="trigger-fixedShare"></div>
+                    </div>
+                    <img src="images/banner-kv.png?v=20191226" alt="操作更靈活 投資更簡單" class="banner-kv">
+                </div>
+            </section>
+            <div id="trigger-fixedShare"></div>
 
-			<section class="item bannerText">
-				<div class="container">
-					<p>
-						定期定額投資基金，扣款日1-31號都能選
-						<br/>紅利折抵手續費最低到0.3%
-						<br/>當天下單當天扣款、當天變更隔天生效
-						<br/>讓投資更彈性，天天都是良辰吉日！
-					</p>
-				</div>
-			</section>
+            <section class="item bannerText">
+                <div class="container">
+                    <p>
+                        定期定額投資基金，扣款日1-31號都能選
+                        <br />紅利折抵手續費最低到0.3%
+                        <br />當天下單當天扣款、當天變更隔天生效
+                        <br />讓投資更彈性，天天都是良辰吉日！
+                    </p>
+                </div>
+            </section>
 
-			<section class="item man">
-				<div class="container">
-					<div class="man-item-area">
-						<article class="man-item">
-							<div class="man-item-content">
-								<div class="man-item-img">
-									<img src="images/man-1.png" alt="月光族">
-								</div>
-								<h2 class="man-item-tit" title="月光族">
-									月光族
-								</h2>
-								<p class="man-item-text">
-									社會新鮮人<br/>小資上班族
-								</p>
-								<div class="man-item-tooltip">
-									<p>
-										一拿到薪水就想犒賞自己，到了月底只能吃泡麵？那就設定發薪日後先扣款投資，強迫理財好妙方，防止薪水月光光。
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="man-item">
-							<div class="man-item-content">
-								<div class="man-item-img">
-									<img src="images/man-2.png" alt="夾心族">
-								</div>
-								<h2 class="man-item-tit" title="夾心族">
-									夾心族
-								</h2>
-								<p class="man-item-text">
-									上有高堂
-									<br/>下有子女
-								</p>
-								<div class="man-item-tooltip">
-									<p>
-										您的小豬撲滿是否被零錢餵撐了？不如拿來買基金，每次1,000元輕鬆投資，日日都能扣款，理財好彈性。
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="man-item">
-							<div class="man-item-content">
-								<div class="man-item-img">
-									<img src="images/man-3.png" alt="小老闆">
-								</div>
-								<h2 class="man-item-tit" title="小老闆">
-									小老闆
-								</h2>
-								<p class="man-item-text">
-									斜槓人生
-									<br/>創業起家
-								</p>
-								<div class="man-item-tooltip">
-									<p>
-										沒有固定發薪日的soho族或自營商每當有收入進帳，即可設定隔天扣款，也能調整扣款金額，不再被固定扣款日綁住你的財務規劃。
-									</p>
-								</div>
-							</div>
-						</article>
-						<article class="man-item">
-							<div class="man-item-content">
-								<div class="man-item-img">
-									<img src="images/man-4.png" alt="投資好手">
-								</div>
-								<h2 class="man-item-tit" title="投資好手">
-									投資好手
-								</h2>
-								<p class="man-item-text">
-									大額分批
-									<br/>領息存股
-								</p>
-								<div class="man-item-tooltip">
-									<p>
-										您有精準眼光、不想放過任何築底機會，那就用定期定額，天天都能加碼進攻、加碼次數多更多、滿手紅利都能用，讓投資策略更靈活！
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
+            <section class="item man">
+                <div class="container">
+                    <div class="man-item-area">
+                        <article class="man-item">
+                            <div class="man-item-content">
+                                <div class="man-item-img">
+                                    <img src="images/man-1.png" alt="月光族">
+                                </div>
+                                <h2 class="man-item-tit" title="月光族">
+                                    月光族
+                                </h2>
+                                <p class="man-item-text">
+                                    社會新鮮人<br />小資上班族
+                                </p>
+                                <div class="man-item-tooltip">
+                                    <p>
+                                        一拿到薪水就想犒賞自己，到了月底只能吃泡麵？那就設定發薪日後先扣款投資，強迫理財好妙方，防止薪水月光光。
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="man-item">
+                            <div class="man-item-content">
+                                <div class="man-item-img">
+                                    <img src="images/man-2.png" alt="夾心族">
+                                </div>
+                                <h2 class="man-item-tit" title="夾心族">
+                                    夾心族
+                                </h2>
+                                <p class="man-item-text">
+                                    上有高堂
+                                    <br />下有子女
+                                </p>
+                                <div class="man-item-tooltip">
+                                    <p>
+                                        您的小豬撲滿是否被零錢餵撐了？不如拿來買基金，每次1,000元輕鬆投資，日日都能扣款，理財好彈性。
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="man-item">
+                            <div class="man-item-content">
+                                <div class="man-item-img">
+                                    <img src="images/man-3.png" alt="小老闆">
+                                </div>
+                                <h2 class="man-item-tit" title="小老闆">
+                                    小老闆
+                                </h2>
+                                <p class="man-item-text">
+                                    斜槓人生
+                                    <br />創業起家
+                                </p>
+                                <div class="man-item-tooltip">
+                                    <p>
+                                        沒有固定發薪日的soho族或自營商每當有收入進帳，即可設定隔天扣款，也能調整扣款金額，不再被固定扣款日綁住你的財務規劃。
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="man-item">
+                            <div class="man-item-content">
+                                <div class="man-item-img">
+                                    <img src="images/man-4.png" alt="投資好手">
+                                </div>
+                                <h2 class="man-item-tit" title="投資好手">
+                                    投資好手
+                                </h2>
+                                <p class="man-item-text">
+                                    大額分批
+                                    <br />領息存股
+                                </p>
+                                <div class="man-item-tooltip">
+                                    <p>
+                                        您有精準眼光、不想放過任何築底機會，那就用定期定額，天天都能加碼進攻、加碼次數多更多、滿手紅利都能用，讓投資策略更靈活！
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-			<section class="item features">
-				<div class="container">
-					<img src="images/tattoo-left.png?v=20191226" alt="" class="features-tattoo features-tattoo-left">
-					<img src="images/tattoo-right.png?v=20191226" alt="" class="features-tattoo features-tattoo-right">
-					<h2 class="tit-type1" title="四大好用特色">
-						<div class="tit-type1-content">
-							四大好用特色
-						</div>
-					</h2>
-					<div class="features-item-area">
-						<article class="features-item">
-							<div class="features-item-no">
-								1
-							</div>
-							<h3 class="features-item-tit" title="扣款日任你選">
-								扣款日任你選
-							</h3>
-							<p class="features-item-text">
-								扣款日可任選每月1日至31日，天天都是投資好時機，不必侷限於每月固定的幾個扣款日期，例如您可以選擇發薪日隔天扣款，強迫每月儲蓄。
-							</p>
-						</article>
-						<article class="features-item">
-							<div class="features-item-no">
-								2
-							</div>
-							<h3 class="features-item-tit" title="累加門檻更彈性">
-								累加門檻更彈性
-							</h3>
-							<p class="features-item-text">
-								累加單位金額較低，例如台幣扣款可以設定1100元、1200元…..可視個人資金狀況做投資調度運用。
-							</p>
-							<div class="chart-table">
-								<table>
-									<thead>
-										<tr>
-											<td>
-												申購幣別
-											</td>
-											<td>
-												最低<br class="mobileShow"/>申購金額
-											</td>
-											<td>
-												累加倍數
-											</td>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												新台幣
-											</td>
-											<td>
-												1,000元
-											</td>
-											<td>
-												100元
-											</td>
-										</tr>
-										<tr>
-											<td>
-												美元 / 歐元 / 澳幣
-											</td>
-											<td>
-												40元
-											</td>
-											<td>
-												10元
-											</td>
-										</tr>
-										<tr>
-											<td>
-												日幣
-											</td>
-											<td>
-												4,000元
-											</td>
-											<td>
-												1,000元
-											</td>
-										</tr>
-										<tr>
-											<td>
-												南非幣
-											</td>
-											<td>
-												600元
-											</td>
-											<td>
-												150元
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</article>
-						<article class="features-item">
-							<div class="features-item-no">
-								3
-							</div>
-							<h3 class="features-item-tit" title="當日下單當日扣">
-								當日下單當日扣
-							</h3>
-							<p class="features-item-text">
-								只要在每營業日下午1:30前下單成功，即可於當日進行扣款，不論是長時間定期扣款，或是逢低進場小額加碼，投資佈局機動，讓閒置資金也能有效運用。
-							</p>
-						</article>
-						<article class="features-item">
-							<div class="features-item-no">
-								4
-							</div>
-							<h3 class="features-item-tit" title="今天變更隔日生效">
-								今天變更隔日生效
-							</h3>
-							<p class="features-item-text">
-								只要在每營業日下午1:30前變更金額或扣款日期，變更內容隔日就能生效！不錯過任何進場加碼的機會。
-							</p>
-						</article>
-					</div>
-				</div>
-			</section>
+            <section class="item features">
+                <div class="container">
+                    <img src="images/tattoo-left.png?v=20191226" alt="" class="features-tattoo features-tattoo-left">
+                    <img src="images/tattoo-right.png?v=20191226" alt="" class="features-tattoo features-tattoo-right">
+                    <h2 class="tit-type1" title="四大好用特色">
+                        <div class="tit-type1-content">
+                            四大好用特色
+                        </div>
+                    </h2>
+                    <div class="features-item-area">
+                        <article class="features-item">
+                            <div class="features-item-no">
+                                1
+                            </div>
+                            <h3 class="features-item-tit" title="扣款日任你選">
+                                扣款日任你選
+                            </h3>
+                            <p class="features-item-text">
+                                扣款日可任選每月1日至31日，天天都是投資好時機，不必侷限於每月固定的幾個扣款日期，例如您可以選擇發薪日隔天扣款，強迫每月儲蓄。
+                            </p>
+                        </article>
+                        <article class="features-item">
+                            <div class="features-item-no">
+                                2
+                            </div>
+                            <h3 class="features-item-tit" title="累加門檻更彈性">
+                                累加門檻更彈性
+                            </h3>
+                            <p class="features-item-text">
+                                累加單位金額較低，例如台幣扣款可以設定1100元、1200元…..可視個人資金狀況做投資調度運用。
+                            </p>
+                            <div class="chart-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                申購幣別
+                                            </td>
+                                            <td>
+                                                最低<br class="mobileShow" />申購金額
+                                            </td>
+                                            <td>
+                                                累加倍數
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                新台幣
+                                            </td>
+                                            <td>
+                                                1,000元
+                                            </td>
+                                            <td>
+                                                100元
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                美元 / 歐元 / 澳幣
+                                            </td>
+                                            <td>
+                                                40元
+                                            </td>
+                                            <td>
+                                                10元
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                日幣
+                                            </td>
+                                            <td>
+                                                4,000元
+                                            </td>
+                                            <td>
+                                                1,000元
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                南非幣
+                                            </td>
+                                            <td>
+                                                600元
+                                            </td>
+                                            <td>
+                                                150元
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                        <article class="features-item">
+                            <div class="features-item-no">
+                                3
+                            </div>
+                            <h3 class="features-item-tit" title="當日下單當日扣">
+                                當日下單當日扣
+                            </h3>
+                            <p class="features-item-text">
+                                只要在每營業日下午1:30前下單成功，即可於當日進行扣款，不論是長時間定期扣款，或是逢低進場小額加碼，投資佈局機動，讓閒置資金也能有效運用。
+                            </p>
+                        </article>
+                        <article class="features-item">
+                            <div class="features-item-no">
+                                4
+                            </div>
+                            <h3 class="features-item-tit" title="今天變更隔日生效">
+                                今天變更隔日生效
+                            </h3>
+                            <p class="features-item-text">
+                                只要在每營業日下午1:30前變更金額或扣款日期，變更內容隔日就能生效！不錯過任何進場加碼的機會。
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-			<section class="item discount">
-				<div class="container">
-					<h2 class="tit-type1" title="專屬手續費優惠">
-						<div class="tit-type1-content">
-							專屬手續費優惠
-						</div>
-					</h2>
-					<div class="discount-item-area">
-						<article class="discount-item full" v-if="false">
-							<div class="discount-item-content">
-								<div class="discount-item-medals">
-									<img src="images/medalsBottom.png" alt="">
-									<div>
-										1
-									</div>
-								</div>
-								<!-- <h3 class="discount-item-tit" title="1月底前限時優惠 申購手續費0.1%">
+            <section class="item discount">
+                <div class="container">
+                    <h2 class="tit-type1" title="專屬手續費優惠">
+                        <div class="tit-type1-content">
+                            專屬手續費優惠
+                        </div>
+                    </h2>
+                    <div class="discount-item-area">
+                        <article class="discount-item full" v-if="false">
+                            <div class="discount-item-content">
+                                <div class="discount-item-medals">
+                                    <img src="images/medalsBottom.png" alt="">
+                                    <div>
+                                        1
+                                    </div>
+                                </div>
+                                <!-- <h3 class="discount-item-tit" title="1月底前限時優惠 申購手續費0.1%">
 									<div class="discount-item-tit-stit">
 										1月底前限時優惠
 									</div>
@@ -379,27 +393,28 @@
 										申購手續費<strong class="focus">0.1%</strong>
 									</div>
 								</h3> -->
-								<div class="discount-item-text">
-									6月底前15檔股債基金定期定額
-									<b class="focus">享0手續費</b>
-									<div class="btn type2">
-										<a href="https://event.franklin.com.tw/latest-offers/latest-offers.html?openInfo=investment_situation2" target="_blank" title="MORE">
-											MORE <i class="fas fa-caret-right"></i>
-										</a>
-									</div>
-								</div>
-								<img src="images/rosette.png" alt="" class="discount-item-rosette">
-							</div>
-						</article>
-						<article class="discount-item">
-							<div class="discount-item-content">
-								<div class="discount-item-medals">
-									<img src="images/medalsBottom.png" alt="">
-									<div>
-										1
-									</div>
-								</div>
-								<!-- <h3 class="discount-item-tit" title="1月底前限時優惠 申購手續費0.1%">
+                                <div class="discount-item-text">
+                                    6月底前15檔股債基金定期定額
+                                    <b class="focus">享0手續費</b>
+                                    <div class="btn type2">
+                                        <a href="https://event.franklin.com.tw/latest-offers/latest-offers.html?openInfo=investment_situation2"
+                                            target="_blank" title="MORE">
+                                            MORE <i class="fas fa-caret-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="images/rosette.png" alt="" class="discount-item-rosette">
+                            </div>
+                        </article>
+                        <article class="discount-item">
+                            <div class="discount-item-content">
+                                <div class="discount-item-medals">
+                                    <img src="images/medalsBottom.png" alt="">
+                                    <div>
+                                        1
+                                    </div>
+                                </div>
+                                <!-- <h3 class="discount-item-tit" title="1月底前限時優惠 申購手續費0.1%">
 									<div class="discount-item-tit-stit">
 										1月底前限時優惠
 									</div>
@@ -407,23 +422,23 @@
 										申購手續費<strong class="focus">0.1%</strong>
 									</div>
 								</h3> -->
-								<div class="discount-item-text">
-									人人有獎無期限
-									<br/>紅利1點折抵手續費1元
-									<br/><b class="focus">最低折至0.3%</b>
-								</div>
-								<img src="images/rosette.png" alt="" class="discount-item-rosette">
-							</div>
-						</article>
-						<article class="discount-item">
-							<div class="discount-item-content">
-								<div class="discount-item-medals">
-									<img src="images/medalsBottom.png" alt="">
-									<div>
-										2
-									</div>
-								</div>
-								<!-- <h3 class="discount-item-tit" title="人人有獎無期限 紅利折抵至0.3%">
+                                <div class="discount-item-text">
+                                    人人有獎無期限
+                                    <br />紅利1點折抵手續費1元
+                                    <br /><b class="focus">最低折至0.3%</b>
+                                </div>
+                                <img src="images/rosette.png" alt="" class="discount-item-rosette">
+                            </div>
+                        </article>
+                        <article class="discount-item">
+                            <div class="discount-item-content">
+                                <div class="discount-item-medals">
+                                    <img src="images/medalsBottom.png" alt="">
+                                    <div>
+                                        2
+                                    </div>
+                                </div>
+                                <!-- <h3 class="discount-item-tit" title="人人有獎無期限 紅利折抵至0.3%">
 									<div class="discount-item-tit-stit">
 										人人有獎無期限
 									</div>
@@ -431,639 +446,684 @@
 										紅利折抵至<strong class="focus">0.3%</strong>
 									</div>
 								</h3> -->
-								<div class="discount-item-text">
-									長期投資值得鼓勵
-									<br/>扣款每達100次可得1筆<br/><b class="focus">單筆0%優惠</b>
-								</div>
-								<img src="images/rosette.png" alt="" class="discount-item-rosette">
-							</div>
-						</article>
-						<p class="discount-notice">
-							<!-- 本優惠限透過民e帳戶以定期定額新申購季精選基金適用，單筆下單、轉申購、既有契約新扣款或AI智能理財專區交易除外；若需了解紅利點數折抵規則請點選
+                                <div class="discount-item-text">
+                                    長期投資值得鼓勵
+                                    <br />扣款每達100次可得1筆<br /><b class="focus">單筆0%優惠</b>
+                                </div>
+                                <img src="images/rosette.png" alt="" class="discount-item-rosette">
+                            </div>
+                        </article>
+                        <p class="discount-notice">
+                            <!-- 本優惠限透過民e帳戶以定期定額新申購季精選基金適用，單筆下單、轉申購、既有契約新扣款或AI智能理財專區交易除外；若需了解紅利點數折抵規則請點選
 							<a href="https://www.franklin.com.tw/ReservationAccount/ECFAQ" target="_blank" title="使用規則">
 								使用規則
 							</a>
 							參閱。 -->
-							※本活動完整規則與優惠使用限制請參考
-							<a :href="latestOffersUrl" target="_blank" title="最新優惠">
-								最新優惠
-							</a>
-							說明，另需了解紅利點數折抵規則請點選
-							<a href="https://www.franklin.com.tw/ReservationAccount/ECFAQ" target="_blank" title="使用規則">
-								使用規則
-							</a>
-							參閱。
-						</p>
-					</div>
-					<div class="btnArea twoBtn">
-						<div class="btn">
-							<a href="https://etrade.franklin.com.tw/Open/Entrance" title="申辦國民e帳戶">
-								申辦國民e帳戶 <i class="fas fa-caret-right"></i>
-							</a>
-						</div>
-						<div class="btn type2">
-							<a href="https://etrade.franklin.com.tw/Home/Login" title="立即下單享優惠">
-								立即下單享優惠 <i class="fas fa-caret-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
+                            ※本活動完整規則與優惠使用限制請參考
+                            <a :href="latestOffersUrl" target="_blank" title="最新優惠">
+                                最新優惠
+                            </a>
+                            說明，另需了解紅利點數折抵規則請點選
+                            <a href="https://www.franklin.com.tw/ReservationAccount/ECFAQ" target="_blank" title="使用規則">
+                                使用規則
+                            </a>
+                            參閱。
+                        </p>
+                    </div>
+                    <div class="btnArea twoBtn">
+                        <sice-login-hide>
+                            <div class="btn" v-app-login>
+                                <a href="https://etrade.franklin.com.tw/Open/Entrance" title="申辦國民e帳戶">
+                                    申辦國民e帳戶 <i class="fas fa-caret-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-hide>
+                        <sice-login-show>
+                            <div class="btn type2" v-app-fund>
+                                <a href="https://etrade.franklin.com.tw/Home/Login" title="立即下單享優惠">
+                                    立即下單享優惠 <i class="fas fa-caret-right"></i>
+                                </a>
+                            </div>
+                        </sice-login-show>
+                    </div>
+                </div>
+            </section>
+            <sice-web-show>
+                <section class="item fund">
+                    <div class="container">
+                        <h2 class="tit-type1" title="本季精選基金">
+                            <div class="tit-type1-content">
+                                本季精選基金
+                            </div>
+                        </h2>
+                        <div class="fund-slickItem">
+                            <h3 class="fund-slickItem-tit" title="期待爆發潛能的朋友">
+                                期待爆發潛能的朋友
+                            </h3>
+                            <div class="fund-slickItem-arrow fund-slickItem-arrow-left slick1">
+                                <i class="fas fa-chevron-circle-left"></i>
+                            </div>
+                            <div class="fund-slickItem-arrow fund-slickItem-arrow-right slick1">
+                                <i class="fas fa-chevron-circle-right"></i>
+                            </div>
+                            <div class="fund-slickItem-1">
+                                <!--
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2017_07_Q3_101/index.html" target="_blank" title="坦伯頓成長基金(本基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-101.png" alt="坦伯頓成長基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                坦伯頓成長基金
+                                                <span class="focus">(本基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2019_10_Q4_1000/index.html" target="_blank" title="吉富世界基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1000.png" alt="吉富世界基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                吉富世界基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                -->
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html"
+                                            target="_blank" title="美國機會基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0799.png"
+                                                alt="美國機會基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                美國機會基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2018_12_fund/1107.html" target="_blank"
+                                            title="公用事業基金(本基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1107.png"
+                                                alt="公用事業基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                公用事業基金<span class="focus">(本基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://www.franklin.com.tw/Fund/BasicInformation/0786" target="_blank"
+                                            title="亞洲成長基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1009.png"
+                                                alt="亞洲成長基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                亞洲成長基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2017_06_Q3_1009/index.html" target="_blank" title="亞洲小型企業基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1009.png" alt="亞洲小型企業基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                亞洲小型企業基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                -->
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2018_01_Q1_0806/index.html"
+                                            target="_blank" title="新興國家基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0806.png"
+                                                alt="新興國家基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                新興國家基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2018_07_Q3_0797/index.html"
+                                            target="_blank" title="科技基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0797.png"
+                                                alt="科技基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                科技基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://www.franklin.com.tw/Fund/BasicInformation/0796" target="_blank"
+                                            title="生技領航基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0796.png"
+                                                alt="生技領航基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                生技領航基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://www.franklin.com.tw/Fund/BasicInformation/2108" target="_blank"
+                                            title="全球氣候變遷基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-2108.png"
+                                                alt="全球氣候變遷基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                全球氣候變遷基金
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fund-slickItem">
+                            <h3 class="fund-slickItem-tit type2" title="偏好穩中求進的朋友">
+                                偏好穩中求進的朋友
+                            </h3>
+                            <div class="fund-slickItem-arrow fund-slickItem-arrow-left slick2">
+                                <i class="fas fa-chevron-circle-left"></i>
+                            </div>
+                            <div class="fund-slickItem-arrow fund-slickItem-arrow-right slick2">
+                                <i class="fas fa-chevron-circle-right"></i>
+                            </div>
+                            <div class="fund-slickItem-2">
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/us-government-fund/index.html"
+                                            target="_blank" title="美國政府基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0812.png"
+                                                alt="美國政府基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                美國政府基金
+                                                <span class="focus">(本基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html"
+                                            target="_blank" title="全球債券基金(本基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0810.png"
+                                                alt="全球債券基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                全球債券基金
+                                                <span class="focus">(本基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://www.franklin.com.tw/Fund/BasicInformation/1049" target="_blank"
+                                            title="新興國家固定收益基金">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1049.png"
+                                                alt="新興國家固定收益基金" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                新興國家固定收益基金
+                                                <span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2019_05_islam/index.html"
+                                            target="_blank" title="伊斯蘭債券基金(本基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-islam.png"
+                                                alt="伊斯蘭債券基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                伊斯蘭債券基金
+                                                <span class="focus">(本基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2019_07_Q3_0479/" target="_blank" title="全球高收益基金(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0479.png" alt="全球高收益基金(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)" class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                全球高收益基金
+                                                <span class="focus">(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                -->
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2018_10_fund/0427.html" target="_blank"
+                                            title="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0427.png"
+                                                alt="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+                                                class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                精選收益基金
+                                                <span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fund-slickItem-item">
+                                        <a href="https://event.franklin.com.tw/C2017_08_Q3_0839/index.html"
+                                            target="_blank" title="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
+                                            <img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0839.png"
+                                                alt="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)"
+                                                class="fund-slickItem-item-img">
+                                            <div class="fund-slickItem-item-tit">
+                                                穩定月收益基金
+                                                <span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </sice-web-show>
+            <section class="item qa">
+                <div class="container">
+                    <h2 class="tit-type1" title="常見問題集">
+                        <div class="tit-type1-content">
+                            常見問題集
+                        </div>
+                    </h2>
+                    <div class="qa-list-area">
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="我可以隨時增加或減少當月扣款次（天）數，或修改扣款金額嗎？">
+                                我可以隨時增加或減少當月扣款次（天）數，或修改扣款金額嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    可以。您可以登入
+                                    <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
+                                        國民e帳戶
+                                    </a>
+                                    修改扣款設定，包括新增指定扣款日、暫停扣款、新增或減少扣款金額。別忘了要在您欲更改之扣款日前一個工作天下午1：30前變更才來得及生效唷！
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="請問定期定額要扣幾年？">
+                                請問定期定額要扣幾年？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    基金不像保險有年限，反而類似股票是由您決定進出場時間。所以投資基金沒有年限限制，可依照您的理財規劃安排扣款投資時間。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="我可以隨時把投資金額拿回來嗎？">
+                                我可以隨時把投資金額拿回來嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    您可以隨時透過
+                                    <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
+                                        國民e帳戶
+                                    </a>
+                                    贖回基金，不過通常一般人會將基金當作長期投資工具、納入長期理財規劃喔！
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="每月1-31號都能扣款，那二月份只有28天或無31日的月份還會扣款嗎？">
+                                每月1-31號都能扣款，那二月份只有28天或無31日的月份還會扣款嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    定期定額申購，若您選擇每月29日、30日或31日為扣款日，遇到當月份無29、30或31日的日期時，則該月份不會扣款。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="定期定額約定的扣款日若遇到國定例假日，還會扣款嗎？">
+                                定期定額約定的扣款日若遇到國定例假日，還會扣款嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    定期定額的約定扣款日若遇到台灣國定例假日、金融機構之電腦轉帳系統故障或其他不可抗力之事由，未能於約定日期進行扣款作業時，則順延至次一營業日扣款。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="定期定額契約全部贖回或轉換時，會自動停止扣款嗎？">
+                                定期定額契約全部贖回或轉換時，會自動停止扣款嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    不會。全數贖回或轉換不代表原定期定額契約停止扣款，若您須調整原契約扣款狀態與內容，請登入
+                                    <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
+                                        國民e帳戶
+                                    </a>
+                                    點選【基金交易】選擇【定期定額變更】單元進行變更。若欲停止扣款，請點選原藍底標示的扣款日期，讓其呈現改為白底狀態代表不扣款並送出申請即可囉！
+                                    <img src="images/qaImg1.jpg" alt="" style="display: block; margin: 10px auto;">
+                                    唯需留意，如欲在當月生效，需在扣款日前一個營業日13:30:00前變更成功；若超過上述時間進行變更，此異動將於下個月扣款日生效。例如：若您原扣款日為12號，本月欲改成8號扣款，假設中間未遇到假日，請於7號當日13:30:00前變更完成。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="各檔基金定期定額申購之最低申購金額各為何？">
+                                各檔基金定期定額申購之最低申購金額各為何？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    境外基金與投信基金除貨幣基金只提供轉入(轉換)外，其他基金定期定額最低申購門檻與累加金額請參考下表：
+                                </p>
+                                <div class="chart-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td rowspan="2">
+                                                    申購<br class="mobileShow" />幣別
+                                                </td>
+                                                <td colspan="2">
+                                                    境外基金
+                                                </td>
+                                                <td colspan="2">
+                                                    投信基金
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    最低申購<br class="mobileShow" />門檻
+                                                </td>
+                                                <td>
+                                                    累加<br class="mobileShow" />單位
+                                                </td>
+                                                <td>
+                                                    最低申購<br class="mobileShow" />門檻
+                                                </td>
+                                                <td>
+                                                    累加<br class="mobileShow" />單位
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    新台幣 TWD
+                                                </td>
+                                                <td>
+                                                    1千
+                                                </td>
+                                                <td>
+                                                    1百
+                                                </td>
+                                                <td>
+                                                    1千
+                                                </td>
+                                                <td>
+                                                    1百
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    澳幣 AUD
+                                                </td>
+                                                <td>
+                                                    40元
+                                                </td>
+                                                <td>
+                                                    10元
+                                                </td>
+                                                <td>
+                                                    40元
+                                                </td>
+                                                <td>
+                                                    10元
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    歐元 EUR
+                                                </td>
+                                                <td>
+                                                    40元
+                                                </td>
+                                                <td>
+                                                    10元
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    美元 USD
+                                                </td>
+                                                <td>
+                                                    40元
+                                                </td>
+                                                <td>
+                                                    10元
+                                                </td>
+                                                <td>
+                                                    40元
+                                                </td>
+                                                <td>
+                                                    10元
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    日幣 JPY
+                                                </td>
+                                                <td>
+                                                    4千
+                                                </td>
+                                                <td>
+                                                    1千
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    南非幣 ZAR
+                                                </td>
+                                                <td>
+                                                    6百
+                                                </td>
+                                                <td>
+                                                    150元
+                                                </td>
+                                                <td>
+                                                    6百
+                                                </td>
+                                                <td>
+                                                    150元
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    人民幣 CNY
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                                <td>
+                                                    -
+                                                </td>
+                                                <td>
+                                                    2百
+                                                </td>
+                                                <td>
+                                                    20元
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="qa-list">
+                            <h3 class="qa-list-tit" title="定期定額手續費是否可指定用紅利點數折抵？外幣扣款也可以折抵嗎？">
+                                定期定額手續費是否可指定用紅利點數折抵？外幣扣款也可以折抵嗎？
+                            </h3>
+                            <div class="qa-list-content">
+                                <p>
+                                    定期定額手續費將一律預設以紅利點數優先折抵至紅利點數用盡為止，無法選擇暫不折抵，若可使用之紅利點數不足以折抵全部手續費，差額部分將自由指定扣款帳戶與申購價金一併扣除。各幣別紅利點數折抵定期定額手續費規則如下：
+                                </p>
+                                <div class="chart-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>
+                                                    幣別
+                                                </td>
+                                                <td>
+                                                    台幣
+                                                </td>
+                                                <td>
+                                                    歐元 /
+                                                    <!--br class="mobileShow"/ -->美元
+                                                </td>
+                                                <td>
+                                                    澳幣
+                                                </td>
+                                                <td>
+                                                    日幣
+                                                </td>
+                                                <td>
+                                                    南非幣
+                                                </td>
+                                                <td>
+                                                    人民幣
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    紅利點數
+                                                </td>
+                                                <td>
+                                                    1點
+                                                </td>
+                                                <td>
+                                                    40點
+                                                </td>
+                                                <td>
+                                                    25點
+                                                </td>
+                                                <td>
+                                                    1點
+                                                </td>
+                                                <td>
+                                                    4點
+                                                </td>
+                                                <td>
+                                                    5點
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    可折抵<br class="mobileShow" />手續費
+                                                </td>
+                                                <td>
+                                                    1元
+                                                </td>
+                                                <td>
+                                                    1元
+                                                </td>
+                                                <td>
+                                                    1元
+                                                </td>
+                                                <td>
+                                                    2.5元
+                                                </td>
+                                                <td>
+                                                    1元
+                                                </td>
+                                                <td>
+                                                    1元
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-			<section class="item fund">
-				<div class="container">
-					<h2 class="tit-type1" title="本季精選基金">
-						<div class="tit-type1-content">
-							本季精選基金
-						</div>
-					</h2>
-					<div class="fund-slickItem">
-						<h3 class="fund-slickItem-tit" title="期待爆發潛能的朋友">
-							期待爆發潛能的朋友
-						</h3>
-						<div class="fund-slickItem-arrow fund-slickItem-arrow-left slick1">
-							<i class="fas fa-chevron-circle-left"></i>
-						</div>
-						<div class="fund-slickItem-arrow fund-slickItem-arrow-right slick1">
-							<i class="fas fa-chevron-circle-right"></i>
-						</div>
-						<div class="fund-slickItem-1">
-							<!--
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2017_07_Q3_101/index.html" target="_blank" title="坦伯頓成長基金(本基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-101.png" alt="坦伯頓成長基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											坦伯頓成長基金
-											<span class="focus">(本基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2019_10_Q4_1000/index.html" target="_blank" title="吉富世界基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1000.png" alt="吉富世界基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											吉富世界基金
-										</div>
-									</a>
-								</div>
-							</div>
-							-->
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2018_12_Q4_0799/index.html" target="_blank" title="美國機會基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0799.png" alt="美國機會基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											美國機會基金
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2018_12_fund/1107.html" target="_blank" title="公用事業基金(本基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1107.png" alt="公用事業基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											公用事業基金<span class="focus">(本基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://www.franklin.com.tw/Fund/BasicInformation/0786" target="_blank" title="亞洲成長基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1009.png" alt="亞洲成長基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											亞洲成長基金
-										</div>
-									</a>
-								</div>
-							</div>
-							<!--
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2017_06_Q3_1009/index.html" target="_blank" title="亞洲小型企業基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1009.png" alt="亞洲小型企業基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											亞洲小型企業基金
-										</div>
-									</a>
-								</div>
-							</div>
-							-->
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2018_01_Q1_0806/index.html" target="_blank" title="新興國家基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0806.png" alt="新興國家基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											新興國家基金
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2018_07_Q3_0797/index.html" target="_blank" title="科技基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0797.png" alt="科技基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											科技基金
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://www.franklin.com.tw/Fund/BasicInformation/0796" target="_blank" title="生技領航基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0796.png" alt="生技領航基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											生技領航基金
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://www.franklin.com.tw/Fund/BasicInformation/2108" target="_blank" title="全球氣候變遷基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-2108.png" alt="全球氣候變遷基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											全球氣候變遷基金
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fund-slickItem">
-						<h3 class="fund-slickItem-tit type2" title="偏好穩中求進的朋友">
-							偏好穩中求進的朋友
-						</h3>
-						<div class="fund-slickItem-arrow fund-slickItem-arrow-left slick2">
-							<i class="fas fa-chevron-circle-left"></i>
-						</div>
-						<div class="fund-slickItem-arrow fund-slickItem-arrow-right slick2">
-							<i class="fas fa-chevron-circle-right"></i>
-						</div>
-						<div class="fund-slickItem-2">
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/us-government-fund/index.html" target="_blank" title="美國政府基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0812.png" alt="美國政府基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											美國政府基金
-											<span class="focus">(本基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2017_11_Q4_0810/index.html" target="_blank" title="全球債券基金(本基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0810.png" alt="全球債券基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											全球債券基金
-											<span class="focus">(本基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://www.franklin.com.tw/Fund/BasicInformation/1049" target="_blank" title="新興國家固定收益基金">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-1049.png" alt="新興國家固定收益基金" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											新興國家固定收益基金
-											<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2019_05_islam/index.html" target="_blank" title="伊斯蘭債券基金(本基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-islam.png" alt="伊斯蘭債券基金(本基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											伊斯蘭債券基金
-											<span class="focus">(本基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<!--
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2019_07_Q3_0479/" target="_blank" title="全球高收益基金(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0479.png" alt="全球高收益基金(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											全球高收益基金
-											<span class="focus">(本基金主要係投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							-->
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2018_10_fund/0427.html" target="_blank" title="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0427.png" alt="精選收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											精選收益基金
-											<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="fund-slickItem-item">
-									<a href="https://event.franklin.com.tw/C2017_08_Q3_0839/index.html" target="_blank" title="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)">
-										<img src="https://event.franklin.com.tw/commonBanner/common-prod-img/fund-0839.png" alt="穩定月收益基金(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)" class="fund-slickItem-item-img">
-										<div class="fund-slickItem-item-tit">
-											穩定月收益基金
-											<span class="focus">(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+        </article>
 
-			<section class="item qa">
-				<div class="container">
-					<h2 class="tit-type1" title="常見問題集">
-						<div class="tit-type1-content">
-							常見問題集
-						</div>
-					</h2>
-					<div class="qa-list-area">
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="我可以隨時增加或減少當月扣款次（天）數，或修改扣款金額嗎？">
-								我可以隨時增加或減少當月扣款次（天）數，或修改扣款金額嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									可以。您可以登入
-									<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
-										國民e帳戶
-									</a>
-									修改扣款設定，包括新增指定扣款日、暫停扣款、新增或減少扣款金額。別忘了要在您欲更改之扣款日前一個工作天下午1：30前變更才來得及生效唷！
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="請問定期定額要扣幾年？">
-								請問定期定額要扣幾年？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									基金不像保險有年限，反而類似股票是由您決定進出場時間。所以投資基金沒有年限限制，可依照您的理財規劃安排扣款投資時間。
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="我可以隨時把投資金額拿回來嗎？">
-								我可以隨時把投資金額拿回來嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									您可以隨時透過
-									<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
-										國民e帳戶
-									</a>
-									贖回基金，不過通常一般人會將基金當作長期投資工具、納入長期理財規劃喔！
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="每月1-31號都能扣款，那二月份只有28天或無31日的月份還會扣款嗎？">
-								每月1-31號都能扣款，那二月份只有28天或無31日的月份還會扣款嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									定期定額申購，若您選擇每月29日、30日或31日為扣款日，遇到當月份無29、30或31日的日期時，則該月份不會扣款。
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="定期定額約定的扣款日若遇到國定例假日，還會扣款嗎？">
-								定期定額約定的扣款日若遇到國定例假日，還會扣款嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									定期定額的約定扣款日若遇到台灣國定例假日、金融機構之電腦轉帳系統故障或其他不可抗力之事由，未能於約定日期進行扣款作業時，則順延至次一營業日扣款。
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="定期定額契約全部贖回或轉換時，會自動停止扣款嗎？">
-								定期定額契約全部贖回或轉換時，會自動停止扣款嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									不會。全數贖回或轉換不代表原定期定額契約停止扣款，若您須調整原契約扣款狀態與內容，請登入
-									<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank">
-										國民e帳戶
-									</a>
-									點選【基金交易】選擇【定期定額變更】單元進行變更。若欲停止扣款，請點選原藍底標示的扣款日期，讓其呈現改為白底狀態代表不扣款並送出申請即可囉！
-									<img src="images/qaImg1.jpg" alt="" style="display: block; margin: 10px auto;">
-									唯需留意，如欲在當月生效，需在扣款日前一個營業日13:30:00前變更成功；若超過上述時間進行變更，此異動將於下個月扣款日生效。例如：若您原扣款日為12號，本月欲改成8號扣款，假設中間未遇到假日，請於7號當日13:30:00前變更完成。
-								</p>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="各檔基金定期定額申購之最低申購金額各為何？">
-								各檔基金定期定額申購之最低申購金額各為何？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									境外基金與投信基金除貨幣基金只提供轉入(轉換)外，其他基金定期定額最低申購門檻與累加金額請參考下表：
-								</p>
-								<div class="chart-table">
-									<table>
-										<thead>
-											<tr>
-												<td rowspan="2">
-													申購<br class="mobileShow"/>幣別
-												</td>
-												<td colspan="2">
-													境外基金
-												</td>
-												<td colspan="2">
-													投信基金
-												</td>
-											</tr>
-											<tr>
-												<td>
-													最低申購<br class="mobileShow"/>門檻
-												</td>
-												<td>
-													累加<br class="mobileShow"/>單位
-												</td>
-												<td>
-													最低申購<br class="mobileShow"/>門檻
-												</td>
-												<td>
-													累加<br class="mobileShow"/>單位
-												</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													新台幣 TWD
-												</td>
-												<td>
-													1千
-												</td>
-												<td>
-													1百
-												</td>
-												<td>
-													1千
-												</td>
-												<td>
-													1百
-												</td>
-											</tr>
-											<tr>
-												<td>
-													澳幣 AUD
-												</td>
-												<td>
-													40元
-												</td>
-												<td>
-													10元
-												</td>
-												<td>
-													40元
-												</td>
-												<td>
-													10元
-												</td>
-											</tr>
-											<tr>
-												<td>
-													歐元 EUR
-												</td>
-												<td>
-													40元
-												</td>
-												<td>
-													10元
-												</td>
-												<td>
-													-
-												</td>
-												<td>
-													-
-												</td>
-											</tr>
-											<tr>
-												<td>
-													美元 USD
-												</td>
-												<td>
-													40元
-												</td>
-												<td>
-													10元
-												</td>
-												<td>
-													40元
-												</td>
-												<td>
-													10元
-												</td>
-											</tr>
-											<tr>
-												<td>
-													日幣 JPY
-												</td>
-												<td>
-													4千
-												</td>
-												<td>
-													1千
-												</td>
-												<td>
-													-
-												</td>
-												<td>
-													-
-												</td>
-											</tr>
-											<tr>
-												<td>
-													南非幣 ZAR
-												</td>
-												<td>
-													6百
-												</td>
-												<td>
-													150元
-												</td>
-												<td>
-													6百
-												</td>
-												<td>
-													150元
-												</td>
-											</tr>
-											<tr>
-												<td>
-													人民幣 CNY
-												</td>
-												<td>
-													-
-												</td>
-												<td>
-													-
-												</td>
-												<td>
-													2百
-												</td>
-												<td>
-													20元
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</article>
-						<article class="qa-list">
-							<h3 class="qa-list-tit" title="定期定額手續費是否可指定用紅利點數折抵？外幣扣款也可以折抵嗎？">
-								定期定額手續費是否可指定用紅利點數折抵？外幣扣款也可以折抵嗎？
-							</h3>
-							<div class="qa-list-content">
-								<p>
-									定期定額手續費將一律預設以紅利點數優先折抵至紅利點數用盡為止，無法選擇暫不折抵，若可使用之紅利點數不足以折抵全部手續費，差額部分將自由指定扣款帳戶與申購價金一併扣除。各幣別紅利點數折抵定期定額手續費規則如下：
-								</p>
-								<div class="chart-table">
-									<table>
-										<thead>
-											<tr>
-												<td>
-													幣別
-												</td>
-												<td>
-													台幣
-												</td>
-												<td>
-													歐元 / <!--br class="mobileShow"/ -->美元
-												</td>
-												<td>
-													澳幣
-												</td>
-												<td>
-													日幣
-												</td>
-												<td>
-													南非幣
-												</td>
-												<td>
-													人民幣
-												</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													紅利點數
-												</td>
-												<td>
-													1點
-												</td>
-												<td>
-													40點
-												</td>
-												<td>
-													25點
-												</td>
-												<td>
-													1點
-												</td>
-												<td>
-													4點
-												</td>
-												<td>
-													5點
-												</td>
-											</tr>
-											<tr>
-												<td>
-													可折抵<br class="mobileShow"/>手續費
-												</td>
-												<td>
-													1元
-												</td>
-												<td>
-													1元
-												</td>
-												<td>
-													1元
-												</td>
-												<td>
-													2.5元
-												</td>
-												<td>
-													1元
-												</td>
-												<td>
-													1元
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
+        <!-- footer -->
+        <footer-area></footer-area>
 
-		</article>
+        <div class="topBtn">
+            <a href="#top" title="返回最上面">
+                <span>
+                    <i class="fas fa-caret-up"></i>
+                    TOP
+                </span>
+            </a>
+        </div>
 
-		<!-- footer -->
-		<footer-area></footer-area>
-		
-		<div class="topBtn">
-			<a href="#top" title="返回最上面">
-				<span>
-					<i class="fas fa-caret-up"></i>
-					TOP
-				</span>
-			</a>
-		</div>
+        <div class="fixedRightBtn-area clearfix">
+            <sice-login-hide>
+                <div class="fixedRightBtn" v-app-login>
+                    <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="申辦國民e帳戶">
+                        申辦國民e帳戶 <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </sice-login-hide>
+            <sice-login-hide>
+                <div class="fixedRightBtn type2" v-app-login>
+                    <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單享優惠">
+                        立即下單享優惠 <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </sice-login-hide>
+            <sice-login-show>
+                <div class="fixedRightBtn type2" v-app-fund>
+                    <a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單享優惠">
+                        立即下單享優惠 <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </sice-login-show>
+        </div>
 
-		<div class="fixedRightBtn-area clearfix">
-			<div class="fixedRightBtn">
-				<a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="申辦國民e帳戶">
-					申辦國民e帳戶 <i class="fas fa-chevron-right"></i>
-				</a>
-			</div>
-			<div class="fixedRightBtn type2">
-				<a href="https://etrade.franklin.com.tw/Home/Login" target="_blank" title="立即下單享優惠">
-					立即下單享優惠 <i class="fas fa-chevron-right"></i>
-				</a>
-			</div>
-		</div>
+    </sice-provider>
 
-	</sice-provider>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<!-- <script src="js/wow.min.js"></script> -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-	<script src="js/animation.gsap.js"></script>
-	<script src="js/main.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/animation.gsap.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
