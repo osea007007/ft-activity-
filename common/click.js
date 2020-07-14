@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(document).ready(function () {
     let regxList = [
         {
             regx: '^https://www.franklin.com.tw/Mobile/Fund/FundInfo\\?idNo=([\\da-zA-Z]*)&token=([\\da-zA-Z]*)&fundGuid=(\\d{4})&?(_ga=[\\d.-])?',
