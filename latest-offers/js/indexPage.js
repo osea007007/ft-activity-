@@ -78,17 +78,3 @@ var indexPage = {
         }
     }
 };
-
-// Vue.component('mock-sice-provider', {
-//     data: function () {
-//         return {
-//             data: {
-//                 isApp: true,    // 判斷是否為app
-//                 isLogin: true,  // 判斷app是否登錄
-//             }
-//         }
-//     },
-//     template: ` <sice-provider :mock-data="data">
-//                     <slot></slot>
-//                 </sice-provider> `,
-// });

@@ -83,24 +83,6 @@
     <script src="../common/click.js">
         //APP用的js
     </script>
-    <!-- <script>
-        Vue.component('mock-sice-provider', {
-            data: function () {
-                return {
-                    data: {
-                        // 判斷是否為app
-                        isApp: true,
-                        // 判斷app是否登錄
-                        isLogin: true,
-                    }
-                }
-            },
-            template: `<sice-provider :mock-data="data">
-                        <slot></slot>
-                        </sice-provider> `,
-        });
-    </script> -->
-
 </head>
 <!--/head-->
 
@@ -113,7 +95,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <sice-provider id="content" v-cloak :mock-data="{isApp:true,isLogin:true}">
+    <sice-provider id="content" v-cloak>
         <header id="header">
             <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
                 <div class="container">
