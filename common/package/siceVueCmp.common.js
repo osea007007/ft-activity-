@@ -2843,7 +2843,9 @@ function install(Vue) {
       }
 
       myAddEvent(el, 'click', function () {
-        window.location.href = 'twsice://login';
+        if (window.appInfo.isApp) {
+          window.location.href = 'twsice://login';
+        }
       });
     }
   });
@@ -2854,7 +2856,18 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 /* harmony default export */ var SiceLogin = ({
-  install: install
+  install: install,
+  inject: ['getAppInfo'],
+  props: {
+    href: {
+      type: String
+    }
+  },
+  computed: {
+    isApp: function isApp() {
+      return this.getAppInfo().isApp;
+    }
+  }
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"62c43d73-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SiceLoginHide/SiceLoginHide.vue?vue&type=template&id=59f59d90&
 var SiceLoginHidevue_type_template_id_59f59d90_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('fragment',[(!_vm.isLogin)?_vm._t("default"):_vm._e()],2)}
