@@ -2207,12 +2207,12 @@ function _objectSpread2(target) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"62c43d73-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SiceProvider/SiceProvider.vue?vue&type=template&id=7c84459b&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"62c43d73-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SiceProvider/SiceProvider.vue?vue&type=template&id=4ecd369c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./components/SiceProvider/SiceProvider.vue?vue&type=template&id=7c84459b&
+// CONCATENATED MODULE: ./components/SiceProvider/SiceProvider.vue?vue&type=template&id=4ecd369c&
 
 // CONCATENATED MODULE: ./common/utils.js
 // 通知react native
@@ -2272,6 +2272,10 @@ function sendMessage(data) {
   },
   created: function created() {
     var _this2 = this;
+
+    if (this.mockData) {
+      window.appInfo = this.mockData;
+    }
 
     var handleMessage = function handleMessage(e) {
       var _ref = e.data || {},
@@ -2852,8 +2856,16 @@ function install(Vue) {
       }
 
       myAddEvent(el, 'click', function () {
-        if (window.appInfo.isApp) {
-          window.location.href = 'twsice://login';
+        var _ref = window.appInfo || {},
+            isApp = _ref.isApp,
+            openLog = _ref.openLog;
+
+        if (isApp) {
+          if (openLog) {
+            console.log('twsice://login');
+          } else {
+            window.location.href = 'twsice://login';
+          }
         }
       });
     }

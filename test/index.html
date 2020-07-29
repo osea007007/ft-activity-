@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../C2018_12_Q4_0799/js/jquery.js"></script>
-
     <script src="../C2018_12_Q4_0799/js/vue.min.js"></script>
 
     <script src="../C2018_12_Q4_0799/js/wow.min.js"></script>
     <script src="../common/package/siceVueCmp.umd.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
 
     <style>
         body {
@@ -20,15 +20,28 @@
 </head>
 
 <body>
-    <sice-provider id="content" v-cloak>
-        <link-test></link-test>
+    <sice-provider id="content" v-cloak :mock-data="{isApp:true,isLogin:true,openLog:true}">
+        <ol>
+            <li>
+                <sice-fund fund-id="0797" target="_blank" title="立即下單">
+                    <strong>組件基金</strong>
+                </sice-fund>
+            </li>
+            <li>
+                <a href='https://etrade.franklin.com.tw/Home/Login?ReturnUrl=/Trade/LumpSum/ShowForm/0797'>a鏈接基金</a>
+            </li>
+            <li>
+                <a href='https://etrade.franklin.com.tw/Home/Login'>a鏈接基金</a>
+            </li>
+        </ol>
+        <!-- <link-test></link-test> -->
 
-        <test-url></test-url>
+        <!-- <test-url></test-url> -->
 
     </sice-provider>
     <script src="https://unpkg.com/callapp-lib@2.1.5/dist/index.umd.js"></script>
     <script src="../C2018_12_Q4_0799/js/component.js"></script>
-    <script src="../C2018_12_Q4_0799/js/click.js"></script>
+    <script src="../common/click.js"></script>
 
 
 </body>

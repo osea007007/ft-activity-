@@ -38,16 +38,16 @@ $(document).ready(function () {
             }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Home/Login\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return 'twsice://fundList';
-            }
-        },
-        {
             regx: createRegExp('^https://etrade.franklin.com.tw/Home/Login\\?ReturnUrl=/Trade/LumpSum/ShowForm/(\\d{4})&?(_ga=[\\d.-])?'),
             path: function (arguments) {
                 let fundId = arguments[1];
                 return 'twsice://fundDetail?fundId=' + fundId;
+            }
+        },
+        {
+            regx: '^https://etrade.franklin.com.tw/Home/Login\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://fundList';
             }
         },
         {
@@ -163,8 +163,18 @@ $(document).ready(function () {
         return href;
     }
 
+    function openUrl(link) {
+        const { openLog } = window.appInfo || {}
+        if (openLog) {
+            console.log(link)
+            return false;
+        } else {
+            window.location.href = link;
+        }
+    }
+
     $("body").on('click', 'a', function (e) {
-        const { isApp } = window.appInfo || {}
+        const { isApp, openLog } = window.appInfo || {}
         if (isApp) {
             const dom = $(e.currentTarget);
             const href = dom.attr('href');
@@ -176,11 +186,11 @@ $(document).ready(function () {
                     dom.attr('href', 'javascript: void(0)');
                     dom.attr('applink', href);
                 }
-                window.location.href = link;
+                return openUrl(link)
             } else if (href === 'javascript: void(0)' && applink) {
                 const url = unescape(applink);
                 const link = getHref(url);
-                window.location.href = link;
+                return openUrl(link)
             }
         }
     })
