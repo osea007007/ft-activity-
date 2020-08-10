@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#003680" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <link rel="shortcut icon" href="https://event.franklin.com.tw/commonResources/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192×192"
+        href="https://event.franklin.com.tw/commonResources/images/192x192.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://event.franklin.com.tw/commonResources/css/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://event.franklin.com.tw/commonResources/css/animate-v3.7.2.css" />
+    <link rel="stylesheet" href="css/style.css?v=20200729" />
+
+    <title>“挺”辛苦的父親 – 投資手續費我們幫您『付清』了｜富蘭克林</title>
+    <meta property="og:title" content="“挺”辛苦的父親 – 投資手續費我們幫您『付清』了｜富蘭克林" />
+    <meta name="twitter:title" content="“挺”辛苦的父親 – 投資手續費我們幫您『付清』了｜富蘭克林" />
+
+    <meta name="description" content="天天都在付清大小帳單的爸爸們，這次換富蘭克林幫您把存基金手續費『付清』了！" />
+    <meta property="og:description" content="天天都在付清大小帳單的爸爸們，這次換富蘭克林幫您把存基金手續費『付清』了！" />
+    <meta name="twitter:description" content="天天都在付清大小帳單的爸爸們，這次換富蘭克林幫您把存基金手續費『付清』了！" />
+
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="1060402337367331" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://event.franklin.com.tw/fathers-day/images/fb.jpg" />
+    <meta name="twitter:image" content="https://event.franklin.com.tw/fathers-day/images/fb.jpg" />
+    <meta name="twitter:card" content="https://event.franklin.com.tw/fathers-day/images/fb.jpg" />
+
+    <meta property="og:url" content="https://event.franklin.com.tw/fathers-day/index.html" />
+    <meta name="twitter:site" content="@franklin_tw" />
+
+    <script src="js/polyfill.min.js"></script>
+    <script src="js/md5.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/vue-v2.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-v3.4.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/jquery-migrate-v1.2.1.min.js"></script>
+    <!-- <script src="https://event.franklin.com.tw/commonResources/js/slick.min.js"></script> -->
+    <script src="https://event.franklin.com.tw/commonResources/js/wow-v1.3.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/ScrollMagic-v2.0.7.min.js"></script>
+    <!-- <script src="https://event.franklin.com.tw/commonResources/js/debug.addIndicators-v2.0.7.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://event.franklin.com.tw/commonResources/js/animation.gsap.js"></script>
+    <script src="js/vue-scrollto.min.js"></script>
+    <script src="js/vuelidate.min.js"></script>
+    <script src="js/validators.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-586SXP");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/siceVueCmp.umd.min.js">
+        //APP用的js
+    </script> -->
+    <!-- <script src="https://event.franklin.com.tw/commonResources/js/appUse/click-for-jq3.4.js">
+      //APP用的js
+    </script> -->
+    <script src="../common/package/siceVueCmp.umd.min.js">
+        //APP用的js
+    </script>
+    <script src="../common/click.js">
+        //APP用的js
+    </script>
+
+    <!-- <script>
+		Vue.component('mock-sice-provider', {
+			data: function () {
+				return {
+					data: {
+						// 判斷是否為app
+						isApp: true,
+						// 判斷app是否登錄
+						isLogin: false,
+					}
+				}
+			},
+			template: `<sice-provider :mock-data="data">
+						<slot></slot>
+						</sice-provider> `,
+		});
+	</script> -->
+</head>
+
+<body>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-586SXP" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+    <!-- <mock-sice-provider id="content" v-cloak> -->
+    <sice-provider id="content" v-cloak :mock-data="{isApp:false,isLogin:true,openLog:true}" title="23">
+        <div id="top"></div>
+        <div>
+
+        </div>
+        <!-- header -->
+        <header-area :active-number="100"></header-area>
+
+        <!-- main -->
+        <article class="main">
+            <section class="banner wow fadeIn">
+                <h1 class="banner-tit" title="挺辛苦的父親 投資手續費我們幫您『付清』了">
+                    "挺"辛苦的父親 投資手續費我們幫您『付清』了
+                </h1>
+
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/banner-mobile.jpg?v=20200731" />
+                    <img src="images/banner.jpg?v=20200731" alt="挺辛苦的父親 投資手續費我們幫您『付清』了" class="banner-kv" />
+                </picture>
+            </section>
+
+            <!-- 預設資料 -->
+            <section class="banner-bottom" v-if="!isDone && !isPart2">
+                <div class="container">
+                    <div class="tit-type3 text-center">
+                        <b>
+                            <sice-web-link href="https://www.Franklin.com.tw" target="_blank" title="123" alt="8888">
+                                https://www.Franklin.com.tw</sice-web-link>
+                        </b>
+                    </div>
+                    <h2 class="tit-type1" title="這次換富蘭克林幫您把存基金手續費『付清』了！">
+                        這次換富蘭克林幫您把存基金手續費『付清』了！
+                    </h2>
+                    <p>
+                        8/5至8/8在下方登記，即可領取存基金0手續費優惠券，如果還不是富蘭克林「國民e帳戶」會員也可以先登記預約，開戶後即可使用！富蘭克林「挺」辛苦的老爸到底！
+                    </p>
+                </div>
+            </section>
+
+            <!-- 表單填寫完成 -->
+            <section class="banner-bottom" id="complete" v-if="isDone && !isPart2">
+                <div class="container">
+                    <h2 class="tit-type1" title="恭喜您獲得0手續費優惠券！">
+                        恭喜您獲得0手續費優惠券！
+                    </h2>
+                    <p class="text-center tit-type3">
+                        <b>
+                            假設您<span class="focus">單筆投資3萬元</span>，富蘭克林就幫您<span class="focus">「付清」900元的手續費</span>！
+                            <sice-login-hide> <br />還沒有「國民e帳戶」的朋友，點下方開戶後即可使用0手續費優惠券。 </sice-login-hide>
+                        </b>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 活動結束 -->
+            <section class="banner-bottom" id="complete" v-if="isPart2">
+                <div class="container">
+                    <h2 class="tit-type1" title="謝謝大家的支持，快閃活動已經結束囉！">
+                        謝謝大家的支持，快閃活動已經結束囉！
+                    </h2>
+                    <p class="text-center tit-type3" v-if="!isDone">
+                        <b> 未來如果想要收到富蘭克林最新優惠資訊，趕快在下方登記電子信箱，<br />就可以掌握第一手消息！謝謝 </b>
+                    </p>
+                    <p class="text-center tit-type3" v-else>
+                        <b>
+                            還沒有「國民e帳戶」的朋友，趕快來加入吧!
+                        </b>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 活動結束-表單填寫完成 -->
+            <!-- <section class="banner-bottom" v-if="demo_isEnd_isDone">
+          <div class="container">
+            <h2 class="tit-type1" title="謝謝大家的支持，快閃活動已經結束囉！">
+              謝謝大家的支持，快閃活動已經結束囉！
+            </h2>
+            <p class="text-center tit-type3">
+              <b>
+                還沒有「國民e帳戶」的朋友，趕快來加入吧!
+              </b>
+            </p>
+          </div>
+        </section> -->
+
+            <!-- 填表單區 -->
+            <section class="item fill" v-if="!isDone">
+                <div class="container">
+                    <h2 class="tit-type1 wow fadeInUp" title="爸氣領卷" v-if="!isPart2">
+                        <div class="tit-type1-content">
+                            爸氣領卷
+                        </div>
+                    </h2>
+                    <!-- 一般狀態 start -->
+                    <div class="formArea wow fadeInUp" v-if="config.isBinded != 1">
+                        <!-- 有錯誤時[.formArea-item]加[.error] -->
+                        <div class="formArea-item" :class="{ 'error' :　loginType == 2 && $v.form.ID_NO.$error }"
+                            v-if="!isPart2">
+                            <div class="formArea-item-tit">
+                                <label for="id">
+                                    身份證字號
+                                </label>
+                            </div>
+                            <div class="formArea-item-input">
+                                <input type="text" name="" id="id" :value="covered_id_no"
+                                    v-if="form.ID_NO == temp.ID_NO && temp.ID_NO != ''" disabled />
+                                <input type="text" name="" id="id" v-model="login_id_no" v-else />
+                            </div>
+                            <div class="formArea-item-error">
+                                請確認您的身份證字號
+                            </div>
+                        </div>
+                        <div class="formArea-item" :class="{ 'error' :　$v.form.BF_NAME.$error }">
+                            <div class="formArea-item-tit">
+                                <label for="name">
+                                    姓名
+                                </label>
+                            </div>
+                            <div class="formArea-item-input">
+                                <input type="text" name="" id="name" v-model="form.BF_NAME"
+                                    :disabled="form.BF_NAME == temp.BF_NAME && temp.BF_NAME != ''" />
+                            </div>
+                            <div class="formArea-item-error">
+                                請確認您的姓名
+                            </div>
+                        </div>
+                        <div class="formArea-item" :class="{ 'error' :　$v.form.CELL_PHONE.$error }">
+                            <div class="formArea-item-tit">
+                                <label for="phone">
+                                    手機
+                                </label>
+                            </div>
+                            <div class="formArea-item-input">
+                                <input type="tel" name="" id="phone" v-model="form.CELL_PHONE"
+                                    :disabled="form.CELL_PHONE == temp.CELL_PHONE && temp.CELL_PHONE != ''" />
+                            </div>
+                            <div class="formArea-item-error">
+                                請確認您的手機
+                            </div>
+                        </div>
+                        <div class="formArea-item" :class="{ 'error' :　$v.form.EMAIL.$error, 'full' : isPart2 }">
+                            <div class="formArea-item-tit">
+                                <label for="email">
+                                    Email
+                                </label>
+                            </div>
+                            <div class="formArea-item-input">
+                                <input type="email" name="" id="email" v-model="form.EMAIL"
+                                    :disabled="form.EMAIL == temp.EMAIL && temp.EMAIL != ''" />
+                            </div>
+                            <div class="formArea-item-error">
+                                請確認您的Email
+                            </div>
+                        </div>
+                        <div class="formArea-item full agree"
+                            :class="{ 'error' :　loginType == 2 && $v.form.AGREE.$error }">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="" id="agree1" v-model="form.AGREE" />
+                                    <span>
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </label>
+                            </div>
+                            <label for="agree1">
+                                我已閱讀並同意接受
+                            </label>
+                            <a href="https://www.franklin.com.tw/Privacy" target="_blank" title="富蘭克林證券投顧 個人資料告知義務內容">
+                                「富蘭克林證券投顧 個人資料告知義務內容」
+                            </a>
+                            <span v-if="isLine">
+                                與
+                                <a href="" @click.prevent="lineAlert" title="「LINE Business Connect服務使用條款暨個人資料運用告知聲明」">
+                                    「LINE Business Connect服務使用條款暨個人資料運用告知聲明」
+                                </a>
+                            </span>
+                            <div class="formArea-item-error">
+                                請勾選個資同意條款
+                            </div>
+                        </div>
+                        <div class="btnArea">
+                            <div class="btn">
+                                <a href="" :title="!isPart2 ? '立即預約' : '立即登記'" @click.prevent="sendForm"
+                                    v-if="!isSubmit">
+                                    立即{{ !isPart2 ? '預約' : '登記'}} <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="" title="處理中，請稍候..." @click.prevent class="disabled" v-else> 處理中，請稍候... </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 一般狀態 end -->
+
+                    <!-- LINE綁定狀態 start -->
+                    <div class="line wow fadeInUp" v-else>
+                        <div class="tit-type2 text-center" style="color: #000;">
+                            <b>
+                                很棒！您已經綁定富蘭克林LINE官方帳號
+                            </b>
+                        </div>
+                        <div class="formArea">
+                            <p class="text-center text">
+                                您的身分證字號為{{covered_id_no}}，請直接點選下方按鍵
+                                <span>
+                                    {{ !isPart2 ? '取得優惠資格吧！' : '完成登記吧!' }}
+                                </span>
+                            </p>
+                            <div class="btnArea">
+                                <div class="btn">
+                                    <a href="" :title="!isPart2 ? '立即預約' : '立即登記'" @click.prevent="sendForm"
+                                        v-if="!isSubmit">
+                                        立即{{ !isPart2 ? '預約' : '登記'}} <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <a href="" title="處理中，請稍候..." @click.prevent class="disabled" v-else> 處理中，請稍候...
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-center chart-remark">
+                                *提醒您，若LINE綁定身分證字號與國民e帳戶不同，請於周一至周五上午9點至下午6點致電0800-885-888，請專人為您服務。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- LINE綁定狀態 end -->
+                </div>
+            </section>
+
+            <!-- 表單填寫完成 - 勸註冊/下單 -->
+            <section class="item openAccount" v-if="isDone">
+                <div class="container">
+                    <sice-web-show>
+                        <article class="openAccount-item-area">
+                            <section class="openAccount-item wow fadeInUp">
+                                <img src="images/join1.png" alt="網路預約 寄件開戶" class="openAccount-item-img" />
+                                <h3 class="openAccount-item-tit" title="網路預約 寄件開戶">
+                                    網路預約 寄件開戶
+                                </h3>
+                                <div class="openAccount-item-text">
+                                    適用多數銀行
+                                    <br />不限年齡 <br />需7-10個工作天
+                                </div>
+                                <div class="btnArea">
+                                    <div class="btn sBtn">
+                                        <a href="https://etrade.franklin.com.tw/Open/NewMember?so=Online&"
+                                            target="_blank" title="立即開戶"
+                                            @click.prevent="$refs.formPost.formSubmit('send')">
+                                            立即開戶 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="openAccount-item wow fadeInUp">
+                                <img src="images/join2.png" alt="約定網銀帳戶 線上開戶" class="openAccount-item-img" />
+                                <h3 class="openAccount-item-tit" title="約定網銀帳戶 線上開戶">
+                                    約定網銀帳戶 線上開戶
+                                </h3>
+                                <div class="openAccount-item-text">
+                                    限第一/華南/彰化/兆豐/
+                                    <br />三信/元大 <br />需年滿20歲 最快1個工作天
+                                </div>
+                                <div class="btnArea">
+                                    <div class="btn sBtn">
+                                        <a href="https://etrade.franklin.com.tw/Open/OpenOnlineAuthenticated?"
+                                            target="_blank" title="立即開戶"
+                                            @click.prevent="$refs.formPost.formSubmit('online')">
+                                            立即開戶 <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                    </sice-web-show>
+                    <sice-app-show>
+                        <div class="btnArea">
+                            <sice-login-hide>
+                                <div class="btn">
+                                    <a href="#" title="立即開戶/登入" v-app-login> 立即開戶/登入 <i class="fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </sice-login-hide>
+                            <sice-login-show>
+                                <div class="btn">
+                                    <sice-fund> 立即存基金 <i class="fas fa-angle-right"></i> </sice-fund>
+                                </div>
+                            </sice-login-show>
+                        </div>
+                    </sice-app-show>
+                </div>
+            </section>
+
+            <section class="item notice wow fadeIn">
+                <div class="container">
+                    <h2 title="父親節快閃優惠說明" class="tit-type1 text-center">
+                        <div class="tit-type1-content">
+                            父親節快閃優惠說明
+                        </div>
+                    </h2>
+                    <div class="notice-item">
+                        <h3 class="notice-tit" title="優惠資格">
+                            優惠資格：
+                        </h3>
+                        <div class="notice-content">
+                            <p>
+                                於8/5~8/8至「父親節快閃優惠」專屬活動頁完整填寫資料並成功送出者，每人限登記一次，依活動當時輸入成功的身分證字號認列。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <h3 class="notice-tit" title="優惠內容">
+                            優惠內容：
+                        </h3>
+                        <div class="notice-content">
+                            <p>
+                                1筆新申購手續費0元優惠，不限單筆或定期定額申購，全平台基金均適用。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <h3 class="notice-tit" title="優惠使用規則">
+                            優惠使用規則：
+                        </h3>
+                        <div class="notice-content">
+                            <ol>
+                                <li>
+                                    使用期限為8/5~9/30，限透過國民e帳戶網路交易新申購、加碼使用，轉換、既有契約新扣款、國民理財機器人專區交易不適用。
+                                </li>
+                                <li>
+                                    尚未辦理國民e帳戶開戶者，需於9/30前盡早完成開戶、核印與變更密碼啟用交易權限，方可使用本優惠，逾9/30優惠即失效。
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p>
+                        活動詳情請依活動網頁說明及富蘭克林證券投顧公告為準，本公司保留修改、變更活動內容以及取消或暫停本活動及贈品之權利，並毋需作事前通知。
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <!-- footer -->
+        <footer-area></footer-area>
+
+        <div class="topBtn">
+            <a href="#top" title="返回最上面" @click.prevent="$scrollTo('body')">
+                <span>
+                    <i class="fas fa-caret-up"></i>
+                    TOP
+                </span>
+            </a>
+        </div>
+
+        <sice-login-hide>
+            <div class="fixedRightBtn-area clearfix twoBtn">
+                <div class="fixedRightBtn rightArrowCta" v-app-login>
+                    <a href="https://etrade.franklin.com.tw/Open/Entrance" target="_blank" title="免費開戶去"
+                        @click.prevent="$refs.formPost.formSubmit('choice')"> 免費開戶去 <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+                <div class="fixedRightBtn type2 rightArrowCta">
+                    <a href="https://etrade.franklin.com.tw/Home/Login?" target="_blank" title="立即存基金"> 立即存基金 <i
+                            class="fas fa-angle-right"></i> </a>
+                </div>
+            </div>
+        </sice-login-hide>
+
+        <sice-login-show>
+            <div class="fixedRightBtn-area clearfix">
+                <div class="fixedRightBtn type2 rightArrowCta">
+                    <sice-fund> 立即存基金 <i class="fas fa-angle-right"></i> </sice-fund>
+                </div>
+            </div>
+        </sice-login-show>
+
+        <!-- <modal ref="warning" :can-close="false" class="md">
+			<slot slot="infoArea">
+				xxxx
+			</slot>
+		</modal> -->
+        <form-post :form="form" :uid="config.uid" :test-mode="testMode" ref="formPost" v-show="false"></form-post>
+        <test-btn @test="test" v-if="testMode && !isDone"></test-btn>
+    </sice-provider>
+    <!-- </mock-sice-provider> -->
+
+    <script src="js/lineEvent.min.js?v=20200731"></script>
+    <script src="js/valid.min.js"></script>
+    <script src="js/index.min.js?v=20200731"></script>
+    <script src="js/main.min.js?v=20200731"></script>
+    <!-- <script src="//event.franklin.com.tw/js/ft.ga.addon.js"></script> -->
+</body>
+
+</html>

@@ -8,19 +8,88 @@ $(document).ready(function () {
             }
         },
         {
+            regx: '^https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/Fund/BasicInformation/(\\d{4})\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                let fundId = arguments[1];
+                return 'twsice://fundDetail?fundId=' + fundId;
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ/DivPoint\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        // 存基金新增
+        {
+            regx: '^https://www.franklin.com.tw/AI_robo/kyc\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/Member/Index\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://memberCenter';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/AI_robo/\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: '^https://www.franklin.com.tw/Privacy\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'defaultUrl';
+            }
+        },
+        {
             regx: '^https://www.franklin.com.tw\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return '';
             }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Open/Entrance\\??&?(_ga=[\\d.-])?',
+            regx: '^http://www.fundclear.com.tw\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return '';
+            }
+        },
+        {
+            regx: createRegExp('^https://etrade.franklin.com.tw/Home/Login\\?ReturnUrl=/Trade/LumpSum/ShowForm/(\\d{4})&?(_ga=[\\d.-])?'),
+            path: function (arguments) {
+                let fundId = arguments[1];
+                return 'twsice://fundDetail?fundId=' + fundId;
+            }
+        },
+        {
+            regx: '^https://etrade.franklin.com.tw/Open/NewMember\\?so=Online&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return 'twsice://login';
             }
         },
         {
-            regx: '^https://etrade.franklin.com.tw/Open/NewMember\\?so=Online&?(_ga=[\\d.-])?',
+            regx: '^https://etrade.franklin.com.tw/Home/Login\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://fundList';
+            }
+        },
+        {
+            regx: '^https://etrade.franklin.com.tw/Open/Entrance\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return 'twsice://login';
             }
@@ -38,28 +107,9 @@ $(document).ready(function () {
             }
         },
         {
-            regx: createRegExp('^https://etrade.franklin.com.tw/Home/Login\\?ReturnUrl=/Trade/LumpSum/ShowForm/(\\d{4})&?(_ga=[\\d.-])?'),
-            path: function (arguments) {
-                let fundId = arguments[1];
-                return 'twsice://fundDetail?fundId=' + fundId;
-            }
-        },
-        {
-            regx: '^https://etrade.franklin.com.tw/Home/Login\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return 'twsice://fundList';
-            }
-        },
-        {
             regx: '^https://etrade.franklin.com.tw/Trade/LumpSum\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return 'twsice://fundList';
-            }
-        },
-        {
-            regx: '^https://www.facebook.com/franklin.taiwan/\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return 'twsice://facebookHome';
             }
         },
         {
@@ -75,61 +125,15 @@ $(document).ready(function () {
             }
         },
         {
+            regx: '^https://www.facebook.com/franklin.taiwan/\\??&?(_ga=[\\d.-])?',
+            path: function (arguments) {
+                return 'twsice://facebookHome';
+            }
+        },
+        {
             regx: '^https://m.me/franklin.taiwan/\\??&?(_ga=[\\d.-])?',
             path: function (arguments) {
                 return 'twsice://onlineService';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/ContactUs/Index/DivLeaveMessage\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/Member/Index\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return 'twsice://memberCenter';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/Fund/BasicInformation/(\\d{4})\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                let fundId = arguments[1];
-                return 'twsice://fundDetail?fundId=' + fundId;
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/ReservationAccount/ECFAQ/DivPoint\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/Privacy\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return 'twsice://mineCenter';
-            }
-        },
-
-
-        // 存基金新增
-        {
-            regx: '^https://www.franklin.com.tw/AI_robo/kyc\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
-            }
-        },
-        {
-            regx: '^https://www.franklin.com.tw/AI_robo/\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
             }
         },
         {
@@ -138,13 +142,6 @@ $(document).ready(function () {
                 return '';
             }
         },
-        {
-            regx: '^http://www.fundclear.com.tw\\??&?(_ga=[\\d.-])?',
-            path: function (arguments) {
-                return '';
-            }
-        },
-
     ];
     function createRegExp(str, a) {
         return new RegExp(str)
@@ -186,10 +183,23 @@ $(document).ready(function () {
                     dom.attr('href', 'javascript: void(0)');
                     dom.attr('applink', href);
                 }
+                if (link === 'defaultUrl') {
+                    console.log(1)
+                    return openUrl(url)
+                }
+                console.log(2)
+
                 return openUrl(link)
             } else if (href === 'javascript: void(0)' && applink) {
                 const url = unescape(applink);
                 const link = getHref(url);
+                if (link === 'defaultUrl') {
+                    console.log(3)
+
+                    return openUrl(url)
+                }
+                console.log(4)
+
                 return openUrl(link)
             }
         }
